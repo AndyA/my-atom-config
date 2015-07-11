@@ -1,3 +1,26 @@
+<a name="v4.1.6"></a>
+# v4.1.6 (2015-07-10)
+
+## :bug: Bug Fixes
+
+- Fix error raised if no editorsMinimap doesn't exist yet ([c8acb713](https://github.com/atom-minimap/minimap-git-diff/commit/c8acb713c5f9aeb0afc12980e4d7e1c88772197b), [#16](https://github.com/atom-minimap/minimap-git-diff/issues/16))
+
+<a name="v4.1.5"></a>
+# v4.1.5 (2015-07-10)
+
+## :bug: Bug Fixes
+
+- Fix leak bindings ([c1c836c8](https://github.com/atom-minimap/minimap-git-diff/commit/c1c836c8b0f5ce98a737889319c2943dcc3af6f8))
+
+
+<a name="v4.1.4"></a>
+# v4.1.4 (2015-07-08)
+
+## :bug: Bug Fixes
+
+- Destroy binding when the repository is destroyed ([4ba6e8d1](https://github.com/atom-minimap/minimap-git-diff/commit/4ba6e8d1b19fc286b6bebbd85e91ea79a315a677), [#12](https://github.com/atom-minimap/minimap-git-diff/issues/12))
+
+
 <a name="v4.1.3"></a>
 # v4.1.3 (2015-05-18)
 

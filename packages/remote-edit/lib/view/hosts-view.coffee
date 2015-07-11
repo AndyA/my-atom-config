@@ -24,12 +24,8 @@ module.exports =
       @panel.destroy() if @panel?
       @disposables.dispose()
 
-    cancel: ->
-      @cancelled()
-
     cancelled: ->
       @hide()
-      @restoreFocus()
       @destroy()
 
     toggle: ->
@@ -90,9 +86,7 @@ module.exports =
       @disposables.add atom.commands.add 'atom-workspace', 'hostview:delete', =>
         item = @getSelectedItem()
         if item?
-          @items = _.reject(@items, ((val) -> val == item))
           item.delete()
-          @populateList()
           @setLoading()
       @disposables.add atom.commands.add 'atom-workspace', 'hostview:edit', =>
         item = @getSelectedItem()
