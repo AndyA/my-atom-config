@@ -44,3 +44,6 @@
   "keybinding-cheatsheet": {}
   "autocomplete-plus":
     maxVisibleSuggestions: 30
+".perl.source":
+  editor:
+    nonWordCharacters: "/\\()\"',.;<>~!#^&*|+=[]{}`?-"
