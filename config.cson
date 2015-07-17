@@ -13,6 +13,7 @@
       "jsdoc-generator"
       "makro"
       "autocomplete-ctags"
+      "linter"
     ]
     projectHome: "~/Works"
   editor:
@@ -24,10 +25,12 @@
     plugins:
       "git-diff": true
   "terminal-panel": {}
-  linter: {}
+  linter:
+    lintOnFly: false
   "linter-eslint":
     showRuleIdInMessage: true
     disableWhenNoEslintrcFileInPath: true
+    lintOnEdit: false
   docblockr:
     auto_add_method_tag: true
     deep_indent: true
