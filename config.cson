@@ -12,8 +12,6 @@
       "jshint"
       "jsdoc-generator"
       "makro"
-      "autocomplete-ctags"
-      "linter"
     ]
     projectHome: "~/Works"
   editor:
