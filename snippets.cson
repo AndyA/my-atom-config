@@ -16,85 +16,355 @@
 # This file uses CoffeeScript Object Notation (CSON).
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
-'.source.perl':
-  'Program':
-    'prefix': 'prog'
-    'body': """
-              #!/usr/bin/env perl
+".source.perl":
+  Program:
+    prefix: "prog"
+    body: '''
+            #!/usr/bin/env perl
 
-              use v5.10;
+            use v5.10;
 
-              use autodie;
-              use strict;
-              use warnings;
+            use autodie;
+            use strict;
+            use warnings;
 
-              ${1}
+            ${1}
 
-            """
-  'Package':
-    'prefix': 'package'
-    'body': """
-              package ${1:name};
+          '''
+  Package:
+    prefix: "package"
+    body: '''
+            package ${1:name};
 
-              use v5.10;
+            use v5.10;
 
-              use autodie;
-              use strict;
-              use warnings;
+            use autodie;
+            use strict;
+            use warnings;
 
-              =head1 NAME
+            =head1 NAME
 
-              ${1} - ${2:description}
+            ${1:name} - ${2:description}
 
-              =cut
+            =cut
 
-              ${3}
+            ${3}
 
-              1;
-            """
-  'Package (Moose)':
-    'prefix': 'moose'
-    'body': """
-              package ${1:name};
+            1;
+          '''
+  "Package (Moose)":
+    prefix: "moose"
+    body: '''
+            package ${1:name};
 
-              use Moose;
+            use Moose;
 
-              =head1 NAME
+            =head1 NAME
 
-              ${1} - ${2:description}
+            ${1:name} - ${2:description}
 
-              =cut
+            =cut
 
-              ${3}
+            ${3}
 
-              1;
-            """
-  'Package (Moose role)':
-    'prefix': 'role'
-    'body': """
-              package ${1:name};
+            1;
+          '''
+  "Package (Moose role)":
+    prefix: "role"
+    body: '''
+            package ${1:name};
 
-              use Moose::Role;
+            use Moose::Role;
 
-              =head1 NAME
+            =head1 NAME
 
-              ${1} - ${2:description}
+            ${1:name} - ${2:description}
 
-              =cut
+            =cut
 
-              ${3}
+            ${3}
 
-              1;
-            """
-'.source.sql':
-  'Procedure':
-    'prefix': 'procedure'
-    'body': """
+            1;
+          '''
+# MySQL mainly
+".source.sql":
+  Procedure:
+    prefix: "proc"
+    body: '''
             DROP PROCEDURE IF EXISTS `${1:procedure}`;
             DELIMITER //
-            CREATE PROCEDURE `${1}` (${2})
+            CREATE PROCEDURE `${1:procedure}` (${2})
             BEGIN
               ${3}
             END//
             DELIMITER ;
-                        """
+          '''
+
+# Clone of
+# https://github.com/atom/language-javascript/blob/master/snippets/language-javascript.cson
+# with quotes doubled
+".source.js":
+  "Object Method":
+    prefix: "kf"
+    body: '''
+            ${1:method_name}: function (${2:args}) {
+            	$3
+            }${4:,}
+          '''
+  "Object key — key: \"value\"":
+    prefix: "kv"
+    body: "${1:key}: ${2:\"${3:value}\"}${4:, }"
+  Prototype:
+    prefix: "proto"
+    body: '''
+            ${1:class_name}.prototype.${2:method_name} = function (${3:first_argument}) {
+            	${0:// body...}
+            };
+          '''
+  do:
+    prefix: "do"
+    body: '''
+            do {
+            	$2
+            } while (${1:true});
+          '''
+  if:
+    prefix: "if"
+    body: '''
+            if (${1:true}) {
+            	$2
+            }
+          '''
+  "if … else":
+    prefix: "ife"
+    body: '''
+            if (${1:true}) {
+            	$2
+            } else {
+            	$3
+            }
+          '''
+  else:
+    prefix: "else"
+    body: '''
+            else {
+            	$1
+            }
+          '''
+  "else if":
+    prefix: "elseif"
+    body: '''
+            else if (${1:true}) {
+            	$2
+            }
+          '''
+  for:
+    prefix: "for"
+    body: '''
+            for (var ${2:i} = 0; ${2:i} < ${1:array}.length; ${2:i}++) {
+            	${1:array}[${2:i}]$3
+            }
+          '''
+  "for in":
+    prefix: "forin"
+    body: '''
+            for (var ${1:variable} in ${2:object}) {
+            	${3:if (${2:object}.hasOwnProperty(${1:variable})) {
+            		$4
+            	}}
+            }
+          '''
+  "for of":
+    prefix: "forof"
+    body: '''
+            for (${1:variable} of ${2:iterable}) {
+            	$3
+            }
+          '''
+  Function:
+    prefix: "fun"
+    body: '''
+            function ${1:function_name}(${2:argument}) {
+            	${0:// body...}
+            }
+          '''
+  "Anonymous Function":
+    prefix: "f"
+    body: '''
+            function ($1) {
+            	$2
+            }
+          '''
+  Generator:
+    prefix: "gen"
+    body: '''
+            function* ${1:function_name}(${2:argument}) {
+            	${0:// body...}
+            }
+          '''
+  "Anonymous Generator":
+    prefix: "g"
+    body: '''
+            function* ($1) {
+            	$2
+            }
+          '''
+  getElementsByClassName:
+    prefix: "get"
+    body: "getElementsByClassName(${1:\"${2:className}\"})$3"
+  getElementsByName:
+    prefix: "getn"
+    body: "getElementsByName(${1:\"${2:name}\"})$3"
+  getElementsByTagName:
+    prefix: "gett"
+    body: "getElementsByTagName(${1:\"${2:tagName}\"})$3"
+  getElementById:
+    prefix: "geti"
+    body: "getElementById(${1:\"${2:id}\"})$3"
+  querySelector:
+    prefix: "qs"
+    body: "querySelector(${1:\"${2:query}\"})$3"
+  querySelectorAll:
+    prefix: "qsa"
+    body: "querySelectorAll(${1:\"${2:query}\"})$3"
+  "Immediately-Invoked Function Expression":
+    prefix: "iife"
+    body: '''
+            (function() {
+              $2
+            }());
+          '''
+  log:
+    prefix: "log"
+    body: "console.log($1);$0"
+  warn:
+    prefix: "warn"
+    body: "console.warn($1);$0"
+  error:
+    prefix: "error"
+    body: "console.error($1);$0"
+  inspect:
+    prefix: "inspect"
+    body: "console.log(require(\"util\").inspect($0, { depth: null }));"
+  "new Promise":
+    prefix: "prom"
+    body: '''
+            new Promise(function(resolve, reject) {
+            	$1
+            });$0
+          '''
+  "setInterval function":
+    prefix: "interval"
+    body: '''
+            setInterval(${2:function () {
+            	$3
+            }}, ${1:10});
+          '''
+  "setTimeout function":
+    prefix: "timeout"
+    body: '''
+            setTimeout(${2:function () {
+            	$3
+            }}, ${1:10});
+          '''
+  switch:
+    prefix: "switch"
+    body: '''
+            switch (${1:expression}) {
+            	case ${2:expression}:
+            		$4
+            		break;$5
+            	default:
+            		$3
+            }
+          '''
+  try:
+    prefix: "try"
+    body: '''
+            try {
+            	$1
+            } catch (${2:e}) {
+            	$3
+            }${4: finally {
+            	$5
+            }}
+          '''
+  while:
+    prefix: "while"
+    body: '''
+            while (${1:true}) {
+            	$2
+            }
+          '''
+  "Start Docblock":
+    prefix: "/**"
+    body: '''
+            /**
+             * $1
+             */$0
+          '''
+  "CommonJS require":
+    prefix: "req"
+    body: "var ${1:module} = require(\"${1:module}\");"
+  "Class":
+    prefix: "class"
+    body: '''
+            function ${1:ClassName}() {
+              $0
+            }
+
+            ${1:ClassName}.prototype = new ${2:Object}();
+
+            _.extend(${1:ClassName}.prototype, {
+
+            });
+          '''
+  "Programme":
+    prefix: "prog"
+    body: '''
+          "use strict";
+
+          $0
+
+          '''
+  "CommonJS module":
+    prefix: "mod"
+    body: '''
+          "use strict";
+
+          $0
+
+          module.exports = ${1:null};
+          '''
+  "Mocha / Chai test":
+    prefix: "test"
+    body: '''
+          "use strict";
+
+          var chai = require("chai");
+
+          var expect = chai.expect;
+
+          describe("${1:Test for...}", function() {
+            $0
+          });
+          '''
+  "Mocha / Chai describe":
+    prefix: "desc"
+    body: '''
+          describe("${1:Test for...}", function() {
+            $0
+          });
+          '''
+  "Mocha / Chai it":
+    prefix: "it"
+    body: '''
+          it("${1:should...}", function() {
+            $0
+          });
+          '''
+  "Mocha / Chai expect":
+    prefix: "exp"
+    body: '''
+          expect(${1:got}).to.deep.equal(${2:want});
+          '''
