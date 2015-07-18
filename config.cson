@@ -12,6 +12,8 @@
       "jshint"
       "jsdoc-generator"
       "makro"
+      "javascript-snippets"
+      "linter-eslint"
     ]
     projectHome: "~/Works"
   editor:
@@ -45,6 +47,7 @@
   "keybinding-cheatsheet": {}
   "autocomplete-plus":
     maxVisibleSuggestions: 30
+  pigments: {}
 ".perl.source":
   editor:
     nonWordCharacters: "/\\()\"',.;<>~!#^&*|+=[]{}`?-"
