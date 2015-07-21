@@ -86,6 +86,29 @@
 
             1;
           '''
+  "Test":
+    prefix: "test"
+    body: '''
+          #!/usr/bin/perl -w
+
+          use strict;
+
+          use Test::More;
+
+          use ${1:ModuleName};
+
+          $0
+
+          done_testing;
+          '''
+  "Foreach Loop":
+    prefix: 'fore'
+    body: '''
+          for my \$${1:x} (@${2:array}) {
+            ${3:# body...}
+          }
+          '''
+
 # MySQL mainly
 ".source.sql":
   Procedure:
