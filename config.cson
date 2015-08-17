@@ -13,6 +13,7 @@
       "makro"
       "javascript-snippets"
       "haskell-grammar"
+      "jshint"
     ]
     projectHome: "~/Works"
   editor:
