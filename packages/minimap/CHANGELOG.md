@@ -1,3 +1,17 @@
+<a name="v4.12.3"></a>
+# v4.12.3 (2015-08-12)
+
+## :racehorse: Performances
+
+- Speed up scrolling with lots of decorations ([7b495e9f](https://github.com/atom-minimap/minimap/commit/7b495e9f259d02aa02bb7c223a33138cc8c0f8cc))
+
+<a name="v4.12.2"></a>
+# v4.12.2 (2015-08-03)
+
+## :bug: Bug Fixes
+
+- Fix visibility changes not properly watched when a tab become active ([806dd4bd](https://github.com/atom-minimap/minimap/commit/806dd4bd1bc0769ed78d19e303d1476b04e8ae0b))
+
 <a name="v4.12.1"></a>
 # v4.12.1 (2015-07-27)
 

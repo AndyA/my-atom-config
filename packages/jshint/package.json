@@ -1,6 +1,6 @@
 {
   "name": "jshint",
-  "version": "1.3.9",
+  "version": "1.3.10",
   "description": "Validate JavaScript with JSHint. In realtime or on save. Supports JSX (React).",
   "license": "MIT",
   "repository": {
@@ -40,10 +40,10 @@
     "url": "https://github.com/sindresorhus/atom-jshint/issues"
   },
   "homepage": "https://github.com/sindresorhus/atom-jshint",
-  "_id": "jshint@1.3.9",
-  "_shasum": "7ff63591fdf9c38936ec06cdf37e85bce7a1b7d5",
-  "_resolved": "file:../d-11562-4702-kc2g5q/package.tgz",
-  "_from": "../d-11562-4702-kc2g5q/package.tgz",
+  "_id": "jshint@1.3.10",
+  "_shasum": "9c94df8c3b6df460a98bde24aaf2eb4f049ed7f6",
+  "_resolved": "file:../d-115717-13955-1lfy3wj/package.tgz",
+  "_from": "../d-115717-13955-1lfy3wj/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -109,7 +109,7 @@
       },
       {
         "name": "amdefine",
-        "version": "0.1.1",
+        "version": "1.0.0",
         "path": "node_modules/event-kit/node_modules/grim/node_modules/coffeestack/node_modules/source-map/node_modules/amdefine/amdefine.js"
       },
       {
@@ -284,7 +284,7 @@
       },
       {
         "name": "minimatch",
-        "version": "2.0.8",
+        "version": "2.0.10",
         "path": "node_modules/jshint/node_modules/minimatch/minimatch.js"
       },
       {
@@ -384,7 +384,7 @@
       },
       {
         "name": "iconv-lite",
-        "version": "0.4.10",
+        "version": "0.4.11",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/iconv-lite/lib/index.js"
       },
       {
@@ -414,27 +414,27 @@
       },
       {
         "name": "recast",
-        "version": "0.10.13",
+        "version": "0.10.29",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/main.js"
       },
       {
         "name": "ast-types",
-        "version": "0.7.8",
+        "version": "0.8.9",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/ast-types/main.js"
       },
       {
         "name": "esprima-fb",
-        "version": "14001.1.0-dev-harmony-fb",
+        "version": "15001.1001.0-dev-harmony-fb",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/esprima-fb/esprima.js"
       },
       {
         "name": "source-map",
-        "version": "0.4.2",
+        "version": "0.4.4",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map.js"
       },
       {
         "name": "amdefine",
-        "version": "0.1.1",
+        "version": "1.0.0",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/node_modules/amdefine/amdefine.js"
       },
       {
@@ -459,17 +459,17 @@
       },
       {
         "name": "amdefine",
-        "version": "0.1.1",
+        "version": "1.0.0",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/jstransform/node_modules/source-map/node_modules/amdefine/amdefine.js"
       },
       {
         "name": "lazy-req",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "path": "node_modules/lazy-req/index.js"
       },
       {
         "name": "lodash",
-        "version": "3.10.0",
+        "version": "3.10.1",
         "path": "node_modules/lodash/index.js"
       },
       {
@@ -489,12 +489,12 @@
       },
       {
         "name": "shelljs",
-        "version": "0.5.1",
+        "version": "0.5.3",
         "path": "node_modules/shelljs/shell.js"
       },
       {
         "name": "strip-json-comments",
-        "version": "1.0.2",
+        "version": "1.0.4",
         "path": "node_modules/strip-json-comments/strip-json-comments.js"
       },
       {
@@ -504,7 +504,7 @@
       },
       {
         "name": "os-homedir",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "path": "node_modules/user-home/node_modules/os-homedir/index.js"
       }
     ],
@@ -1581,10 +1581,12 @@
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/lib/types.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/lib/util.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/main.js",
+        "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/ast-types/def/babel.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/ast-types/def/core.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/ast-types/def/e4x.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/ast-types/def/es6.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/ast-types/def/es7.js",
+        "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/ast-types/def/esprima.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/ast-types/def/fb-harmony.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/ast-types/def/mozilla.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/ast-types/lib/equiv.js",
@@ -1598,19 +1600,17 @@
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/esprima-fb/bin/esparse.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/esprima-fb/bin/esvalidate.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/esprima-fb/esprima.js",
-        "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/Makefile.dryice.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/build/assert-shim.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/build/mini-require.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/build/suffix-browser.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/build/test-prefix.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/build/test-suffix.js",
-        "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/dist/source-map.js",
-        "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/dist/source-map.min.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map/array-set.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map/base64-vlq.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map/base64.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map/binary-search.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map/mapping-list.js",
+        "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map/quick-sort.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map/source-map-consumer.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map/source-map-generator.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map/source-node.js",
@@ -3108,20 +3108,18 @@
           "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast"
         ],
         "dependencies": {
-          "esprima-fb": "~14001.1.0-dev-harmony-fb",
-          "source-map": "~0.4.1",
+          "esprima-fb": "~15001.1001.0-dev-harmony-fb",
+          "source-map": "~0.4.4",
           "private": "~0.1.5",
-          "ast-types": "~0.7.0"
+          "ast-types": "0.8.9"
         }
       },
       {
         "paths": [
-          "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map",
           "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/build",
-          "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/dist",
-          "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/dist/test",
           "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map",
-          "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib"
+          "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib",
+          "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map"
         ],
         "dependencies": {
           "amdefine": ">=0.0.4"

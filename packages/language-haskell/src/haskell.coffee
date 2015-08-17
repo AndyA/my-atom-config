@@ -59,6 +59,9 @@ haskellGrammar =
     functionTypeDeclaration:
       concat list('functionTypeDeclaration',/{functionName}|{operatorFun}/,/,/),
         /\s*(::|∷)/
+    ctorTypeDeclaration:
+      concat list('functionTypeDeclaration',/{className}|{operatorFun}/,/,/),
+        /\s*(::|∷)/
     ctorArgs: ///
       (?!deriving)
       (?:
@@ -194,8 +197,36 @@ haskellGrammar =
             1: name: 'keyword.other.haskell'
       ]
     ,
+      name: 'meta.declaration.type.GADT.haskell'
+      begin: /{maybeBirdTrack}(\s*)(data|newtype)\s+({typeDecl})\s*(?=where|$)/
+      end: /{indentBlockEnd}/
+      beginCaptures:
+        2: name: 'storage.type.data.haskell'
+        3:
+          name: 'meta.type-signature.haskell'
+          patterns: [include: '#type_signature']
+      patterns: [
+          include: '#comments'
+        ,
+          include: '#deriving'
+        ,
+          match: /{ctor}/
+          captures:
+            1: patterns: [include: '#type_ctor']
+            2:
+              name: 'meta.type-signature.haskell'
+              patterns: [include: '#type_signature']
+        ,
+          name: 'keyword.other.haskell'
+          match: /\bwhere\b/
+        ,
+          include: '#type_name'
+        ,
+          include: '#ctor_type_declaration'
+      ]
+    ,
       name: 'meta.declaration.type.data.haskell'
-      begin: /{maybeBirdTrack}(\s)*(data|newtype)\s+({typeDecl})\s*(?=\=|$)/
+      begin: /{maybeBirdTrack}(\s*)(data|newtype)\s+({typeDecl})\s*(?=\=|$)/
       end: /{indentBlockEnd}/
       beginCaptures:
         2: name: 'storage.type.data.haskell'
@@ -238,7 +269,7 @@ haskellGrammar =
       ]
     ,
       name: 'meta.declaration.type.type.haskell'
-      begin: /{maybeBirdTrack}(\s)*(type)\s+({typeDecl})\s*(?=\=|$)/
+      begin: /{maybeBirdTrack}(\s*)(type)\s+({typeDecl})\s*(?=\=|$)/
       end: /{indentBlockEnd}/
       contentName: 'meta.type-signature.haskell'
       beginCaptures:
@@ -475,6 +506,23 @@ haskellGrammar =
           patterns: [
               name: 'entity.name.function.haskell'
               match: /{functionName}/
+            ,
+              include: '#infix_op'
+          ]
+        3: name: 'keyword.other.double-colon.haskell'
+      patterns: [
+          include: '#type_signature'
+      ]
+    ctor_type_declaration:
+      name: 'meta.ctor.type-declaration.haskell'
+      begin: concat /{maybeBirdTrack}(\s*)/,/{ctorTypeDeclaration}/
+      end: /{indentBlockEnd}/
+      contentName: 'meta.type-signature.haskell'
+      beginCaptures:
+        2:
+          patterns: [
+              name: 'entity.name.type.haskell'
+              match: /{className}/
             ,
               include: '#infix_op'
           ]

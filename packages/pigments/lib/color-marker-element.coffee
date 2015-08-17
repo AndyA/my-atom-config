@@ -43,6 +43,7 @@ class ColorMarkerElement extends HTMLElement
     @clear()
 
   render: ->
+    return if @colorMarker.marker.displayBuffer.isDestroyed()
     @innerHTML = ''
     {style, regions, class: cls} = @renderer.render(@colorMarker)
 
@@ -56,10 +57,10 @@ class ColorMarkerElement extends HTMLElement
     else
       @style.cssText = ''
 
-    @lastMarkerScreenRange = @colorMarker.marker.getScreenRange()
+    @lastMarkerScreenRange = @colorMarker.getScreenRange()
 
   checkScreenRange: ->
-    unless @lastMarkerScreenRange.isEqual(@colorMarker.marker.getScreenRange())
+    unless @lastMarkerScreenRange.isEqual(@colorMarker.getScreenRange())
       @render()
 
   isReleased: -> @released

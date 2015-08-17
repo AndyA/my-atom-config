@@ -9,11 +9,9 @@
       "base16-tomorrow-dark-theme"
     ]
     disabledPackages: [
-      "jshint"
       "jsdoc-generator"
       "makro"
       "javascript-snippets"
-      "linter-eslint"
       "haskell-grammar"
     ]
     projectHome: "~/Works"

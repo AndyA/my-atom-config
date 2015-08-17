@@ -1,7 +1,7 @@
 {
   "name": "clang-format",
   "main": "./lib/main",
-  "version": "1.14.0",
+  "version": "1.16.0",
   "private": true,
   "description": "Format your C/C++/Obj-C/Javascript files with clang-format from inside atom. Requires clang-format to be installed.",
   "repository": {
@@ -15,10 +15,10 @@
     "url": "https://github.com/LiquidHelium/atom-clang-format/issues"
   },
   "homepage": "https://github.com/LiquidHelium/atom-clang-format",
-  "_id": "clang-format@1.14.0",
-  "_shasum": "2e4e80889174e0fdf000f5275e14275c2abc3bc1",
-  "_resolved": "file:../d-115528-17083-1qhntrr/package.tgz",
-  "_from": "../d-115528-17083-1qhntrr/package.tgz",
+  "_id": "clang-format@1.16.0",
+  "_shasum": "ea0c79295d0c9f19d56d588b79b538317922adae",
+  "_resolved": "file:../d-115717-13938-1egoi06/package.tgz",
+  "_from": "../d-115717-13938-1egoi06/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [],
