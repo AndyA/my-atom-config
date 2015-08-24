@@ -1,6 +1,7 @@
 'fileTypes': [
   'hs'
 ]
+'firstLineMatch': '^\\#\\!.*\\brunhaskell\\b'
 'name': 'Haskell'
 'scopeName': 'source.haskell'
 'macros':
@@ -22,6 +23,10 @@
   'indentBlockEnd': '^(?!\\1[ \\t]|[ \\t]*$)'
   'maybeBirdTrack': '^'
 'patterns': [
+  {
+    'name': 'comment.line.shebang.haskell'
+    'match': '^\\#\\!.*\\brunhaskell\\b.*$'
+  }
   {
     'name': 'keyword.operator.function.infix.haskell'
     'match': '(`)(?:[\\p{Lu}\\p{Lt}][\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\']*(?:\\.[\\p{Lu}\\p{Lt}][\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\']*)*\\.)?[\\p{Ll}_][\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\']*(`)'

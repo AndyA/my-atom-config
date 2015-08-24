@@ -21,6 +21,7 @@ concat = (list...) ->
 haskellGrammar =
   name: 'Haskell'
   fileTypes: [ 'hs' ]
+  firstLineMatch: '^\\#\\!.*\\brunhaskell\\b'
   scopeName: 'source.haskell'
 
   macros:
@@ -78,6 +79,9 @@ haskellGrammar =
     maybeBirdTrack: /^/
 
   patterns: [
+      name: 'comment.line.shebang.haskell'
+      match: '^\\#\\!.*\\brunhaskell\\b.*$'
+    ,
       name: 'keyword.operator.function.infix.haskell'
       match: /(`){functionName}(`)/
       captures:
@@ -696,6 +700,13 @@ literateHaskellGrammar =
       patterns: haskellGrammar.patterns.concat
         match: /^> /
         name: 'punctuation.definition.bird-track.haskell'
+    ,
+      begin: '(?<!\\\\verb)\\|'
+      end: /\|/
+      name: 'meta.embedded.text.haskell.latex'
+      patterns: [
+          include: 'source.haskell'
+      ]
     ,
       include: 'text.tex.latex'
   ]
