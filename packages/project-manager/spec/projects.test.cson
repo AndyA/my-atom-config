@@ -1,14 +1,12 @@
-'Test01':
-  'title': 'Test01'
-  'paths': [
-    '/Users/'
+testproject1:
+  title: "Test project 1"
+  group: "Test"
+  paths: [
+    "/Users/project-1"
   ]
-  'settings':
-    'tree-view':
-      'showOnRightSide': true
-    'fuzzy-finder':
-      'ignoredNames': [
-        'test1'
-        'test2'
-        'test3'
-      ]
+testproject2:
+  title: "Test project 2"
+  group: "Test"
+  paths: [
+    "/Users/project-2"
+  ]
