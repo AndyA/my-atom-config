@@ -1,11 +1,11 @@
 {
   "name": "esformatter",
-  "version": "1.9.0",
+  "version": "1.12.0",
   "description": "Beautify JavaScript",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sindresorhus/atom-esformatter"
+    "url": "git+https://github.com/sindresorhus/atom-esformatter.git"
   },
   "private": true,
   "activationCommands": {
@@ -31,14 +31,17 @@
   ],
   "dependencies": {
     "esformatter": "^0.7.0",
+    "esformatter-add-trailing-commas": "^1.1.0",
     "esformatter-braces": "^1.0.0",
     "esformatter-collapse-objects": "^0.4.1",
     "esformatter-dot-notation": "^1.1.0",
     "esformatter-jsx": "^2.0.10",
     "esformatter-literal-notation": "^1.0.0",
     "esformatter-parseint": "^1.0.1",
+    "esformatter-quote-props": "^1.0.2",
     "esformatter-quotes": "^1.0.0",
     "esformatter-semicolons": "^1.0.3",
+    "esformatter-spaced-lined-comment": "^2.0.1",
     "esformatter-var-each": "^2.0.1",
     "esformatter-wordpress": "^0.2.0"
   },
@@ -47,11 +50,11 @@
   "bugs": {
     "url": "https://github.com/sindresorhus/atom-esformatter/issues"
   },
-  "homepage": "https://github.com/sindresorhus/atom-esformatter",
-  "_id": "esformatter@1.9.0",
-  "_shasum": "9260a44bdf35bb8a9ea40fc3f491db0f60f30375",
-  "_resolved": "file:../d-115724-83273-1oy4dvk/package.tgz",
-  "_from": "../d-115724-83273-1oy4dvk/package.tgz",
+  "homepage": "https://github.com/sindresorhus/atom-esformatter#readme",
+  "_id": "esformatter@1.12.0",
+  "_shasum": "d75da10e4aaaa8aecb68e06761ff9dc49b4ce28f",
+  "_resolved": "file:../d-11582-22688-11k7ep6/package.tgz",
+  "_from": "../d-11582-22688-11k7ep6/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -197,12 +200,12 @@
       },
       {
         "name": "rocambole",
-        "version": "0.6.0",
+        "version": "0.7.0",
         "path": "node_modules/esformatter/node_modules/rocambole/rocambole.js"
       },
       {
         "name": "esprima",
-        "version": "2.5.0",
+        "version": "2.6.0",
         "path": "node_modules/esformatter/node_modules/rocambole/node_modules/esprima/esprima.js"
       },
       {
@@ -301,6 +304,26 @@
         "path": "node_modules/esformatter/node_modules/user-home/node_modules/os-homedir/index.js"
       },
       {
+        "name": "esformatter-add-trailing-commas",
+        "version": "1.1.0",
+        "path": "node_modules/esformatter-add-trailing-commas/index.js"
+      },
+      {
+        "name": "rocambole",
+        "version": "0.7.0",
+        "path": "node_modules/esformatter-add-trailing-commas/node_modules/rocambole/rocambole.js"
+      },
+      {
+        "name": "esprima",
+        "version": "2.6.0",
+        "path": "node_modules/esformatter-add-trailing-commas/node_modules/rocambole/node_modules/esprima/esprima.js"
+      },
+      {
+        "name": "rocambole-token",
+        "version": "1.2.1",
+        "path": "node_modules/esformatter-add-trailing-commas/node_modules/rocambole-token/index.js"
+      },
+      {
         "name": "esformatter-braces",
         "version": "1.2.1",
         "path": "node_modules/esformatter-braces/index.js"
@@ -347,7 +370,7 @@
       },
       {
         "name": "esprima",
-        "version": "2.5.0",
+        "version": "2.6.0",
         "path": "node_modules/esformatter-collapse-objects/node_modules/rocambole/node_modules/esprima/esprima.js"
       },
       {
@@ -387,7 +410,7 @@
       },
       {
         "name": "esprima",
-        "version": "2.5.0",
+        "version": "2.6.0",
         "path": "node_modules/esformatter-dot-notation/node_modules/rocambole/node_modules/esprima/esprima.js"
       },
       {
@@ -501,6 +524,16 @@
         "path": "node_modules/esformatter-parseint/node_modules/rocambole-token/index.js"
       },
       {
+        "name": "esformatter-quote-props",
+        "version": "1.0.2",
+        "path": "node_modules/esformatter-quote-props/index.js"
+      },
+      {
+        "name": "unquoted-property-validator",
+        "version": "1.0.0",
+        "path": "node_modules/esformatter-quote-props/node_modules/unquoted-property-validator/index.js"
+      },
+      {
         "name": "esformatter-quotes",
         "version": "1.0.3",
         "path": "node_modules/esformatter-quotes/index.js"
@@ -509,6 +542,11 @@
         "name": "esformatter-semicolons",
         "version": "1.1.1",
         "path": "node_modules/esformatter-semicolons/index.js"
+      },
+      {
+        "name": "esformatter-spaced-lined-comment",
+        "version": "2.0.1",
+        "path": "node_modules/esformatter-spaced-lined-comment/index.js"
       },
       {
         "name": "esformatter-var-each",
@@ -564,16 +602,6 @@
         "name": "ms",
         "version": "0.7.1",
         "path": "node_modules/esformatter-wordpress/node_modules/esformatter-jquery-chain/node_modules/rocambole-indent/node_modules/debug/node_modules/ms/index.js"
-      },
-      {
-        "name": "esformatter-quote-props",
-        "version": "1.0.2",
-        "path": "node_modules/esformatter-wordpress/node_modules/esformatter-quote-props/index.js"
-      },
-      {
-        "name": "unquoted-property-validator",
-        "version": "1.0.0",
-        "path": "node_modules/esformatter-wordpress/node_modules/esformatter-quote-props/node_modules/unquoted-property-validator/index.js"
       },
       {
         "name": "esformatter-remove-trailing-commas",
@@ -1293,6 +1321,17 @@
         "node_modules/esformatter/node_modules/supports-color/index.js",
         "node_modules/esformatter/node_modules/user-home/index.js",
         "node_modules/esformatter/node_modules/user-home/node_modules/os-homedir/index.js",
+        "node_modules/esformatter-add-trailing-commas/index.js",
+        "node_modules/esformatter-add-trailing-commas/node_modules/rocambole/node_modules/esprima/bin/esparse.js",
+        "node_modules/esformatter-add-trailing-commas/node_modules/rocambole/node_modules/esprima/bin/esvalidate.js",
+        "node_modules/esformatter-add-trailing-commas/node_modules/rocambole/node_modules/esprima/esprima.js",
+        "node_modules/esformatter-add-trailing-commas/node_modules/rocambole/rocambole.js",
+        "node_modules/esformatter-add-trailing-commas/node_modules/rocambole-token/find.js",
+        "node_modules/esformatter-add-trailing-commas/node_modules/rocambole-token/index.js",
+        "node_modules/esformatter-add-trailing-commas/node_modules/rocambole-token/insert.js",
+        "node_modules/esformatter-add-trailing-commas/node_modules/rocambole-token/is.js",
+        "node_modules/esformatter-add-trailing-commas/node_modules/rocambole-token/makeCheck.js",
+        "node_modules/esformatter-add-trailing-commas/node_modules/rocambole-token/remove.js",
         "node_modules/esformatter-braces/index.js",
         "node_modules/esformatter-braces/node_modules/rocambole-token/find.js",
         "node_modules/esformatter-braces/node_modules/rocambole-token/index.js",
@@ -1407,8 +1446,13 @@
         "node_modules/esformatter-parseint/node_modules/rocambole-token/is.js",
         "node_modules/esformatter-parseint/node_modules/rocambole-token/makeCheck.js",
         "node_modules/esformatter-parseint/node_modules/rocambole-token/remove.js",
+        "node_modules/esformatter-quote-props/index.js",
+        "node_modules/esformatter-quote-props/node_modules/unquoted-property-validator/index.js",
+        "node_modules/esformatter-quote-props/node_modules/unquoted-property-validator/lib/unquoted-property-validator.js",
+        "node_modules/esformatter-quote-props/test.js",
         "node_modules/esformatter-quotes/index.js",
         "node_modules/esformatter-semicolons/index.js",
+        "node_modules/esformatter-spaced-lined-comment/index.js",
         "node_modules/esformatter-var-each/Gruntfile.js",
         "node_modules/esformatter-var-each/docs/getting-started.js",
         "node_modules/esformatter-var-each/lib/esformatter-var-each.js",
@@ -1438,10 +1482,6 @@
         "node_modules/esformatter-wordpress/node_modules/esformatter-jquery-chain/node_modules/rocambole-indent/rocambole-indent.js",
         "node_modules/esformatter-wordpress/node_modules/esformatter-jquery-chain/plugin.js",
         "node_modules/esformatter-wordpress/node_modules/esformatter-jquery-chain/test.js",
-        "node_modules/esformatter-wordpress/node_modules/esformatter-quote-props/index.js",
-        "node_modules/esformatter-wordpress/node_modules/esformatter-quote-props/node_modules/unquoted-property-validator/index.js",
-        "node_modules/esformatter-wordpress/node_modules/esformatter-quote-props/node_modules/unquoted-property-validator/lib/unquoted-property-validator.js",
-        "node_modules/esformatter-wordpress/node_modules/esformatter-quote-props/test.js",
         "node_modules/esformatter-wordpress/node_modules/esformatter-remove-trailing-commas/index.js",
         "node_modules/esformatter-wordpress/node_modules/esformatter-special-bangs/index.js",
         "node_modules/esformatter-wordpress/node_modules/mout/array/append.js",
@@ -2034,6 +2074,10 @@
         "node_modules/esformatter/node_modules/user-home/node_modules/os-homedir/package.json",
         "node_modules/esformatter/node_modules/user-home/package.json",
         "node_modules/esformatter/package.json",
+        "node_modules/esformatter-add-trailing-commas/node_modules/rocambole/node_modules/esprima/package.json",
+        "node_modules/esformatter-add-trailing-commas/node_modules/rocambole/package.json",
+        "node_modules/esformatter-add-trailing-commas/node_modules/rocambole-token/package.json",
+        "node_modules/esformatter-add-trailing-commas/package.json",
         "node_modules/esformatter-braces/node_modules/rocambole-token/package.json",
         "node_modules/esformatter-braces/package.json",
         "node_modules/esformatter-collapse-objects/node_modules/defaults-deep/node_modules/for-own/node_modules/for-in/package.json",
@@ -2080,8 +2124,11 @@
         "node_modules/esformatter-parseint/node_modules/rocambole/package.json",
         "node_modules/esformatter-parseint/node_modules/rocambole-token/package.json",
         "node_modules/esformatter-parseint/package.json",
+        "node_modules/esformatter-quote-props/node_modules/unquoted-property-validator/package.json",
+        "node_modules/esformatter-quote-props/package.json",
         "node_modules/esformatter-quotes/package.json",
         "node_modules/esformatter-semicolons/package.json",
+        "node_modules/esformatter-spaced-lined-comment/package.json",
         "node_modules/esformatter-var-each/node_modules/rocambole/node_modules/esprima/package.json",
         "node_modules/esformatter-var-each/node_modules/rocambole/package.json",
         "node_modules/esformatter-var-each/node_modules/rocambole-token/package.json",
@@ -2095,8 +2142,6 @@
         "node_modules/esformatter-wordpress/node_modules/esformatter-jquery-chain/node_modules/rocambole-indent/node_modules/debug/package.json",
         "node_modules/esformatter-wordpress/node_modules/esformatter-jquery-chain/node_modules/rocambole-indent/package.json",
         "node_modules/esformatter-wordpress/node_modules/esformatter-jquery-chain/package.json",
-        "node_modules/esformatter-wordpress/node_modules/esformatter-quote-props/node_modules/unquoted-property-validator/package.json",
-        "node_modules/esformatter-wordpress/node_modules/esformatter-quote-props/package.json",
         "node_modules/esformatter-wordpress/node_modules/esformatter-remove-trailing-commas/package.json",
         "node_modules/esformatter-wordpress/node_modules/esformatter-special-bangs/package.json",
         "node_modules/esformatter-wordpress/node_modules/mout/package.json",
@@ -2121,14 +2166,17 @@
         ],
         "dependencies": {
           "esformatter": "^0.7.0",
+          "esformatter-add-trailing-commas": "^1.1.0",
           "esformatter-braces": "^1.0.0",
           "esformatter-collapse-objects": "^0.4.1",
           "esformatter-dot-notation": "^1.1.0",
           "esformatter-jsx": "^2.0.10",
           "esformatter-literal-notation": "^1.0.0",
           "esformatter-parseint": "^1.0.1",
+          "esformatter-quote-props": "^1.0.2",
           "esformatter-quotes": "^1.0.0",
           "esformatter-semicolons": "^1.0.3",
+          "esformatter-spaced-lined-comment": "^2.0.1",
           "esformatter-var-each": "^2.0.1",
           "esformatter-wordpress": "^0.2.0"
         }
@@ -2287,7 +2335,7 @@
           "node_modules/esformatter/node_modules/rocambole/test"
         ],
         "dependencies": {
-          "esprima": "^2.0"
+          "esprima": "^2.1"
         }
       },
       {
@@ -2351,6 +2399,25 @@
         ],
         "dependencies": {
           "os-homedir": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/esformatter-add-trailing-commas"
+        ],
+        "dependencies": {
+          "rocambole": "^0.7.0",
+          "rocambole-token": "^1.2.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/esformatter-add-trailing-commas/node_modules/rocambole",
+          "node_modules/esformatter-add-trailing-commas/node_modules/rocambole/test/files",
+          "node_modules/esformatter-add-trailing-commas/node_modules/rocambole/test"
+        ],
+        "dependencies": {
+          "esprima": "^2.1"
         }
       },
       {
@@ -2555,6 +2622,14 @@
       },
       {
         "paths": [
+          "node_modules/esformatter-quote-props"
+        ],
+        "dependencies": {
+          "unquoted-property-validator": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
           "node_modules/esformatter-var-each",
           "node_modules/esformatter-var-each/docs",
           "node_modules/esformatter-var-each/lib",
@@ -2635,14 +2710,6 @@
         ],
         "dependencies": {
           "ms": "0.7.1"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/esformatter-wordpress/node_modules/esformatter-quote-props"
-        ],
-        "dependencies": {
-          "unquoted-property-validator": "^1.0.0"
         }
       },
       {

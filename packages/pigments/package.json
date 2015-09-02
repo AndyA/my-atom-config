@@ -1,7 +1,7 @@
 {
   "name": "pigments",
   "main": "./lib/pigments",
-  "version": "0.13.0",
+  "version": "0.13.2",
   "description": "A package to display colors in project and files.",
   "keywords": [
     "colors",
@@ -50,10 +50,10 @@
     "url": "https://github.com/abe33/atom-pigments/issues"
   },
   "homepage": "https://github.com/abe33/atom-pigments#readme",
-  "_id": "pigments@0.13.0",
-  "_shasum": "a47ad2c4b87c85c4d38945c5042aa577664b3303",
-  "_resolved": "file:../d-115731-72923-10rk4n2/package.tgz",
-  "_from": "../d-115731-72923-10rk4n2/package.tgz",
+  "_id": "pigments@0.13.2",
+  "_shasum": "b1111607f5207f3e51f4dd245317802aee375615",
+  "_resolved": "file:../d-11582-22637-1p0mdpq/package.tgz",
+  "_from": "../d-11582-22637-1p0mdpq/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -285,6 +285,7 @@
         "lib/tasks/scan-buffer-colors-handler.coffee",
         "lib/tasks/scan-buffer-variables-handler.coffee",
         "lib/tasks/scan-paths-handler.coffee",
+        "lib/uris.coffee",
         "lib/utils.coffee",
         "lib/variable-expression.coffee",
         "lib/variable-expressions.coffee",

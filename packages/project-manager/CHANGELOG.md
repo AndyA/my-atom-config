@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.2.1
+Fixed bug where the list view would sort projects wrong if there were to many
+
+## 2.2.0
+Added back the menu under Packages
+
+## 2.1.0
+Renamed `Project Manager: Toggle` to `Project Manager: List Projects` to make it clearer what it does.
+
 ## 2.0.1
 Fixed an issue where the projects file would be added to late.
 
