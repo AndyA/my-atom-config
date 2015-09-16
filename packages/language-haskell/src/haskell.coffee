@@ -73,7 +73,7 @@ haskellGrammar =
       ///
     ctor: concat /\b({className})\s+/,
       listMaybe('ctorArgs',/{ctorArgs}/,/\s+/)
-    typeDecl: /.+?/
+    typeDecl: /(?:(?:{className}|{functionName})\s*)*?(?:(?!=where)(?:{className}|{functionName}))/
     indentChar: /[ \t]/
     indentBlockEnd: /^(?!\1{indentChar}|{indentChar}*$)/
     maybeBirdTrack: /^/
@@ -322,6 +322,15 @@ haskellGrammar =
       ###
     ,
       include: '#pragma'
+    ,
+      name: 'string.quoted.double.haskell'
+      match: /(")[^"]*(")/
+      captures:
+        0: patterns: [
+            include: '#characters'
+        ]
+        1: name: 'punctuation.definition.string.begin.haskell'
+        2: name: 'punctuation.definition.string.end.haskell'
     ,
       name: 'string.quoted.double.haskell'
       begin: /"/
