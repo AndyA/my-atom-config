@@ -1,6 +1,6 @@
 {
   "name": "language-haskell",
-  "version": "1.4.4",
+  "version": "1.4.6",
   "description": "Haskell language support in Atom",
   "repository": {
     "type": "git",
@@ -23,10 +23,10 @@
     "url": "https://github.com/atom-haskell/language-haskell/issues"
   },
   "homepage": "https://github.com/atom-haskell/language-haskell#readme",
-  "_id": "language-haskell@1.4.4",
-  "_shasum": "07be36436252d5cf73da738546ca8d59ee15bb73",
-  "_resolved": "file:../d-115815-33891-1nuvz10/package.tgz",
-  "_from": "../d-115815-33891-1nuvz10/package.tgz",
+  "_id": "language-haskell@1.4.6",
+  "_shasum": "d206eac499ddb4a25280db965a29b0ce1cc6f34f",
+  "_resolved": "file:../d-115823-81917-10q4oqp/package.tgz",
+  "_from": "../d-115823-81917-10q4oqp/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [

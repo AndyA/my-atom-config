@@ -12,6 +12,11 @@ Serializable = require 'serializable'
 Path = require 'path'
 osenv = require 'osenv'
 _ = require 'underscore-plus'
+try
+  keytar = require 'keytar'
+catch err
+  console.debug 'Keytar could not be loaded! Passwords will be stored in cleartext to remoteEdit.json!'
+  keytar = undefined
 
 module.exports =
   class SftpHost extends Host
@@ -43,21 +48,19 @@ module.exports =
       connectionString
 
     getConnectionStringUsingKey: ->
-      return {
-        host: @hostname,
-        port: @port,
-        username: @username,
-        privateKey: @getPrivateKey(@privateKeyPath),
-        passphrase: @passphrase
-      }
+      if atom.config.get('remote-edit.storePasswordsUsingKeytar') and (keytar?)
+        keytarPassphrase = keytar.getPassword(@getServiceNamePassphrase(), @getServiceAccount())
+        {host: @hostname, port: @port, username: @username, privateKey: @getPrivateKey(@privateKeyPath), passphrase: keytarPassphrase}
+      else
+        {host: @hostname, port: @port, username: @username, privateKey: @getPrivateKey(@privateKeyPath), passphrase: @passphrase}
+
 
     getConnectionStringUsingPassword: ->
-      return {
-        host: @hostname,
-        port: @port,
-        username: @username,
-        password: @password
-      }
+      if atom.config.get('remote-edit.storePasswordsUsingKeytar') and (keytar?)
+        keytarPassword = keytar.getPassword(@getServiceNamePassword(), @getServiceAccount())
+        {host: @hostname, port: @port, username: @username, password: keytarPassword}
+      else
+        {host: @hostname, port: @port, username: @username, password: @password}
 
     getPrivateKey: (path) ->
       if path[0] == "~"
@@ -72,6 +75,11 @@ module.exports =
       remoteFile = new RemoteFile(Path.normalize("#{path}/#{file.filename}").split(Path.sep).join('/'), (file.longname[0] == '-'), (file.longname[0] == 'd'), (file.longname[0] == 'l'), filesize(file.attrs.size).human(), parseInt(file.attrs.mode, 10).toString(8).substr(2, 4), moment(file.attrs.mtime * 1000).format("HH:mm:ss DD/MM/YYYY"))
       return remoteFile
 
+    getServiceNamePassword: ->
+      "atom.remote-edit.ssh.password"
+
+    getServiceNamePassphrase: ->
+      "atom.remote-edit.ssh.passphrase"
 
     ####################
     # Overridden methods
