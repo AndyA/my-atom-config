@@ -1,4 +1,4 @@
-'use babel';
+/** @babel */
 import esformatter from 'esformatter';
 
 const SUPPORTED_SCOPES = [
@@ -41,14 +41,14 @@ function init(editor, onSave) {
 	}
 }
 
-export let config = {
+export const config = {
 	formatOnSave: {
 		type: 'boolean',
 		default: false
 	}
 };
 
-export let activate = () => {
+export const activate = () => {
 	atom.workspace.observeTextEditors(editor => {
 		editor.getBuffer().onWillSave(() => {
 			const isJS = SUPPORTED_SCOPES.indexOf(editor.getGrammar().scopeName) !== -1;
