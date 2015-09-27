@@ -1,7 +1,8 @@
 .node-gyp
 .npm
 /nohup.out
-projects.cson
+build/
 compile-cache
 dev
+projects.cson
 storage
