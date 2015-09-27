@@ -47,6 +47,7 @@
   "autocomplete-plus":
     maxVisibleSuggestions: 30
   pigments: {}
+  "merge-conflicts": {}
 ".perl.source":
   editor:
     nonWordCharacters: "/\\()\"',.;<>~!#^&*|+=[]{}`?-"
