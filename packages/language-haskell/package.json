@@ -1,12 +1,13 @@
 {
   "name": "language-haskell",
-  "version": "1.4.8",
+  "version": "1.4.11",
   "description": "Haskell language support in Atom",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/atom-haskell/language-haskell.git"
   },
   "license": "MIT",
+  "main": "src/main.coffee",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
   },
@@ -23,10 +24,10 @@
     "url": "https://github.com/atom-haskell/language-haskell/issues"
   },
   "homepage": "https://github.com/atom-haskell/language-haskell#readme",
-  "_id": "language-haskell@1.4.8",
-  "_shasum": "c4550d0460ba128d138f1a9c748a30963b97c939",
-  "_resolved": "file:../d-115827-23763-gluz22/package.tgz",
-  "_from": "../d-115827-23763-gluz22/package.tgz",
+  "_id": "language-haskell@1.4.11",
+  "_shasum": "f91add83b7a07ec23db4255258b67614859873f1",
+  "_resolved": "file:../d-115913-6814-x8fqzl/package.tgz",
+  "_from": "../d-115913-6814-x8fqzl/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -361,6 +362,7 @@
         "node_modules/season/node_modules/cson-safe/node_modules/coffee-script-redux/node_modules/cscodegen/src/cscodegen.coffee",
         "node_modules/season/node_modules/cson-safe/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/escope/gulpfile.coffee",
         "src/haskell.coffee",
+        "src/main.coffee",
         "src/syntax-tools.coffee"
       ]
     },
@@ -368,6 +370,7 @@
       {
         "paths": [
           "",
+          "spec",
           "src"
         ],
         "dependencies": {
