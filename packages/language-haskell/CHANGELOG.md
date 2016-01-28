@@ -1,3 +1,15 @@
+## 1.5.2
+* Don't confuse timecop
+
+## 1.5.1
+* Support multiline module export ctors (#60)
+
+## 1.5.0
+* Haskell Autocompletion Hint grammar
+
+## 1.4.12
+* Fix #58 (escaped quotes in multiline strings)
+
 ## 1.4.11
 * Fix where anchoring in typeDecl and GADT
 

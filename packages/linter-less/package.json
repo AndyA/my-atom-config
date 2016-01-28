@@ -1,22 +1,22 @@
 {
   "name": "linter-less",
   "main": "./lib/init",
-  "version": "2.2.0",
+  "version": "2.3.3",
   "description": "Lint `less` on the fly, using less",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AtomLinter/linter-less.git"
+    "url": "git+https://github.com/josa42/atom-linter-less.git"
   },
   "license": "MIT",
   "scripts": {
-    "lint": "coffeelint lib"
+    "lint": "eslint lib"
   },
   "engines": {
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "atom-package-deps": "^2.1.3",
-    "less": "^2.5.1"
+    "atom-package-deps": "^3.0.2",
+    "less": "^2.5.3"
   },
   "package-deps": [
     "linter"
@@ -28,23 +28,32 @@
       }
     }
   },
-  "readme": "# linter-less\n\n[![Build Status](https://img.shields.io/travis/AtomLinter/linter-less.svg?style=flat-square)](https://travis-ci.org/AtomLinter/linter-less)\n[![Plugin installs!](https://img.shields.io/apm/dm/linter-less.svg?style=flat-square)](https://atom.io/packages/linter-less)\n[![Package version!](https://img.shields.io/apm/v/linter-less.svg?style=flat-square)](https://atom.io/packages/linter-less)\n[![Dependencies!](https://img.shields.io/david/AtomLinter/linter-less.svg?style=flat-square)](https://david-dm.org/AtomLinter/linter-less)\n\n\nThis linter plugin for [Linter](https://github.com/AtomLinter/Linter) provides an interface to [less](http://lesscss.org).\n\n## Configuration\n\n* **Ignore undefined variables**\n* **IE Compatibility Checks**\n* **Strict Math:** Turn on or off strict math, where in strict mode, math requires brackets.\n* **Strict Units:** Allow mixed units, e.g. 1px+1em or 1px*1px which have units that cannot be represented.\n\nSee also: [lesscss.org](http://lesscss.org/usage/#command-line-usage).\n",
+  "devDependencies": {
+    "babel-eslint": "^4.1.5",
+    "eslint": "^1.10.3"
+  },
+  "readme": "# linter-less\n\n[![Build Status](https://img.shields.io/travis/josa42/linter-less.svg?style=flat-square)](https://travis-ci.org/josa42/linter-less)\n[![Plugin installs!](https://img.shields.io/apm/dm/linter-less.svg?style=flat-square)](https://atom.io/packages/linter-less)\n[![Package version!](https://img.shields.io/apm/v/linter-less.svg?style=flat-square)](https://atom.io/packages/linter-less)\n[![Dependencies!](https://img.shields.io/david/josa42/linter-less.svg?style=flat-square)](https://david-dm.org/josa42/linter-less)\n\n\nThis linter plugin for [Linter](https://github.com/atom-community/linter) provides an interface to [less](http://lesscss.org).\n\n## Configuration\n\n* **Ignore undefined variables**\n* **IE Compatibility Checks**\n* **Strict Math:** Turn on or off strict math, where in strict mode, math requires brackets.\n* **Strict Units:** Allow mixed units, e.g. 1px+1em or 1px*1px which have units that cannot be represented.\n\nSee also: [lesscss.org](http://lesscss.org/usage/#command-line-usage).\n",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/AtomLinter/linter-less/issues"
+    "url": "https://github.com/josa42/atom-linter-less/issues"
   },
-  "homepage": "https://github.com/AtomLinter/linter-less#readme",
-  "_id": "linter-less@2.2.0",
-  "_shasum": "a104804ac28087d4b84c5da2569f792a36490ae8",
-  "_resolved": "file:../d-115913-6834-wt8cyx/package.tgz",
-  "_from": "../d-115913-6834-wt8cyx/package.tgz",
+  "homepage": "https://github.com/josa42/atom-linter-less#readme",
+  "_id": "linter-less@2.3.3",
+  "_shasum": "9685bb9b5eacf1403598d5b1b5655df34c86ee95",
+  "_resolved": "file:../d-116028-8091-blsol9/package.tgz",
+  "_from": "../d-116028-8091-blsol9/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
       {
         "name": "atom-package-deps",
-        "version": "2.1.3",
+        "version": "3.0.7",
         "path": "node_modules/atom-package-deps/lib/main.js"
+      },
+      {
+        "name": "sb-callsite",
+        "version": "1.1.2",
+        "path": "node_modules/atom-package-deps/node_modules/sb-callsite/lib/main.js"
       },
       {
         "name": "less",
@@ -98,7 +107,7 @@
       },
       {
         "name": "request",
-        "version": "2.65.0",
+        "version": "2.69.0",
         "path": "node_modules/less/node_modules/request/index.js"
       },
       {
@@ -107,18 +116,28 @@
         "path": "node_modules/less/node_modules/request/node_modules/aws-sign2/index.js"
       },
       {
+        "name": "aws4",
+        "version": "1.2.1",
+        "path": "node_modules/less/node_modules/request/node_modules/aws4/aws4.js"
+      },
+      {
+        "name": "lru-cache",
+        "version": "2.7.3",
+        "path": "node_modules/less/node_modules/request/node_modules/aws4/node_modules/lru-cache/lib/lru-cache.js"
+      },
+      {
         "name": "bl",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "path": "node_modules/less/node_modules/request/node_modules/bl/bl.js"
       },
       {
         "name": "readable-stream",
-        "version": "2.0.2",
+        "version": "2.0.5",
         "path": "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/readable.js"
       },
       {
         "name": "core-util-is",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "path": "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/lib/util.js"
       },
       {
@@ -133,7 +152,7 @@
       },
       {
         "name": "process-nextick-args",
-        "version": "1.0.3",
+        "version": "1.0.6",
         "path": "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/process-nextick-args/index.js"
       },
       {
@@ -178,12 +197,12 @@
       },
       {
         "name": "async",
-        "version": "1.4.2",
+        "version": "1.5.2",
         "path": "node_modules/less/node_modules/request/node_modules/form-data/node_modules/async/lib/async.js"
       },
       {
         "name": "har-validator",
-        "version": "2.0.2",
+        "version": "2.0.6",
         "path": "node_modules/less/node_modules/request/node_modules/har-validator/lib/index.js"
       },
       {
@@ -198,7 +217,7 @@
       },
       {
         "name": "escape-string-regexp",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "path": "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/escape-string-regexp/index.js"
       },
       {
@@ -228,7 +247,7 @@
       },
       {
         "name": "commander",
-        "version": "2.8.1",
+        "version": "2.9.0",
         "path": "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/commander/index.js"
       },
       {
@@ -238,7 +257,7 @@
       },
       {
         "name": "is-my-json-valid",
-        "version": "2.12.2",
+        "version": "2.12.4",
         "path": "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/index.js"
       },
       {
@@ -263,27 +282,27 @@
       },
       {
         "name": "xtend",
-        "version": "4.0.0",
+        "version": "4.0.1",
         "path": "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/immutable.js"
       },
       {
         "name": "pinkie-promise",
-        "version": "1.0.0",
+        "version": "2.0.0",
         "path": "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise/index.js"
       },
       {
         "name": "pinkie",
-        "version": "1.0.0",
+        "version": "2.0.1",
         "path": "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise/node_modules/pinkie/index.js"
       },
       {
         "name": "hawk",
-        "version": "3.1.0",
+        "version": "3.1.3",
         "path": "node_modules/less/node_modules/request/node_modules/hawk/lib/index.js"
       },
       {
         "name": "boom",
-        "version": "2.9.0",
+        "version": "2.10.1",
         "path": "node_modules/less/node_modules/request/node_modules/hawk/node_modules/boom/lib/index.js"
       },
       {
@@ -303,23 +322,73 @@
       },
       {
         "name": "http-signature",
-        "version": "0.11.0",
+        "version": "1.1.1",
         "path": "node_modules/less/node_modules/request/node_modules/http-signature/lib/index.js"
       },
       {
-        "name": "asn1",
-        "version": "0.1.11",
-        "path": "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/index.js"
-      },
-      {
         "name": "assert-plus",
-        "version": "0.1.5",
+        "version": "0.2.0",
         "path": "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/assert-plus/assert.js"
       },
       {
-        "name": "ctype",
-        "version": "0.5.3",
-        "path": "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/ctype/ctype.js"
+        "name": "jsprim",
+        "version": "1.2.2",
+        "path": "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/lib/jsprim.js"
+      },
+      {
+        "name": "extsprintf",
+        "version": "1.0.2",
+        "path": "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/extsprintf/lib/extsprintf.js"
+      },
+      {
+        "name": "json-schema",
+        "version": "0.2.2",
+        "path": "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/json-schema/lib/validate.js"
+      },
+      {
+        "name": "verror",
+        "version": "1.3.6",
+        "path": "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/verror/lib/verror.js"
+      },
+      {
+        "name": "sshpk",
+        "version": "1.7.3",
+        "path": "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/index.js"
+      },
+      {
+        "name": "asn1",
+        "version": "0.2.3",
+        "path": "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/lib/index.js"
+      },
+      {
+        "name": "dashdash",
+        "version": "1.12.2",
+        "path": "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/lib/dashdash.js"
+      },
+      {
+        "name": "ecc-jsbn",
+        "version": "0.1.1",
+        "path": "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/ecc-jsbn/index.js"
+      },
+      {
+        "name": "jodid25519",
+        "version": "1.0.2",
+        "path": "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jodid25519/index.js"
+      },
+      {
+        "name": "jsbn",
+        "version": "0.1.0",
+        "path": "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jsbn/index.js"
+      },
+      {
+        "name": "tweetnacl",
+        "version": "0.13.3",
+        "path": "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/tweetnacl/nacl-fast.js"
+      },
+      {
+        "name": "is-typedarray",
+        "version": "1.0.0",
+        "path": "node_modules/less/node_modules/request/node_modules/is-typedarray/index.js"
       },
       {
         "name": "isstream",
@@ -333,17 +402,17 @@
       },
       {
         "name": "mime-types",
-        "version": "2.1.7",
+        "version": "2.1.9",
         "path": "node_modules/less/node_modules/request/node_modules/mime-types/index.js"
       },
       {
         "name": "mime-db",
-        "version": "1.19.0",
+        "version": "1.21.0",
         "path": "node_modules/less/node_modules/request/node_modules/mime-types/node_modules/mime-db/index.js"
       },
       {
         "name": "node-uuid",
-        "version": "1.4.3",
+        "version": "1.4.7",
         "path": "node_modules/less/node_modules/request/node_modules/node-uuid/uuid.js"
       },
       {
@@ -353,22 +422,22 @@
       },
       {
         "name": "qs",
-        "version": "5.2.0",
+        "version": "6.0.2",
         "path": "node_modules/less/node_modules/request/node_modules/qs/lib/index.js"
       },
       {
         "name": "stringstream",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "path": "node_modules/less/node_modules/request/node_modules/stringstream/stringstream.js"
       },
       {
         "name": "tough-cookie",
-        "version": "2.2.0",
+        "version": "2.2.1",
         "path": "node_modules/less/node_modules/request/node_modules/tough-cookie/lib/cookie.js"
       },
       {
         "name": "tunnel-agent",
-        "version": "0.4.1",
+        "version": "0.4.2",
         "path": "node_modules/less/node_modules/request/node_modules/tunnel-agent/index.js"
       },
       {
@@ -383,113 +452,13 @@
       }
     ],
     "extensions": {
-      ".json": [
-        "coffeelint.json",
-        "node_modules/atom-package-deps/package.json",
-        "node_modules/less/bower.json",
-        "node_modules/less/node_modules/errno/node_modules/prr/package.json",
-        "node_modules/less/node_modules/errno/package.json",
-        "node_modules/less/node_modules/graceful-fs/package.json",
-        "node_modules/less/node_modules/image-size/package.json",
-        "node_modules/less/node_modules/mime/package.json",
-        "node_modules/less/node_modules/mime/types.json",
-        "node_modules/less/node_modules/mkdirp/node_modules/minimist/package.json",
-        "node_modules/less/node_modules/mkdirp/package.json",
-        "node_modules/less/node_modules/promise/node_modules/asap/package.json",
-        "node_modules/less/node_modules/promise/package.json",
-        "node_modules/less/node_modules/request/node_modules/aws-sign2/package.json",
-        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/package.json",
-        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/package.json",
-        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/component.json",
-        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/package.json",
-        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/process-nextick-args/package.json",
-        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/string_decoder/package.json",
-        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/util-deprecate/package.json",
-        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/package.json",
-        "node_modules/less/node_modules/request/node_modules/bl/package.json",
-        "node_modules/less/node_modules/request/node_modules/caseless/package.json",
-        "node_modules/less/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/package.json",
-        "node_modules/less/node_modules/request/node_modules/combined-stream/package.json",
-        "node_modules/less/node_modules/request/node_modules/extend/.jscs.json",
-        "node_modules/less/node_modules/request/node_modules/extend/component.json",
-        "node_modules/less/node_modules/request/node_modules/extend/package.json",
-        "node_modules/less/node_modules/request/node_modules/forever-agent/package.json",
-        "node_modules/less/node_modules/request/node_modules/form-data/node_modules/async/package.json",
-        "node_modules/less/node_modules/request/node_modules/form-data/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/cache.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/cacheEntry.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/content.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/cookie.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/creator.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/entry.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/har.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/log.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/page.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/pageTimings.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/postData.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/record.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/request.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/response.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/timings.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/ansi-styles/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/escape-string-regexp/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/has-ansi/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/strip-ansi/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/supports-color/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/commander/node_modules/graceful-readlink/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/commander/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-function/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-object-property/node_modules/is-property/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-object-property/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise/node_modules/pinkie/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise/package.json",
-        "node_modules/less/node_modules/request/node_modules/har-validator/package.json",
-        "node_modules/less/node_modules/request/node_modules/hawk/bower.json",
-        "node_modules/less/node_modules/request/node_modules/hawk/component.json",
-        "node_modules/less/node_modules/request/node_modules/hawk/node_modules/boom/package.json",
-        "node_modules/less/node_modules/request/node_modules/hawk/node_modules/cryptiles/package.json",
-        "node_modules/less/node_modules/request/node_modules/hawk/node_modules/hoek/package.json",
-        "node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/package.json",
-        "node_modules/less/node_modules/request/node_modules/hawk/package.json",
-        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/asn1/package.json",
-        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/assert-plus/package.json",
-        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/ctype/package.json",
-        "node_modules/less/node_modules/request/node_modules/http-signature/package.json",
-        "node_modules/less/node_modules/request/node_modules/isstream/package.json",
-        "node_modules/less/node_modules/request/node_modules/json-stringify-safe/package.json",
-        "node_modules/less/node_modules/request/node_modules/mime-types/node_modules/mime-db/db.json",
-        "node_modules/less/node_modules/request/node_modules/mime-types/node_modules/mime-db/package.json",
-        "node_modules/less/node_modules/request/node_modules/mime-types/package.json",
-        "node_modules/less/node_modules/request/node_modules/node-uuid/bower.json",
-        "node_modules/less/node_modules/request/node_modules/node-uuid/component.json",
-        "node_modules/less/node_modules/request/node_modules/node-uuid/package.json",
-        "node_modules/less/node_modules/request/node_modules/oauth-sign/package.json",
-        "node_modules/less/node_modules/request/node_modules/qs/bower.json",
-        "node_modules/less/node_modules/request/node_modules/qs/component.json",
-        "node_modules/less/node_modules/request/node_modules/qs/package.json",
-        "node_modules/less/node_modules/request/node_modules/stringstream/package.json",
-        "node_modules/less/node_modules/request/node_modules/tough-cookie/package.json",
-        "node_modules/less/node_modules/request/node_modules/tunnel-agent/package.json",
-        "node_modules/less/node_modules/request/package.json",
-        "node_modules/less/node_modules/source-map/node_modules/amdefine/package.json",
-        "node_modules/less/node_modules/source-map/package.json",
-        "node_modules/less/package.json",
-        "package.json"
-      ],
-      ".coffee": [
-        "lib/init.coffee",
-        "lib/linter-less-provider.coffee"
-      ],
       ".js": [
-        "node_modules/atom-package-deps/lib/helper.js",
+        "lib/init.js",
+        "lib/linter-less-provider.js",
+        "node_modules/atom-package-deps/lib/helpers.js",
         "node_modules/atom-package-deps/lib/main.js",
         "node_modules/atom-package-deps/lib/view.js",
+        "node_modules/atom-package-deps/node_modules/sb-callsite/lib/main.js",
         "node_modules/less/Gruntfile.js",
         "node_modules/less/browser.js",
         "node_modules/less/dist/less-rolledup.js",
@@ -651,6 +620,9 @@
         "node_modules/less/node_modules/request/lib/redirect.js",
         "node_modules/less/node_modules/request/lib/tunnel.js",
         "node_modules/less/node_modules/request/node_modules/aws-sign2/index.js",
+        "node_modules/less/node_modules/request/node_modules/aws4/aws4.js",
+        "node_modules/less/node_modules/request/node_modules/aws4/example.js",
+        "node_modules/less/node_modules/request/node_modules/aws4/node_modules/lru-cache/lib/lru-cache.js",
         "node_modules/less/node_modules/request/node_modules/bl/bl.js",
         "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/duplex.js",
         "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_duplex.js",
@@ -659,7 +631,7 @@
         "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_transform.js",
         "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_writable.js",
         "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/lib/util.js",
-        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/util.js",
+        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/test.js",
         "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/inherits.js",
         "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/inherits_browser.js",
         "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/test.js",
@@ -682,6 +654,8 @@
         "node_modules/less/node_modules/request/node_modules/forever-agent/index.js",
         "node_modules/less/node_modules/request/node_modules/form-data/lib/browser.js",
         "node_modules/less/node_modules/request/node_modules/form-data/lib/form_data.js",
+        "node_modules/less/node_modules/request/node_modules/form-data/node_modules/async/dist/async.js",
+        "node_modules/less/node_modules/request/node_modules/form-data/node_modules/async/dist/async.min.js",
         "node_modules/less/node_modules/request/node_modules/form-data/node_modules/async/lib/async.js",
         "node_modules/less/node_modules/request/node_modules/har-validator/lib/async.js",
         "node_modules/less/node_modules/request/node_modules/har-validator/lib/error.js",
@@ -715,6 +689,7 @@
         "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/require.js",
         "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise/index.js",
         "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise/node_modules/pinkie/index.js",
+        "node_modules/less/node_modules/request/node_modules/hawk/dist/client.js",
         "node_modules/less/node_modules/request/node_modules/hawk/example/usage.js",
         "node_modules/less/node_modules/request/node_modules/hawk/lib/browser.js",
         "node_modules/less/node_modules/request/node_modules/hawk/lib/client.js",
@@ -733,20 +708,65 @@
         "node_modules/less/node_modules/request/node_modules/http-signature/lib/index.js",
         "node_modules/less/node_modules/request/node_modules/http-signature/lib/parser.js",
         "node_modules/less/node_modules/request/node_modules/http-signature/lib/signer.js",
-        "node_modules/less/node_modules/request/node_modules/http-signature/lib/util.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/lib/utils.js",
         "node_modules/less/node_modules/request/node_modules/http-signature/lib/verify.js",
-        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/ber/errors.js",
-        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/ber/index.js",
-        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/ber/reader.js",
-        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/ber/types.js",
-        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/ber/writer.js",
-        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/index.js",
-        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/asn1/tst/ber/reader.test.js",
-        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/asn1/tst/ber/writer.test.js",
         "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/assert-plus/assert.js",
-        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/ctype/ctf.js",
-        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/ctype/ctio.js",
-        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/ctype/ctype.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/lib/jsprim.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/extsprintf/examples/simple.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/extsprintf/lib/extsprintf.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/json-schema/lib/links.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/json-schema/lib/validate.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/verror/examples/levels-verror.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/verror/examples/levels-werror.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/verror/examples/varargs.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/verror/examples/verror.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/verror/examples/werror.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/verror/lib/verror.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/algs.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/dhe.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/ed-compat.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/errors.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/fingerprint.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/formats/auto.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/formats/pem.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/formats/pkcs1.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/formats/pkcs8.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/formats/rfc4253.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/formats/ssh-private.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/formats/ssh.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/index.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/key.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/private-key.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/signature.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/ssh-buffer.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/utils.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/lib/ber/errors.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/lib/ber/index.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/lib/ber/reader.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/lib/ber/types.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/lib/ber/writer.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/lib/index.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/tst/ber/reader.test.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/tst/ber/writer.test.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/lib/dashdash.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/ecc-jsbn/index.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/ecc-jsbn/lib/ec.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/ecc-jsbn/lib/sec.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/ecc-jsbn/test.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jodid25519/index.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jodid25519/lib/core.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jodid25519/lib/curve255.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jodid25519/lib/dh.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jodid25519/lib/eddsa.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jodid25519/lib/utils.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jsbn/example.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jsbn/index.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/tweetnacl/nacl-fast.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/tweetnacl/nacl-fast.min.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/tweetnacl/nacl.js",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/tweetnacl/nacl.min.js",
+        "node_modules/less/node_modules/request/node_modules/is-typedarray/index.js",
+        "node_modules/less/node_modules/request/node_modules/is-typedarray/test.js",
         "node_modules/less/node_modules/request/node_modules/isstream/isstream.js",
         "node_modules/less/node_modules/request/node_modules/isstream/test.js",
         "node_modules/less/node_modules/request/node_modules/json-stringify-safe/stringify.js",
@@ -789,18 +809,139 @@
         "node_modules/less/node_modules/source-map/lib/source-map.js",
         "node_modules/less/node_modules/source-map/node_modules/amdefine/amdefine.js",
         "node_modules/less/node_modules/source-map/node_modules/amdefine/intercept.js"
+      ],
+      ".json": [
+        "node_modules/atom-package-deps/node_modules/sb-callsite/package.json",
+        "node_modules/atom-package-deps/package.json",
+        "node_modules/less/bower.json",
+        "node_modules/less/node_modules/errno/node_modules/prr/package.json",
+        "node_modules/less/node_modules/errno/package.json",
+        "node_modules/less/node_modules/graceful-fs/package.json",
+        "node_modules/less/node_modules/image-size/package.json",
+        "node_modules/less/node_modules/mime/package.json",
+        "node_modules/less/node_modules/mime/types.json",
+        "node_modules/less/node_modules/mkdirp/node_modules/minimist/package.json",
+        "node_modules/less/node_modules/mkdirp/package.json",
+        "node_modules/less/node_modules/promise/node_modules/asap/package.json",
+        "node_modules/less/node_modules/promise/package.json",
+        "node_modules/less/node_modules/request/node_modules/aws-sign2/package.json",
+        "node_modules/less/node_modules/request/node_modules/aws4/node_modules/lru-cache/package.json",
+        "node_modules/less/node_modules/request/node_modules/aws4/package.json",
+        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/package.json",
+        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/package.json",
+        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/component.json",
+        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/package.json",
+        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/process-nextick-args/package.json",
+        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/string_decoder/package.json",
+        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/util-deprecate/package.json",
+        "node_modules/less/node_modules/request/node_modules/bl/node_modules/readable-stream/package.json",
+        "node_modules/less/node_modules/request/node_modules/bl/package.json",
+        "node_modules/less/node_modules/request/node_modules/caseless/package.json",
+        "node_modules/less/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/package.json",
+        "node_modules/less/node_modules/request/node_modules/combined-stream/package.json",
+        "node_modules/less/node_modules/request/node_modules/extend/.jscs.json",
+        "node_modules/less/node_modules/request/node_modules/extend/component.json",
+        "node_modules/less/node_modules/request/node_modules/extend/package.json",
+        "node_modules/less/node_modules/request/node_modules/forever-agent/package.json",
+        "node_modules/less/node_modules/request/node_modules/form-data/node_modules/async/package.json",
+        "node_modules/less/node_modules/request/node_modules/form-data/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/cache.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/cacheEntry.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/content.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/cookie.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/creator.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/entry.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/har.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/log.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/page.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/pageTimings.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/postData.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/record.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/request.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/response.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/lib/schemas/timings.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/ansi-styles/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/escape-string-regexp/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/has-ansi/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/strip-ansi/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/supports-color/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/chalk/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/commander/node_modules/graceful-readlink/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/commander/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-function/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-object-property/node_modules/is-property/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-object-property/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise/node_modules/pinkie/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise/package.json",
+        "node_modules/less/node_modules/request/node_modules/har-validator/package.json",
+        "node_modules/less/node_modules/request/node_modules/hawk/bower.json",
+        "node_modules/less/node_modules/request/node_modules/hawk/component.json",
+        "node_modules/less/node_modules/request/node_modules/hawk/node_modules/boom/package.json",
+        "node_modules/less/node_modules/request/node_modules/hawk/node_modules/cryptiles/package.json",
+        "node_modules/less/node_modules/request/node_modules/hawk/node_modules/hoek/package.json",
+        "node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/package.json",
+        "node_modules/less/node_modules/request/node_modules/hawk/package.json",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/assert-plus/package.json",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/extsprintf/package.json",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/json-schema/package.json",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/verror/package.json",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/package.json",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/package.json",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/package.json",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/ecc-jsbn/package.json",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jodid25519/jsdoc.json",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jodid25519/package.json",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jsbn/package.json",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/tweetnacl/package.json",
+        "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/package.json",
+        "node_modules/less/node_modules/request/node_modules/http-signature/package.json",
+        "node_modules/less/node_modules/request/node_modules/is-typedarray/package.json",
+        "node_modules/less/node_modules/request/node_modules/isstream/package.json",
+        "node_modules/less/node_modules/request/node_modules/json-stringify-safe/package.json",
+        "node_modules/less/node_modules/request/node_modules/mime-types/node_modules/mime-db/db.json",
+        "node_modules/less/node_modules/request/node_modules/mime-types/node_modules/mime-db/package.json",
+        "node_modules/less/node_modules/request/node_modules/mime-types/package.json",
+        "node_modules/less/node_modules/request/node_modules/node-uuid/bower.json",
+        "node_modules/less/node_modules/request/node_modules/node-uuid/component.json",
+        "node_modules/less/node_modules/request/node_modules/node-uuid/package.json",
+        "node_modules/less/node_modules/request/node_modules/oauth-sign/package.json",
+        "node_modules/less/node_modules/request/node_modules/qs/bower.json",
+        "node_modules/less/node_modules/request/node_modules/qs/component.json",
+        "node_modules/less/node_modules/request/node_modules/qs/package.json",
+        "node_modules/less/node_modules/request/node_modules/stringstream/package.json",
+        "node_modules/less/node_modules/request/node_modules/tough-cookie/package.json",
+        "node_modules/less/node_modules/request/node_modules/tunnel-agent/package.json",
+        "node_modules/less/node_modules/request/package.json",
+        "node_modules/less/node_modules/source-map/node_modules/amdefine/package.json",
+        "node_modules/less/node_modules/source-map/package.json",
+        "node_modules/less/package.json",
+        "package.json"
       ]
     },
     "folders": [
       {
         "paths": [
-          "",
           "lib",
+          "",
           "spec"
         ],
         "dependencies": {
-          "atom-package-deps": "^2.1.3",
-          "less": "^2.5.1"
+          "atom-package-deps": "^3.0.2",
+          "less": "^2.5.3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/atom-package-deps/lib",
+          "node_modules/atom-package-deps"
+        ],
+        "dependencies": {
+          "sb-callsite": "^1.0.0"
         }
       },
       {
@@ -881,25 +1022,35 @@
           "node_modules/less/node_modules/request/lib"
         ],
         "dependencies": {
+          "aws-sign2": "~0.6.0",
+          "aws4": "^1.2.1",
           "bl": "~1.0.0",
           "caseless": "~0.11.0",
+          "combined-stream": "~1.0.5",
           "extend": "~3.0.0",
           "forever-agent": "~0.6.1",
           "form-data": "~1.0.0-rc3",
+          "har-validator": "~2.0.6",
+          "hawk": "~3.1.0",
+          "http-signature": "~1.1.0",
+          "is-typedarray": "~1.0.0",
+          "isstream": "~0.1.2",
           "json-stringify-safe": "~5.0.1",
           "mime-types": "~2.1.7",
-          "node-uuid": "~1.4.3",
-          "qs": "~5.2.0",
-          "tunnel-agent": "~0.4.1",
-          "tough-cookie": "~2.2.0",
-          "http-signature": "~0.11.0",
+          "node-uuid": "~1.4.7",
           "oauth-sign": "~0.8.0",
-          "hawk": "~3.1.0",
-          "aws-sign2": "~0.6.0",
+          "qs": "~6.0.2",
           "stringstream": "~0.0.4",
-          "combined-stream": "~1.0.5",
-          "isstream": "~0.1.2",
-          "har-validator": "~2.0.2"
+          "tough-cookie": "~2.2.0",
+          "tunnel-agent": "~0.4.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/less/node_modules/request/node_modules/aws4"
+        ],
+        "dependencies": {
+          "lru-cache": "^2.6.5"
         }
       },
       {
@@ -908,7 +1059,7 @@
           "node_modules/less/node_modules/request/node_modules/bl/test"
         ],
         "dependencies": {
-          "readable-stream": "~2.0.0"
+          "readable-stream": "~2.0.5"
         }
       },
       {
@@ -920,7 +1071,7 @@
           "core-util-is": "~1.0.0",
           "inherits": "~2.0.1",
           "isarray": "0.0.1",
-          "process-nextick-args": "~1.0.0",
+          "process-nextick-args": "~1.0.6",
           "string_decoder": "~0.10.x",
           "util-deprecate": "~1.0.1"
         }
@@ -953,9 +1104,9 @@
         ],
         "dependencies": {
           "chalk": "^1.1.1",
-          "commander": "^2.8.1",
-          "is-my-json-valid": "^2.12.2",
-          "pinkie-promise": "^1.0.0"
+          "commander": "^2.9.0",
+          "is-my-json-valid": "^2.12.4",
+          "pinkie-promise": "^2.0.0"
         }
       },
       {
@@ -1021,19 +1172,20 @@
           "node_modules/less/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise"
         ],
         "dependencies": {
-          "pinkie": "^1.0.0"
+          "pinkie": "^2.0.0"
         }
       },
       {
         "paths": [
           "node_modules/less/node_modules/request/node_modules/hawk",
+          "node_modules/less/node_modules/request/node_modules/hawk/dist",
           "node_modules/less/node_modules/request/node_modules/hawk/example",
           "node_modules/less/node_modules/request/node_modules/hawk/lib",
           "node_modules/less/node_modules/request/node_modules/hawk/test"
         ],
         "dependencies": {
           "hoek": "2.x.x",
-          "boom": "^2.8.x",
+          "boom": "2.x.x",
           "cryptiles": "2.x.x",
           "sntp": "1.x.x"
         }
@@ -1075,9 +1227,74 @@
           "node_modules/less/node_modules/request/node_modules/http-signature"
         ],
         "dependencies": {
-          "assert-plus": "^0.1.5",
-          "asn1": "0.1.11",
-          "ctype": "0.5.3"
+          "assert-plus": "^0.2.0",
+          "jsprim": "^1.2.2",
+          "sshpk": "^1.7.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/lib",
+          "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim"
+        ],
+        "dependencies": {
+          "extsprintf": "1.0.2",
+          "json-schema": "0.2.2",
+          "verror": "1.3.6"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/verror/examples",
+          "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/verror/lib",
+          "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/verror",
+          "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/verror/tests"
+        ],
+        "dependencies": {
+          "extsprintf": "1.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib",
+          "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/lib/formats",
+          "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk"
+        ],
+        "dependencies": {
+          "asn1": ">=0.2.3 <0.3.0",
+          "assert-plus": ">=0.2.0 <0.3.0",
+          "dashdash": ">=1.10.1 <2.0.0",
+          "jsbn": ">=0.1.0 <0.2.0",
+          "tweetnacl": ">=0.13.0 <1.0.0",
+          "jodid25519": ">=1.0.0 <2.0.0",
+          "ecc-jsbn": ">=0.0.1 <1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/lib",
+          "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash"
+        ],
+        "dependencies": {
+          "assert-plus": "^0.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/ecc-jsbn",
+          "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/ecc-jsbn/lib"
+        ],
+        "dependencies": {
+          "jsbn": "~0.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jodid25519",
+          "node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jodid25519/lib"
+        ],
+        "dependencies": {
+          "jsbn": "~0.1.0"
         }
       },
       {
@@ -1085,7 +1302,7 @@
           "node_modules/less/node_modules/request/node_modules/mime-types"
         ],
         "dependencies": {
-          "mime-db": "~1.19.0"
+          "mime-db": "~1.21.0"
         }
       },
       {

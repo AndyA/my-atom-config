@@ -61,7 +61,7 @@ haskellGrammar =
       concat list('functionTypeDeclaration',/{functionName}|{operatorFun}/,/,/),
         /\s*(::|∷)/
     ctorTypeDeclaration:
-      concat list('functionTypeDeclaration',/{className}|{operatorFun}/,/,/),
+      concat list('ctorTypeDeclaration',/{className}|{operatorFun}/,/,/),
         /\s*(::|∷)/
     ctorArgs: ///
       (?!deriving)
@@ -325,7 +325,7 @@ haskellGrammar =
       include: '#pragma'
     ,
       name: 'string.quoted.double.haskell'
-      match: '(")(?:(?<!\\\\)\\\\(?:\\\\{2})*"|[^"])*(")'
+      match: '(")(?>(?:[^"\\\\]+|\\\\.)*)(")'
       captures:
         0: patterns: [
             include: '#characters'
@@ -497,7 +497,11 @@ haskellGrammar =
           include: '#infix_op'
         ,
           name: 'meta.other.constructor-list.haskell'
-          match: /\(.*?\)/
+          begin: /\(/
+          end: /\)/
+          patterns: [
+            include: '#type_ctor'
+          ]
       ]
     module_name:
       name: 'support.other.module.haskell'
@@ -670,6 +674,21 @@ haskellGrammar =
         2: name: 'entity.other.inherited-class.haskell'
 
 makeGrammar haskellGrammar, "grammars/haskell.cson"
+
+completionHintGrammar =
+  name: 'Haskell Autocompletion Hint'
+  fileTypes: []
+  scopeName: 'hint.haskell'
+
+  macros: haskellGrammar.macros
+  patterns: [
+      include: '#function_type_declaration'
+    ,
+      include: '#ctor_type_declaration'
+  ]
+  repository: haskellGrammar.repository
+
+makeGrammar completionHintGrammar, "grammars/haskell autocompletion hint.cson"
 
 literateHaskellGrammar =
   name: 'Literate Haskell'

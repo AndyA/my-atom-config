@@ -1,3 +1,4 @@
+{CompositeDisposable} = require 'atom'
 {$, View, ScrollView, TextEditorView} = require 'atom-space-pen-views'
 _ = require 'underscore-plus'
 
@@ -37,14 +38,18 @@ class KeybindingCheatsheetView extends View
     @update()
 
   attached: ->
-    @commandsSubscription = atom.commands.add @element,
+    @disposables = new CompositeDisposable
+
+    @disposables.add atom.commands.add @element,
+      'core-cancel': @toggle
       'core:move-down': @down
       'core:move-up': @up
+
+    @disposables.add atom.commands.add 'atom-workspace',
       'core:cancel': @toggle
 
   detached: ->
-    @commandsSubscription?.dispose()
-    @commandsSubscription = null
+    @disposables?.dispose()
 
   # Returns an object that can be retrieved when package is activated
   serialize: ->
@@ -101,6 +106,16 @@ class KeybindingCheatsheetView extends View
       {command, keystrokes, selector, source} = binding
       if "#{command}#{keystrokes}#{selector}#{source}".indexOf(filterText) == -1
         return false
+
+    [pkg, command] = binding.command.split ':'
+    if pkg in atom.config.get('keybinding-cheatsheet.alwaysShowGroups')
+      return true
+    if pkg in atom.config.get('keybinding-cheatsheet.alwaysHideGroups')
+      return false
+    if atom.config.get('keybinding-cheatsheet.hideAllOthers') &&
+        !(pkg in atom.config.get('keybinding-cheatsheet.exceptFor'))
+      return false
+
     return true
 
   deactivate: ->

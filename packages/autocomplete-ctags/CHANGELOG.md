@@ -1,3 +1,9 @@
+## 0.3.4
+* Fix typo(#8)
+
+## 0.3.3
+* Update npms
+
 ## 0.3.2
 * Update npms
 
