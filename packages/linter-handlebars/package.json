@@ -1,7 +1,7 @@
 {
   "name": "linter-handlebars",
   "main": "./lib/init",
-  "version": "2.3.1",
+  "version": "2.3.3",
   "description": "Lint `handlebars` on the fly, using handlebars",
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "atom-package-deps": "^3.0.6",
+    "atom-package-deps": "^4.0.1",
     "handlebars": "^4.0.5",
     "xregexp": "^3.0.0"
   },
@@ -31,30 +31,35 @@
   },
   "devDependencies": {
     "babel-eslint": "^4.1.6",
-    "eslint": "^1.10.3"
+    "eslint": "^2.1.0"
   },
-  "readme": "# linter-handlebars\n\n[![Build Status](https://img.shields.io/travis/josa42/linter-handlebars.svg?style=flat-square)](https://travis-ci.org/josa42/linter-handlebars)\n[![Plugin installs!](https://img.shields.io/apm/dm/linter-handlebars.svg?style=flat-square)](https://atom.io/packages/linter-handlebars)\n[![Package version!](https://img.shields.io/apm/v/linter-handlebars.svg?style=flat-square)](https://atom.io/packages/linter-handlebars)\n[![Dependencies!](https://img.shields.io/david/josa42/linter-handlebars.svg?style=flat-square)](https://david-dm.org/josa42/linter-handlebars)\n\nThis linter plugin for [Linter](https://github.com/atom-community/linter) provides an interface to [handlebars](http://handlebarsjs.com/).\n",
+  "readme": "# linter-handlebars\n\n[![Build Status](https://img.shields.io/travis/josa42/atom-linter-handlebars.svg?style=flat-square)](https://travis-ci.org/josa42/linter-handlebars)\n[![Plugin installs!](https://img.shields.io/apm/dm/linter-handlebars.svg?style=flat-square)](https://atom.io/packages/linter-handlebars)\n[![Package version!](https://img.shields.io/apm/v/linter-handlebars.svg?style=flat-square)](https://atom.io/packages/linter-handlebars)\n[![Dependencies!](https://img.shields.io/david/josa42/atom-linter-handlebars.svg?style=flat-square)](https://david-dm.org/josa42/linter-handlebars)\n\nThis linter plugin for [Linter](https://github.com/atom-community/linter) provides an interface to [handlebars](http://handlebarsjs.com/).\n",
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/josa42/atom-linter-handlebars/issues"
   },
   "homepage": "https://github.com/josa42/atom-linter-handlebars#readme",
-  "_id": "linter-handlebars@2.3.1",
-  "_shasum": "191af3d645bed21e04f039112b21d2faf69790b4",
-  "_resolved": "file:../d-116028-8086-skzlr5/package.tgz",
-  "_from": "../d-116028-8086-skzlr5/package.tgz",
+  "_id": "linter-handlebars@2.3.3",
+  "_shasum": "a8231e768fac33a745f98d69a77c6c277ae725bd",
+  "_resolved": "file:../d-116117-38840-q2xix7/package.tgz",
+  "_from": "../d-116117-38840-q2xix7/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
       {
         "name": "atom-package-deps",
-        "version": "3.0.7",
-        "path": "node_modules/atom-package-deps/lib/main.js"
+        "version": "4.0.1",
+        "path": "node_modules/atom-package-deps/lib/index.js"
+      },
+      {
+        "name": "atom-package-path",
+        "version": "1.1.0",
+        "path": "node_modules/atom-package-deps/node_modules/atom-package-path/lib/index.js"
       },
       {
         "name": "sb-callsite",
         "version": "1.1.2",
-        "path": "node_modules/atom-package-deps/node_modules/sb-callsite/lib/main.js"
+        "path": "node_modules/atom-package-deps/node_modules/atom-package-path/node_modules/sb-callsite/lib/main.js"
       },
       {
         "name": "handlebars",
@@ -128,22 +133,22 @@
       },
       {
         "name": "center-align",
-        "version": "0.1.2",
+        "version": "0.1.3",
         "path": "node_modules/handlebars/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/index.js"
       },
       {
         "name": "align-text",
-        "version": "0.1.3",
+        "version": "0.1.4",
         "path": "node_modules/handlebars/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/index.js"
       },
       {
         "name": "kind-of",
-        "version": "2.0.1",
+        "version": "3.0.2",
         "path": "node_modules/handlebars/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/node_modules/kind-of/index.js"
       },
       {
         "name": "is-buffer",
-        "version": "1.1.1",
+        "version": "1.1.2",
         "path": "node_modules/handlebars/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/node_modules/kind-of/node_modules/is-buffer/index.js"
       },
       {
@@ -158,7 +163,7 @@
       },
       {
         "name": "lazy-cache",
-        "version": "0.2.7",
+        "version": "1.0.3",
         "path": "node_modules/handlebars/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/lazy-cache/index.js"
       },
       {
@@ -168,17 +173,17 @@
       },
       {
         "name": "align-text",
-        "version": "0.1.3",
+        "version": "0.1.4",
         "path": "node_modules/handlebars/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/index.js"
       },
       {
         "name": "kind-of",
-        "version": "2.0.1",
+        "version": "3.0.2",
         "path": "node_modules/handlebars/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/node_modules/kind-of/index.js"
       },
       {
         "name": "is-buffer",
-        "version": "1.1.1",
+        "version": "1.1.2",
         "path": "node_modules/handlebars/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/node_modules/kind-of/node_modules/is-buffer/index.js"
       },
       {
@@ -222,9 +227,10 @@
         "lib/init.js",
         "lib/linter-handlebars-provider.js",
         "node_modules/atom-package-deps/lib/helpers.js",
-        "node_modules/atom-package-deps/lib/main.js",
+        "node_modules/atom-package-deps/lib/index.js",
         "node_modules/atom-package-deps/lib/view.js",
-        "node_modules/atom-package-deps/node_modules/sb-callsite/lib/main.js",
+        "node_modules/atom-package-deps/node_modules/atom-package-path/lib/index.js",
+        "node_modules/atom-package-deps/node_modules/atom-package-path/node_modules/sb-callsite/lib/main.js",
         "node_modules/handlebars/dist/amd/handlebars/base.js",
         "node_modules/handlebars/dist/amd/handlebars/compiler/ast.js",
         "node_modules/handlebars/dist/amd/handlebars/compiler/base.js",
@@ -426,7 +432,8 @@
         "node_modules/xregexp/xregexp-all.js"
       ],
       ".json": [
-        "node_modules/atom-package-deps/node_modules/sb-callsite/package.json",
+        "node_modules/atom-package-deps/node_modules/atom-package-path/node_modules/sb-callsite/package.json",
+        "node_modules/atom-package-deps/node_modules/atom-package-path/package.json",
         "node_modules/atom-package-deps/package.json",
         "node_modules/handlebars/node_modules/async/package.json",
         "node_modules/handlebars/node_modules/optimist/node_modules/minimist/package.json",
@@ -473,7 +480,7 @@
           "spec"
         ],
         "dependencies": {
-          "atom-package-deps": "^3.0.6",
+          "atom-package-deps": "^4.0.1",
           "handlebars": "^4.0.5",
           "xregexp": "^3.0.0"
         }
@@ -484,7 +491,17 @@
           "node_modules/atom-package-deps"
         ],
         "dependencies": {
-          "sb-callsite": "^1.0.0"
+          "atom-package-path": "^1.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/atom-package-deps/node_modules/atom-package-path/lib",
+          "node_modules/atom-package-deps/node_modules/atom-package-path",
+          "node_modules/atom-package-deps/node_modules/atom-package-path/spec"
+        ],
+        "dependencies": {
+          "sb-callsite": "^1.1.2"
         }
       },
       {
@@ -579,8 +596,8 @@
           "node_modules/handlebars/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align"
         ],
         "dependencies": {
-          "align-text": "^0.1.0",
-          "lazy-cache": "^0.2.4"
+          "align-text": "^0.1.3",
+          "lazy-cache": "^1.0.3"
         }
       },
       {
@@ -588,7 +605,7 @@
           "node_modules/handlebars/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text"
         ],
         "dependencies": {
-          "kind-of": "^2.0.0",
+          "kind-of": "^3.0.2",
           "longest": "^1.0.1",
           "repeat-string": "^1.5.2"
         }
@@ -614,7 +631,7 @@
           "node_modules/handlebars/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text"
         ],
         "dependencies": {
-          "kind-of": "^2.0.0",
+          "kind-of": "^3.0.2",
           "longest": "^1.0.1",
           "repeat-string": "^1.5.2"
         }

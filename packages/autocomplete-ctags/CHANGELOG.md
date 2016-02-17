@@ -1,3 +1,8 @@
+## 0.4.0
+* Add maximumTagFileSize settings
+* Update engines
+* Move config schema to package.json
+
 ## 0.3.4
 * Fix typo(#8)
 

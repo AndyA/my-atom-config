@@ -1,3 +1,44 @@
+<a name="v0.24.1"></a>
+# v0.24.1 (2016-02-16)
+
+## Bug Fixes
+
+- Fix parsing issue in CRLF files ([07117e1f](https://github.com/abe33/atom-pigments/commit/07117e1fe1c5215bc921085dd516ce72d6af6604), [#144](https://github.com/abe33/atom-pigments/issues/144))
+
+<a name="v0.24.0"></a>
+# v0.24.0 (2016-02-15)
+
+## Features
+
+- Add a min-height on search results panel heading ([9959c281](https://github.com/abe33/atom-pigments/commit/9959c28139de48daf5c6c7e2857aa86282ac4aa9))
+- Add a new setting to show color variable value in autocomplete ([3a86e258](https://github.com/abe33/atom-pigments/commit/3a86e258043194b8c4f58b7636ca5dfe0b1418cb))
+
+## Bug Fixes
+
+- Ensure that all custom pane items are serialized on pane split ([0d39d82c](https://github.com/abe33/atom-pigments/commit/0d39d82c192a24bbc3558fc10b9e3f04f79122c5), [#139](https://github.com/abe33/atom-pigments/issues/139))
+
+a name="v0.23.1"></a>
+# v0.23.1 (2016-02-03)
+
+## Bug Fixes
+
+- Fix variables not recognised by the css color function ([01c4ecc0](https://github.com/abe33/atom-pigments/commit/01c4ecc00ed9dd3da2a80104716341eef3a94d54))
+- Fix css variable value using val instead of var ([4ef2c02a](https://github.com/abe33/atom-pigments/commit/4ef2c02a5e34ad4c76b9f4a7b4948e5e951ac4b8))
+- Fix require and console not available in registry vm context ([ebbeab77](https://github.com/abe33/atom-pigments/commit/ebbeab77969e9b8f4903c64349acceaf1b351f56))
+
+<a name="v0.23.0"></a>
+# v0.23.0 (2016-02-02)
+
+## Features
+
+- Add basic support for css variables ([9bd132c2](https://github.com/abe33/atom-pigments/commit/9bd132c22b3e6d56675a9a6ab9ff77b3f818dca1))
+
+## Bug Fixes
+
+- Fix sass variables with spaces before colon not matched ([1e873a64](https://github.com/abe33/atom-pigments/commit/1e873a6482a8c539ef51537df76b632ad6b1f936), [#106](https://github.com/abe33/atom-pigments/issues/106))
+- Fix files created not caught by pigments as sources ([8345f984](https://github.com/abe33/atom-pigments/commit/8345f98409a24bded06413a6eeced0f99cbd33e2))
+- Fix invalid expression being caught as CSS vars ([2cc123e1](https://github.com/abe33/atom-pigments/commit/2cc123e18d62df044106c3a64dcaab2caa56606d))
+
 <a name="v0.22.1"></a>
 # v0.22.1 (2016-01-27)
 

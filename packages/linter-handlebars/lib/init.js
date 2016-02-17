@@ -1,12 +1,14 @@
 "use babel"
 
 import LinterHandlebarsProvider from './linter-handlebars-provider'
-const packageDeps = require('atom-package-deps')
+import { install } from 'atom-package-deps'
 
 export default {
 
   activate() {
-    packageDeps.install()
+    if (!atom.inSpecMode()) {
+      install('linter-handlebars')
+    }
   },
 
   provideLinter: () => LinterHandlebarsProvider

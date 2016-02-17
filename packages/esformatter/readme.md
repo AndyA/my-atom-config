@@ -27,7 +27,7 @@ There's a `Format On Save` option in the settings.
 
 ## [Config](https://github.com/millermedeiros/esformatter#configuration)
 
-Some [plugins](https://github.com/sindresorhus/atom-esformatter/blob/c5d0d550d94dd8c8caec4b7a5c0a72722d432e4d/package.json#L31-L43) are bundled. *PR welcome for more.*
+Some [plugins](https://github.com/sindresorhus/atom-esformatter/blob/master/package.json) are bundled. *PR welcome for more.*
 
 Just add the ones you want to your config file:
 

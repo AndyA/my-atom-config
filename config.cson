@@ -1,13 +1,13 @@
 "*":
-  "exception-reporting":
-    userId: "f9a18cac-be95-c8b9-09ec-02a129e9b8d7"
-  welcome:
-    showOnStartup: false
+  "atom-beautify":
+    _analyticsUserId: "28afc5e2-8e9c-4e71-8c79-67dd3cbe7f6b"
+    perl_perltidy_profile: "~/.perltidyrc"
+  "autocomplete-plus":
+    maxVisibleSuggestions: 30
+  "clang-format":
+    formatJavascriptOnSave: false
+    formatObjectiveCOnSave: true
   core:
-    themes: [
-      "one-dark-ui"
-      "base16-tomorrow-dark-theme"
-    ]
     disabledPackages: [
       "jsdoc-generator"
       "makro"
@@ -15,39 +15,40 @@
       "haskell-grammar"
     ]
     projectHome: "~/Works"
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  docblockr:
+    align_tags: "shallow"
+    auto_add_method_tag: true
+    deep_indent: true
+    extra_tags_go_after: true
   editor:
-    invisibles: {}
     fontSize: 12
-  mocha:
-    specDirectory: "./test/"
-  minimap:
-    plugins:
-      "git-diff": true
-  "terminal-panel": {}
+    invisibles: {}
+  "exception-reporting":
+    userId: "f9a18cac-be95-c8b9-09ec-02a129e9b8d7"
+  "jsdoc-generator": {}
+  "keybinding-cheatsheet": {}
   linter:
     lintOnFly: false
   "linter-eslint":
-    showRuleIdInMessage: true
     disableWhenNoEslintrcFileInPath: true
     lintOnEdit: false
-  docblockr:
-    auto_add_method_tag: true
-    deep_indent: true
-    align_tags: "shallow"
-    extra_tags_go_after: true
-  "jsdoc-generator": {}
-  perltidy: {}
+    showRuleIdInMessage: true
   "linter-less": {}
-  "clang-format":
-    formatJavascriptOnSave: false
-  "atom-beautify":
-    _analyticsUserId: "28afc5e2-8e9c-4e71-8c79-67dd3cbe7f6b"
-    perl_perltidy_profile: "~/.perltidyrc"
-  "keybinding-cheatsheet": {}
-  "autocomplete-plus":
-    maxVisibleSuggestions: 30
-  pigments: {}
   "merge-conflicts": {}
+  minimap:
+    plugins:
+      "git-diff": true
+  mocha:
+    specDirectory: "./test/"
+  perltidy: {}
+  pigments: {}
+  "terminal-panel": {}
+  welcome:
+    showOnStartup: false
 ".perl.source":
   editor:
     nonWordCharacters: "/\\()\"',.;<>~!#^&*|+=[]{}`?-"

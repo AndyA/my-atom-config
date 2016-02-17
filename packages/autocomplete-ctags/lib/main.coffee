@@ -4,36 +4,6 @@ getTagsFile = require './get-tags-file'
 module.exports =
   ctagsProvider: null
 
-  config:
-    minimumPrefixLength:
-      order: 1
-      type: 'integer'
-      default: 3
-      minimum: 1
-      maximum: 10
-    caseInsensitive:
-      order: 2
-      type: 'boolean'
-      default: true
-    useSnippers:
-      order: 3
-      type: 'boolean'
-      default: true
-    useFuzzy:
-      order: 4
-      type: 'boolean'
-      default: true
-      description: 'executed only if there is no suggestions'
-    disableBuiltinProvider:
-      order: 10
-      title: 'Disable Built-In Provider'
-      type: 'boolean'
-      default: false
-    debug:
-      order: 99
-      type: 'boolean'
-      default: false
-
   activate: (state) ->
     @ctagsProvider = new CtagsProvider
 
