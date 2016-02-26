@@ -1,7 +1,7 @@
 {
   "name": "linter-handlebars",
   "main": "./lib/init",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "description": "Lint `handlebars` on the fly, using handlebars",
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   "dependencies": {
     "atom-package-deps": "^4.0.1",
     "handlebars": "^4.0.5",
-    "xregexp": "^3.0.0"
+    "xregexp": "^3.1.0"
   },
   "package-deps": [
     "linter"
@@ -39,10 +39,10 @@
     "url": "https://github.com/josa42/atom-linter-handlebars/issues"
   },
   "homepage": "https://github.com/josa42/atom-linter-handlebars#readme",
-  "_id": "linter-handlebars@2.3.3",
-  "_shasum": "a8231e768fac33a745f98d69a77c6c277ae725bd",
-  "_resolved": "file:../d-116117-38840-q2xix7/package.tgz",
-  "_from": "../d-116117-38840-q2xix7/package.tgz",
+  "_id": "linter-handlebars@2.3.4",
+  "_shasum": "78f29cfc58e4e6ae7ca2ec867c993685d158014c",
+  "_resolved": "file:../d-116126-3696-z5zzry/package.tgz",
+  "_from": "../d-116126-3696-z5zzry/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -98,7 +98,7 @@
       },
       {
         "name": "uglify-js",
-        "version": "2.6.1",
+        "version": "2.6.2",
         "path": "node_modules/handlebars/node_modules/uglify-js/tools/node.js"
       },
       {
@@ -208,7 +208,7 @@
       },
       {
         "name": "escape-string-regexp",
-        "version": "1.0.4",
+        "version": "1.0.5",
         "path": "node_modules/handlebars/node_modules/uglify-js/node_modules/yargs/node_modules/decamelize/node_modules/escape-string-regexp/index.js"
       },
       {
@@ -218,8 +218,8 @@
       },
       {
         "name": "xregexp",
-        "version": "3.0.0",
-        "path": "node_modules/xregexp/xregexp-all.js"
+        "version": "3.1.0",
+        "path": "node_modules/xregexp/src/index.js"
       }
     ],
     "extensions": {
@@ -429,7 +429,15 @@
         "node_modules/handlebars/node_modules/uglify-js/tools/exports.js",
         "node_modules/handlebars/node_modules/uglify-js/tools/node.js",
         "node_modules/handlebars/runtime.js",
-        "node_modules/xregexp/xregexp-all.js"
+        "node_modules/xregexp/src/addons/build.js",
+        "node_modules/xregexp/src/addons/matchrecursive.js",
+        "node_modules/xregexp/src/addons/unicode-base.js",
+        "node_modules/xregexp/src/addons/unicode-blocks.js",
+        "node_modules/xregexp/src/addons/unicode-categories.js",
+        "node_modules/xregexp/src/addons/unicode-properties.js",
+        "node_modules/xregexp/src/addons/unicode-scripts.js",
+        "node_modules/xregexp/src/index.js",
+        "node_modules/xregexp/src/xregexp.js"
       ],
       ".json": [
         "node_modules/atom-package-deps/node_modules/atom-package-path/node_modules/sb-callsite/package.json",
@@ -482,7 +490,7 @@
         "dependencies": {
           "atom-package-deps": "^4.0.1",
           "handlebars": "^4.0.5",
-          "xregexp": "^3.0.0"
+          "xregexp": "^3.1.0"
         }
       },
       {

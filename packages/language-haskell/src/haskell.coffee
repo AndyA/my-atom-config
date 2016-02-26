@@ -690,6 +690,49 @@ completionHintGrammar =
 
 makeGrammar completionHintGrammar, "grammars/haskell autocompletion hint.cson"
 
+typeHintGrammar =
+  name: 'Haskell Type Hint'
+  fileTypes: []
+  scopeName: 'hint.type.haskell'
+
+  macros: haskellGrammar.macros
+  patterns: [
+      include: '#type_signature'
+  ]
+  repository: haskellGrammar.repository
+
+makeGrammar typeHintGrammar, "grammars/haskell type hint.cson"
+
+messageHintGrammar =
+  name: 'Haskell Message Hint'
+  fileTypes: []
+  scopeName: 'hint.message.haskell'
+
+  macros: haskellGrammar.macros
+  patterns: [
+      match: /^[^:]*:(.+)$/
+      captures:
+        1:
+          patterns: [
+            include: 'source.haskell'
+          ]
+    ,
+      begin: /^[^:]*:$/
+      end: /^\S/
+      patterns: [
+        include: 'source.haskell'
+      ]
+    ,
+      begin: /‘/
+      end: /’/
+      patterns: [
+        include: 'source.haskell'
+      ]
+  ]
+  repository: haskellGrammar.repository
+
+makeGrammar messageHintGrammar, "grammars/haskell message hint.cson"
+
 literateHaskellGrammar =
   name: 'Literate Haskell'
   fileTypes: [ 'lhs' ]
