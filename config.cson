@@ -42,6 +42,7 @@
   minimap:
     plugins:
       "git-diff": true
+      "git-diffDecorationsZIndex": 0
   mocha:
     specDirectory: "./test/"
   perltidy: {}
