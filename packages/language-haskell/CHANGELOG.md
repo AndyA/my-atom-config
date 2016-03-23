@@ -1,3 +1,14 @@
+## 1.7.5
+* Add [] () to inline type signature characters
+
+## 1.7.4
+* More accurate inline type signature match
+* Add meta.type-signature.haskell to in-line sigs
+
+## 1.7.3
+* Fix message highlighting
+* Add coffeelint
+
 ## 1.7.2
 * Merge pull request #63 from robrix/options-ghc-pragma
 * Add OPTIONS_GHC to the recognized pragmas.
