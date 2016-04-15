@@ -1,7 +1,9 @@
 "*":
   "atom-beautify":
-    _analyticsUserId: "28afc5e2-8e9c-4e71-8c79-67dd3cbe7f6b"
-    perl_perltidy_profile: "~/.perltidyrc"
+    general:
+      _analyticsUserId: "28afc5e2-8e9c-4e71-8c79-67dd3cbe7f6b"
+    perl:
+      perltidy_profile: "~/.perltidyrc"
   "autocomplete-plus":
     maxVisibleSuggestions: 30
   "clang-format":

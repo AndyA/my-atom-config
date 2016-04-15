@@ -1,3 +1,20 @@
+## 1.7.10
+* added liquidhaskell comment block (PR #69 by @ranjitjhala)
+
+## 1.7.9
+* Add 'type instance' keyword
+
+## 1.7.8
+* Initial support for type families
+
+## 1.7.7
+* Regression tests for #65
+* Tweak ctor regex
+* Spec update
+
+## 1.7.6
+* More preprocessor pragmas
+
 ## 1.7.5
 * Add [] () to inline type signature characters
 

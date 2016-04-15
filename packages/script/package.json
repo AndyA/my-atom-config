@@ -1,7 +1,7 @@
 {
   "name": "script",
   "main": "./lib/script",
-  "version": "3.6.2",
+  "version": "3.6.3",
   "private": false,
   "description": "Run code in Atom!",
   "author": {
@@ -358,10 +358,10 @@
     "url": "https://github.com/rgbkrk/atom-script/issues"
   },
   "homepage": "https://github.com/rgbkrk/atom-script#readme",
-  "_id": "script@3.6.2",
-  "_shasum": "149dfd9974903c80438791912e4be7a7461bba4a",
-  "_resolved": "file:../d-116217-4600-23yxka/package.tgz",
-  "_from": "../d-116217-4600-23yxka/package.tgz",
+  "_id": "script@3.6.3",
+  "_shasum": "902a1b816963b87bb9d7a83fa80df7e94130fbdb",
+  "_resolved": "file:../d-116223-64655-1sweejc/package.tgz",
+  "_from": "../d-116223-64655-1sweejc/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -427,8 +427,13 @@
       },
       {
         "name": "typechecker",
-        "version": "4.1.0",
-        "path": "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/esnextguardian.js"
+        "version": "4.3.0",
+        "path": "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/index.js"
+      },
+      {
+        "name": "editions",
+        "version": "1.1.1",
+        "path": "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/node_modules/editions/es2015/index.js"
       },
       {
         "name": "requirefresh",
@@ -452,12 +457,12 @@
       },
       {
         "name": "js-yaml",
-        "version": "3.5.4",
+        "version": "3.5.5",
         "path": "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/js-yaml/index.js"
       },
       {
         "name": "argparse",
-        "version": "1.0.6",
+        "version": "1.0.7",
         "path": "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/js-yaml/node_modules/argparse/index.js"
       },
       {
@@ -726,6 +731,7 @@
         "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/cson-parser/package.json",
         "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/eachr/package.json",
         "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/esnextguardian/package.json",
+        "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/node_modules/editions/package.json",
         "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/package.json",
         "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/package.json",
         "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/requirefresh/package.json",
@@ -1782,10 +1788,15 @@
         "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/eachr/example.js",
         "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/esnextguardian/.eslintrc.js",
         "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/esnextguardian/lib/index.js",
-        "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/.eslintrc.js",
-        "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/es5/lib/typechecker.js",
-        "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/esnext/lib/typechecker.js",
-        "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/esnextguardian.js",
+        "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/docs/assets/anchor.js",
+        "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/docs/assets/site.js",
+        "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/es2015/index.js",
+        "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/index.js",
+        "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/node_modules/editions/docs/assets/anchor.js",
+        "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/node_modules/editions/docs/assets/site.js",
+        "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/node_modules/editions/es2015/index.js",
+        "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/node_modules/editions/source/index.js",
+        "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/source/index.js",
         "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/requirefresh/out/lib/requirefresh.js",
         "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/safefs/.eslintrc.js",
         "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/safefs/es5/lib/safefs.js",
@@ -3411,12 +3422,13 @@
       },
       {
         "paths": [
+          "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/docs/assets",
+          "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/es2015",
           "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker",
-          "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/es5/lib",
-          "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/esnext/lib"
+          "node_modules/ansi-to-html/node_modules/karg/node_modules/noon/node_modules/cson/node_modules/extract-opts/node_modules/typechecker/source"
         ],
         "dependencies": {
-          "esnextguardian": "^1.1.0"
+          "editions": "^1.1.0"
         }
       },
       {

@@ -1,5 +1,17 @@
 # Changelog
 
+## v7.2.0
+
+*   Add Fix on Save option ([#508](https://github.com/AtomLinter/linter-eslint/pull/508))
+
+## v7.1.3
+
+*   Reliably use `.eslintignore` file if present (#481)
+
+## v7.1.2
+
+*   Skipped due to release difficulties
+
 ## v7.1.1
 
 *   Fix link color in certain themes (#480)
