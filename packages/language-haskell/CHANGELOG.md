@@ -1,3 +1,30 @@
+## 1.7.17
+* Prelude typeclasses
+* Merge branch 'master' of github.com:atom-haskell/language-haskell
+* Grab prelude definitions from Prelude
+
+## 1.7.16
+* Fix #76
+
+## 1.7.15
+* Another stab at Windows postinstall
+
+## 1.7.14
+* Update postinstall hook to hopefully make it work in windows
+* Spec update
+* Various tweaks to word anchoring, symbol provider
+
+## 1.7.13
+* Fix runaway module name
+
+## 1.7.12
+* Spec update
+* Capture identifiers before type ctors
+
+## 1.7.11
+* Fix CPP # confusion
+* Updated contributors
+
 ## 1.7.10
 * added liquidhaskell comment block (PR #69 by @ranjitjhala)
 

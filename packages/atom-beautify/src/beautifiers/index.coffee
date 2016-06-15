@@ -38,6 +38,7 @@ module.exports = class Beautifiers extends EventEmitter
     'coffee-formatter'
     'coffee-fmt'
     'clang-format'
+    'crystal'
     'dfmt'
     'elm-format'
     'htmlbeautifier'
@@ -48,6 +49,7 @@ module.exports = class Beautifiers extends EventEmitter
     'fortran-beautifier'
     'js-beautify'
     'jscs'
+    'ocp-indent'
     'perltidy'
     'php-cs-fixer'
     'phpcbf'
@@ -64,6 +66,7 @@ module.exports = class Beautifiers extends EventEmitter
     'typescript-formatter'
     'yapf'
     'erl_tidy'
+    'marko-beautifier'
   ]
 
   ###
@@ -274,7 +277,11 @@ module.exports = class Beautifiers extends EventEmitter
 
             # Beautify text with language options
             @emit "beautify::start"
-            beautifier.beautify(text, language.name, options)
+
+            context =
+              filePath: filePath
+
+            beautifier.beautify(text, language.name, options, context)
             .then(resolve)
             .catch(reject)
             .finally(=>
@@ -302,7 +309,7 @@ module.exports = class Beautifiers extends EventEmitter
               grammar : grammar
               extension : fileExtension
               version : version
-              options : allOptions
+              #options : allOptions
               label : language?.name
               category : version
 
