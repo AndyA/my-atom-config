@@ -1,3 +1,24 @@
+## 3.8.3
+
+* Support for Processing
+
+## 3.8.2
+
+* Support for Lua (WoW)
+
+## 3.8.1
+
+* Fix compilation errors
+
+## 3.8.0
+
+* Support for C/C++ on Windows (only latest win10 builds with `bash` and `g++` installed)
+* Support for Fortran
+* Support for `Inno Setup`
+* Support for Tcl
+* Use `cmd.exe` for `Batch` files
+* Change `stata` intrepreter to `stata`
+
 ## 3.7.3
 
 * Support for Stata

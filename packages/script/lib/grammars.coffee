@@ -2,6 +2,7 @@
 # As well as any special setup for arguments.
 
 _ = require 'underscore'
+path = require 'path'
 GrammarUtils = require '../lib/grammar-utils'
 
 module.exports =
@@ -33,8 +34,8 @@ module.exports =
 
   Batch:
     "File Based":
-      command: ""
-      args: (context) -> [context.filepath]
+      command: "cmd.exe"
+      args: (context) -> ['/q', '/c', context.filepath]
 
   'Behat Feature':
     "File Based":
@@ -68,6 +69,10 @@ module.exports =
       "File Based":
         command: "bash"
         args: (context) -> ["-c", "g++ -Wall -include stdio.h -include iostream '" + context.filepath + "' -o /tmp/cpp.out && /tmp/cpp.out"]
+    else if GrammarUtils.OperatingSystem.isWindows() and GrammarUtils.OperatingSystem.release().split(".").slice -1 >= '14399'
+      "File Based":
+        command: "bash"
+        args: (context) -> ["-c", "g++ -Wall -include stdio.h -include iostream '/mnt/" + path.posix.join.apply(path.posix, [].concat([context.filepath.split(path.win32.sep)[0].toLowerCase()], context.filepath.split(path.win32.sep).slice(1))).replace(":", "") + "' -o /tmp/cpp.out && /tmp/cpp.out"]
 
   Clojure:
     "Selection Based":
@@ -139,6 +144,26 @@ module.exports =
       command: "gforth"
       args: (context) -> [context.filepath]
 
+  "Fortran - Fixed Form":
+    "File Based":
+      command: "bash"
+      args: (context) -> ['-c', "gfortran '" + context.filepath + "' -ffixed-form -o /tmp/f.out && /tmp/f.out"]
+
+  "Fortran - Free Form":
+    "File Based":
+      command: "bash"
+      args: (context) -> ['-c', "gfortran '" + context.filepath + "' -ffree-form -o /tmp/f90.out && /tmp/f90.out"]
+
+  "Fortran - Modern":
+    "File Based":
+      command: "bash"
+      args: (context) -> ['-c', "gfortran '" + context.filepath + "' -ffree-form -o /tmp/f90.out && /tmp/f90.out"]
+
+  "Fortran - Punchcard":
+    "File Based":
+      command: "bash"
+      args: (context) -> ['-c', "gfortran '" + context.filepath + "' -ffixed-form -o /tmp/f.out && /tmp/f.out"]
+
   Gherkin:
     "File Based":
       command: "cucumber"
@@ -184,6 +209,11 @@ module.exports =
     "File Based":
       command: "iced"
       args: (context) -> [context.filepath]
+
+  InnoSetup:
+    "File Based":
+      command: "ISCC.exe"
+      args: (context) -> ['/Q', context.filepath]
 
   ioLanguage:
     "Selection Based":
@@ -290,6 +320,17 @@ module.exports =
       args: (context) -> [context.filepath]
 
   Lua:
+    "Selection Based":
+      command: "lua"
+      args: (context) ->
+        code = context.getCode(true)
+        tmpFile = GrammarUtils.createTempFileWithCode(code)
+        [tmpFile]
+    "File Based":
+      command: "lua"
+      args: (context) -> [context.filepath]
+
+  'Lua (WoW)':
     "Selection Based":
       command: "lua"
       args: (context) ->
@@ -457,6 +498,16 @@ module.exports =
       command: "powershell"
       args: (context) -> [context.filepath.replace /\ /g, "` "]
 
+  Processing:
+    "File Based":
+      command: if GrammarUtils.OperatingSystem.isWindows() then "cmd" else "bash"
+      args: (context) ->
+        if GrammarUtils.OperatingSystem.isWindows()
+          return ['/c processing-java --sketch='+context.filepath.replace("\\"+context.filename,"")+' --run']
+        else
+          return ['-c', 'processing-java --sketch='+context.filepath.replace("/"+context.filename,"")+' --run']
+
+
   Prolog:
     "File Based":
       command: "bash"
@@ -604,15 +655,26 @@ module.exports =
 
   Stata:
     "Selection Based":
-      command: "xstata-se"
+      command: "stata"
       args: (context)  -> ['do', context.getCode()]
     "File Based":
-      command: "xstata-se"
+      command: "stata"
       args: (context) -> ['do', context.filepath]
 
   Swift:
     "File Based":
       command: "swift"
+      args: (context) -> [context.filepath]
+
+  Tcl:
+    "Selection Based":
+      command: "tclsh"
+      args: (context) ->
+        code = context.getCode()
+        tmpFile = GrammarUtils.createTempFileWithCode(code)
+        [tmpFile]
+    "File Based":
+      command: "tclsh"
       args: (context) -> [context.filepath]
 
   TypeScript:

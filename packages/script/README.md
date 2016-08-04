@@ -35,11 +35,13 @@ Currently supported grammars are:
 | F#                                   | Yes        |                 | |
 | Fish                                 | Yes        | Yes             | Finally, a way to run code within Atom for the 90s |
 | Forth (via GForth)                   | Yes        |                 | |
+| Fortran (via gfortran)               | Yes        |                 |
 | Gnuplot                              | Yes        |                 | |
 | Go                                   | Yes        |                 | |
 | Groovy                               | Yes        | Yes             | |
 | Haskell                              | Yes        | Yes             | |
 | IcedCoffeeScript                     | Yes        | Yes             | |
+| Inno Setup                           | Yes        |                 | Requires the path of `ISCC.exe` in your system environment variables |
 | [ioLanguage](http://iolanguage.org/) | Yes        | Yes             | |
 | Java                                 | Yes        |                 | Windows users should manually add jdk path (...\jdk1.x.x_xx\bin) to their system environment variables |
 | Javascript                           | Yes        | Yes             | |
@@ -53,6 +55,7 @@ Currently supported grammars are:
 | Literate Haskell                     | Yes        |                 | |
 | LiveScript                           | Yes        | Yes             | |
 | Lua                                  | Yes        | Yes             | |
+| Lua (WoW)                            | Yes        | Yes             | |
 | Makefile                             | Yes        | Yes             | |
 | [MATLAB](http://mathworks.com/products/matlab) | Yes        | Yes   | |
 | MongoDB                              | Yes        | Yes             | |
@@ -71,6 +74,7 @@ Currently supported grammars are:
 | PHP                                  | Yes        | Yes             | |
 | PostgreSQL                           | Yes        | Yes             | Requires the atom-language-pgsql package in Atom https://atom.io/packages/language-pgsql. Connects as user `$PGUSER` to database `$PGDATABASE`. Both default to the operating system's user name and both can be set in the process environment or in Atom's `init.coffee` script: `process.env.PGUSER = ⟨username⟩` and `process.env.PGDATABASE = ⟨database name⟩` |
 | PowerShell                           | Yes        |                 | |
+| Processing                           | Yes        |                 | Runs through processing-java. |
 | Prolog                               | Yes        |                 | Scripts must contain a rule with the head `main` (e.g.`main:- parent(X,lucas),writeln(X).`). The script is executed with the goal `main` and is halted after the first result is found. The output is produced by the `writeln/1` predicates. It requires swipl |
 | Python                               | Yes        | Yes             | |
 | R                                    | Yes        | Yes             | |
@@ -86,8 +90,9 @@ Currently supported grammars are:
 | Scheme                               | Yes        | Yes             | |
 | Shell Script                         | Yes        | Yes             | The shell used is based on your default `$SHELL` environment variable |
 | Standard ML                          | Yes        |                 | |
-| Stata                                | Yes        | Yes             | Runs through xstata-se |
+| Stata                                | Yes        | Yes             | Runs through Stata. Note stata needs to be added to your system PATH for this to work. `Mac directions <http://www.stata.com/support/faqs/mac/advanced-topics/>`_ . |
 | Swift                                | Yes        |                 | |
+| Tcl                                  | Yes        | Yes             | |
 | TypeScript                           | Yes        | Yes             | |
 | Zsh                                  | Yes        | Yes             | The shell used is based on your default `$SHELL` environment variable |
 

@@ -1,7 +1,7 @@
 {
   "name": "autocomplete-clang",
   "main": "./lib/autocomplete-clang",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "autocomplete for C/C++/ObjC using clang",
   "activationCommands": [],
   "repository": {
@@ -29,10 +29,10 @@
     "url": "https://github.com/yasuyuky/autocomplete-clang/issues"
   },
   "homepage": "https://github.com/yasuyuky/autocomplete-clang#readme",
-  "_id": "autocomplete-clang@0.9.3",
-  "_shasum": "8cef1f1d9bed4d50ea28e01b16bbab7913c7ae19",
-  "_resolved": "file:../d-116515-43127-103l9jl/package.tgz",
-  "_from": "../d-116515-43127-103l9jl/package.tgz",
+  "_id": "autocomplete-clang@0.9.4",
+  "_shasum": "544373c90a79f235755426d1db0ddacc8a10b5c8",
+  "_resolved": "file:../d-11674-76807-x106v5/package.tgz",
+  "_from": "../d-11674-76807-x106v5/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -73,7 +73,7 @@
       },
       {
         "name": "es5-ext",
-        "version": "0.10.11",
+        "version": "0.10.12",
         "path": "node_modules/atom-space-pen-views/node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/index.js"
       },
       {
@@ -83,7 +83,7 @@
       },
       {
         "name": "es6-symbol",
-        "version": "3.0.2",
+        "version": "3.1.0",
         "path": "node_modules/atom-space-pen-views/node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/index.js"
       },
       {
@@ -924,7 +924,7 @@
         ],
         "dependencies": {
           "es6-iterator": "2",
-          "es6-symbol": "~3.0.2"
+          "es6-symbol": "~3.1"
         }
       },
       {
@@ -947,7 +947,7 @@
         ],
         "dependencies": {
           "d": "~0.1.1",
-          "es5-ext": "~0.10.10"
+          "es5-ext": "~0.10.11"
         }
       },
       {

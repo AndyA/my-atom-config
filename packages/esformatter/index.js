@@ -1,5 +1,6 @@
 /** @babel */
-import esformatter from 'esformatter';
+import path from 'path';
+import {silent as reqFrom} from 'req-from';
 
 const SUPPORTED_SCOPES = [
 	'source.js',
@@ -12,12 +13,16 @@ function init(editor, onSave) {
 		return;
 	}
 
+	const fp = editor.getPath();
+	const esformatter = reqFrom(path.dirname(fp), 'esformatter') || require('esformatter');
+
 	const selectedText = onSave ? null : editor.getSelectedText();
 	const text = selectedText || editor.getText();
+
 	let retText = '';
 
 	try {
-		retText = esformatter.format(text, esformatter.rc(editor.getURI()));
+		retText = esformatter.format(text, esformatter.rc(fp));
 	} catch (err) {
 		console.error(err);
 		atom.notifications.addError('esformatter', {detail: err.message});
@@ -51,7 +56,7 @@ export const config = {
 export const activate = () => {
 	atom.workspace.observeTextEditors(editor => {
 		editor.getBuffer().onWillSave(() => {
-			const isJS = SUPPORTED_SCOPES.indexOf(editor.getGrammar().scopeName) !== -1;
+			const isJS = SUPPORTED_SCOPES.includes(editor.getGrammar().scopeName);
 
 			if (isJS && atom.config.get('esformatter.formatOnSave')) {
 				init(editor, true);

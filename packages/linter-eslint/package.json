@@ -1,7 +1,7 @@
 {
   "name": "linter-eslint",
   "main": "./lib/main",
-  "version": "7.2.2",
+  "version": "7.2.4",
   "description": "Lint JavaScript on the fly, using ESLint",
   "repository": {
     "type": "git",
@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "engines": {
-    "atom": ">=1.4.0 <2.0.0"
+    "atom": ">=1.8.0 <2.0.0"
   },
   "scripts": {
     "test": "apm test",
@@ -18,17 +18,17 @@
     "compile": "ucompiler go"
   },
   "dependencies": {
-    "atom-linter": "^4.3.4",
+    "atom-linter": "^5.0.1",
     "atom-package-deps": "^4.0.1",
     "consistent-path": "^2.0.1",
     "escape-html": "^1.0.3",
-    "eslint": "^2.9.0",
+    "eslint": "^2.11.1",
     "process-communication": "^1.1.0",
     "resolve-env": "^1.0.0"
   },
   "devDependencies": {
-    "eslint-config-airbnb-base": "^2.0.0",
-    "eslint-plugin-import": "^1.6.1",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.7.0",
     "ucompiler": "^3.2.0",
     "ucompiler-plugin-babel": "^3.0.0",
     "ucompiler-plugin-newline": "^3.0.0",
@@ -85,16 +85,16 @@
     "url": "https://github.com/AtomLinter/linter-eslint/issues"
   },
   "homepage": "https://github.com/AtomLinter/linter-eslint#readme",
-  "_id": "linter-eslint@7.2.2",
-  "_shasum": "b4f52580953ad0f0cb1804b7ee3498349aafc9c7",
-  "_resolved": "file:../d-116515-43159-1g74p14/package.tgz",
-  "_from": "../d-116515-43159-1g74p14/package.tgz",
+  "_id": "linter-eslint@7.2.4",
+  "_shasum": "371a7f7e5894d445f782b94cec8144d55b32b6bb",
+  "_resolved": "file:../d-11674-76865-wpk6rz/package.tgz",
+  "_from": "../d-11674-76865-wpk6rz/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
       {
         "name": "atom-linter",
-        "version": "4.7.0",
+        "version": "5.0.2",
         "path": "node_modules/atom-linter/lib/index.js"
       },
       {
@@ -104,7 +104,7 @@
       },
       {
         "name": "sb-exec",
-        "version": "1.0.5",
+        "version": "2.0.5",
         "path": "node_modules/atom-linter/node_modules/sb-exec/lib/index.js"
       },
       {
@@ -113,13 +113,8 @@
         "path": "node_modules/atom-linter/node_modules/sb-exec/node_modules/consistent-env/lib/index.js"
       },
       {
-        "name": "extify",
-        "version": "1.0.0",
-        "path": "node_modules/atom-linter/node_modules/sb-exec/node_modules/extify/lib/index.js"
-      },
-      {
         "name": "sb-npm-path",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "path": "node_modules/atom-linter/node_modules/sb-exec/node_modules/sb-npm-path/lib/index.js"
       },
       {
@@ -174,7 +169,7 @@
       },
       {
         "name": "eslint",
-        "version": "2.12.0",
+        "version": "2.13.1",
         "path": "node_modules/eslint/lib/api.js"
       },
       {
@@ -299,13 +294,8 @@
       },
       {
         "name": "es5-ext",
-        "version": "0.10.11",
+        "version": "0.10.12",
         "path": "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/index.js"
-      },
-      {
-        "name": "es6-symbol",
-        "version": "3.0.2",
-        "path": "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/node_modules/es6-symbol/index.js"
       },
       {
         "name": "es6-iterator",
@@ -344,13 +334,8 @@
       },
       {
         "name": "es5-ext",
-        "version": "0.10.11",
+        "version": "0.10.12",
         "path": "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/index.js"
-      },
-      {
-        "name": "es6-symbol",
-        "version": "3.0.2",
-        "path": "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/index.js"
       },
       {
         "name": "es6-iterator",
@@ -379,12 +364,12 @@
       },
       {
         "name": "espree",
-        "version": "3.1.4",
+        "version": "3.1.7",
         "path": "node_modules/eslint/node_modules/espree/espree.js"
       },
       {
         "name": "acorn",
-        "version": "3.2.0",
+        "version": "3.3.0",
         "path": "node_modules/eslint/node_modules/espree/node_modules/acorn/dist/acorn.js"
       },
       {
@@ -404,88 +389,43 @@
       },
       {
         "name": "file-entry-cache",
-        "version": "1.2.4",
+        "version": "1.3.1",
         "path": "node_modules/eslint/node_modules/file-entry-cache/cache.js"
       },
       {
         "name": "flat-cache",
-        "version": "1.0.10",
+        "version": "1.2.1",
         "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/cache.js"
       },
       {
+        "name": "circular-json",
+        "version": "0.3.1",
+        "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/circular-json/build/circular-json.node.js"
+      },
+      {
         "name": "del",
-        "version": "2.2.0",
+        "version": "2.2.1",
         "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/index.js"
       },
       {
         "name": "globby",
-        "version": "4.1.0",
+        "version": "5.0.0",
         "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/index.js"
       },
       {
         "name": "array-union",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/array-union/index.js"
       },
       {
         "name": "array-uniq",
-        "version": "1.0.2",
+        "version": "1.0.3",
         "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/array-union/node_modules/array-uniq/index.js"
       },
       {
         "name": "arrify",
         "version": "1.0.1",
         "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/arrify/index.js"
-      },
-      {
-        "name": "glob",
-        "version": "6.0.4",
-        "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/glob.js"
-      },
-      {
-        "name": "inflight",
-        "version": "1.0.5",
-        "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inflight/inflight.js"
-      },
-      {
-        "name": "wrappy",
-        "version": "1.0.2",
-        "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy.js"
-      },
-      {
-        "name": "inherits",
-        "version": "2.0.1",
-        "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inherits/inherits.js"
-      },
-      {
-        "name": "minimatch",
-        "version": "3.0.0",
-        "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/minimatch/minimatch.js"
-      },
-      {
-        "name": "brace-expansion",
-        "version": "1.1.4",
-        "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js"
-      },
-      {
-        "name": "balanced-match",
-        "version": "0.4.1",
-        "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js"
-      },
-      {
-        "name": "concat-map",
-        "version": "0.0.1",
-        "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js"
-      },
-      {
-        "name": "once",
-        "version": "1.3.3",
-        "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/once/once.js"
-      },
-      {
-        "name": "wrappy",
-        "version": "1.0.2",
-        "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/once/node_modules/wrappy/wrappy.js"
       },
       {
         "name": "is-path-cwd",
@@ -519,18 +459,13 @@
       },
       {
         "name": "rimraf",
-        "version": "2.5.2",
+        "version": "2.5.4",
         "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/rimraf/rimraf.js"
       },
       {
         "name": "graceful-fs",
-        "version": "4.1.4",
+        "version": "4.1.5",
         "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/graceful-fs/graceful-fs.js"
-      },
-      {
-        "name": "read-json-sync",
-        "version": "1.1.1",
-        "path": "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/read-json-sync/index.js"
       },
       {
         "name": "write",
@@ -544,8 +479,13 @@
       },
       {
         "name": "glob",
-        "version": "7.0.3",
+        "version": "7.0.5",
         "path": "node_modules/eslint/node_modules/glob/glob.js"
+      },
+      {
+        "name": "fs.realpath",
+        "version": "1.0.0",
+        "path": "node_modules/eslint/node_modules/glob/node_modules/fs.realpath/index.js"
       },
       {
         "name": "inflight",
@@ -564,17 +504,17 @@
       },
       {
         "name": "minimatch",
-        "version": "3.0.0",
+        "version": "3.0.2",
         "path": "node_modules/eslint/node_modules/glob/node_modules/minimatch/minimatch.js"
       },
       {
         "name": "brace-expansion",
-        "version": "1.1.4",
+        "version": "1.1.6",
         "path": "node_modules/eslint/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js"
       },
       {
         "name": "balanced-match",
-        "version": "0.4.1",
+        "version": "0.4.2",
         "path": "node_modules/eslint/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js"
       },
       {
@@ -594,12 +534,12 @@
       },
       {
         "name": "globals",
-        "version": "9.8.0",
+        "version": "9.9.0",
         "path": "node_modules/eslint/node_modules/globals/index.js"
       },
       {
         "name": "ignore",
-        "version": "3.1.2",
+        "version": "3.1.3",
         "path": "node_modules/eslint/node_modules/ignore/ignore.js"
       },
       {
@@ -834,7 +774,7 @@
       },
       {
         "name": "lodash",
-        "version": "4.13.1",
+        "version": "4.14.1",
         "path": "node_modules/eslint/node_modules/lodash/lodash.js"
       },
       {
@@ -859,7 +799,7 @@
       },
       {
         "name": "fast-levenshtein",
-        "version": "1.1.3",
+        "version": "1.1.4",
         "path": "node_modules/eslint/node_modules/optionator/node_modules/fast-levenshtein/levenshtein.js"
       },
       {
@@ -934,7 +874,7 @@
       },
       {
         "name": "bluebird",
-        "version": "3.4.0",
+        "version": "3.4.1",
         "path": "node_modules/eslint/node_modules/table/node_modules/bluebird/js/release/bluebird.js"
       },
       {
@@ -1039,8 +979,6 @@
         "node_modules/atom-linter/node_modules/sb-exec/lib/types.js",
         "node_modules/atom-linter/node_modules/sb-exec/node_modules/consistent-env/lib/helpers.js",
         "node_modules/atom-linter/node_modules/sb-exec/node_modules/consistent-env/lib/index.js",
-        "node_modules/atom-linter/node_modules/sb-exec/node_modules/extify/lib/helpers.js",
-        "node_modules/atom-linter/node_modules/sb-exec/node_modules/extify/lib/index.js",
         "node_modules/atom-linter/node_modules/sb-exec/node_modules/sb-npm-path/lib/helpers.js",
         "node_modules/atom-linter/node_modules/sb-exec/node_modules/sb-npm-path/lib/index.js",
         "node_modules/atom-linter/node_modules/sb-exec/node_modules/sb-npm-path/node_modules/sb-memoize/lib/index.js",
@@ -1601,13 +1539,6 @@
         "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/math/trunc/index.js",
         "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/math/trunc/is-implemented.js",
         "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/math/trunc/shim.js",
-        "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/node_modules/es6-symbol/implement.js",
-        "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/node_modules/es6-symbol/index.js",
-        "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/node_modules/es6-symbol/is-implemented.js",
-        "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/node_modules/es6-symbol/is-native-implemented.js",
-        "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/node_modules/es6-symbol/is-symbol.js",
-        "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/node_modules/es6-symbol/polyfill.js",
-        "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/node_modules/es6-symbol/validate-symbol.js",
         "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/number/#/index.js",
         "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/number/#/pad.js",
         "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/number/epsilon/implement.js",
@@ -2048,13 +1979,6 @@
         "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/math/trunc/index.js",
         "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/math/trunc/is-implemented.js",
         "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/math/trunc/shim.js",
-        "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/implement.js",
-        "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/index.js",
-        "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/is-implemented.js",
-        "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/is-native-implemented.js",
-        "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/is-symbol.js",
-        "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/polyfill.js",
-        "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/validate-symbol.js",
         "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/number/#/index.js",
         "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/number/#/pad.js",
         "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/number/epsilon/implement.js",
@@ -2287,18 +2211,23 @@
         "node_modules/eslint/node_modules/espree/lib/features.js",
         "node_modules/eslint/node_modules/espree/lib/token-translator.js",
         "node_modules/eslint/node_modules/espree/lib/visitor-keys.js",
-        "node_modules/eslint/node_modules/espree/node_modules/acorn/bin/build-acorn.js",
         "node_modules/eslint/node_modules/espree/node_modules/acorn/bin/generate-identifier-regex.js",
+        "node_modules/eslint/node_modules/espree/node_modules/acorn/dist/acorn.es.js",
         "node_modules/eslint/node_modules/espree/node_modules/acorn/dist/acorn.js",
+        "node_modules/eslint/node_modules/espree/node_modules/acorn/dist/acorn_loose.es.js",
         "node_modules/eslint/node_modules/espree/node_modules/acorn/dist/acorn_loose.js",
+        "node_modules/eslint/node_modules/espree/node_modules/acorn/dist/walk.es.js",
         "node_modules/eslint/node_modules/espree/node_modules/acorn/dist/walk.js",
+        "node_modules/eslint/node_modules/espree/node_modules/acorn/rollup/config.bin.js",
+        "node_modules/eslint/node_modules/espree/node_modules/acorn/rollup/config.loose.js",
+        "node_modules/eslint/node_modules/espree/node_modules/acorn/rollup/config.main.js",
+        "node_modules/eslint/node_modules/espree/node_modules/acorn/rollup/config.walk.js",
         "node_modules/eslint/node_modules/espree/node_modules/acorn/src/bin/acorn.js",
         "node_modules/eslint/node_modules/espree/node_modules/acorn/src/expression.js",
         "node_modules/eslint/node_modules/espree/node_modules/acorn/src/identifier.js",
         "node_modules/eslint/node_modules/espree/node_modules/acorn/src/index.js",
         "node_modules/eslint/node_modules/espree/node_modules/acorn/src/location.js",
         "node_modules/eslint/node_modules/espree/node_modules/acorn/src/locutil.js",
-        "node_modules/eslint/node_modules/espree/node_modules/acorn/src/loose/acorn_loose.js",
         "node_modules/eslint/node_modules/espree/node_modules/acorn/src/loose/expression.js",
         "node_modules/eslint/node_modules/espree/node_modules/acorn/src/loose/index.js",
         "node_modules/eslint/node_modules/espree/node_modules/acorn/src/loose/parseutil.js",
@@ -2328,27 +2257,14 @@
         "node_modules/eslint/node_modules/esutils/lib/utils.js",
         "node_modules/eslint/node_modules/file-entry-cache/cache.js",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/cache.js",
+        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/circular-json/build/circular-json.js",
+        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/circular-json/build/circular-json.max.js",
+        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/circular-json/build/circular-json.node.js",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/index.js",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/index.js",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/array-union/index.js",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/array-union/node_modules/array-uniq/index.js",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/arrify/index.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/common.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/glob.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inflight/inflight.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inherits/inherits.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inherits/inherits_browser.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inherits/test.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/minimatch/minimatch.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/example.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/example/map.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/once/node_modules/wrappy/wrappy.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/once/once.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/sync.js",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/is-path-cwd/index.js",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/is-path-in-cwd/index.js",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/is-path-in-cwd/node_modules/is-path-inside/index.js",
@@ -2361,18 +2277,19 @@
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/graceful-fs/graceful-fs.js",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/graceful-fs/legacy-streams.js",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/graceful-fs/polyfills.js",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/read-json-sync/index.js",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/write/index.js",
+        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/utils.js",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/object-assign/index.js",
         "node_modules/eslint/node_modules/glob/common.js",
         "node_modules/eslint/node_modules/glob/glob.js",
+        "node_modules/eslint/node_modules/glob/node_modules/fs.realpath/index.js",
+        "node_modules/eslint/node_modules/glob/node_modules/fs.realpath/old.js",
         "node_modules/eslint/node_modules/glob/node_modules/inflight/inflight.js",
         "node_modules/eslint/node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy.js",
         "node_modules/eslint/node_modules/glob/node_modules/inherits/inherits.js",
         "node_modules/eslint/node_modules/glob/node_modules/inherits/inherits_browser.js",
         "node_modules/eslint/node_modules/glob/node_modules/inherits/test.js",
         "node_modules/eslint/node_modules/glob/node_modules/minimatch/minimatch.js",
-        "node_modules/eslint/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/example.js",
         "node_modules/eslint/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js",
         "node_modules/eslint/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js",
         "node_modules/eslint/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/example/map.js",
@@ -2578,6 +2495,7 @@
         "node_modules/eslint/node_modules/lodash/_baseClamp.js",
         "node_modules/eslint/node_modules/lodash/_baseClone.js",
         "node_modules/eslint/node_modules/lodash/_baseConforms.js",
+        "node_modules/eslint/node_modules/lodash/_baseConformsTo.js",
         "node_modules/eslint/node_modules/lodash/_baseCreate.js",
         "node_modules/eslint/node_modules/lodash/_baseDelay.js",
         "node_modules/eslint/node_modules/lodash/_baseDifference.js",
@@ -2597,6 +2515,7 @@
         "node_modules/eslint/node_modules/lodash/_baseFunctions.js",
         "node_modules/eslint/node_modules/lodash/_baseGet.js",
         "node_modules/eslint/node_modules/lodash/_baseGetAllKeys.js",
+        "node_modules/eslint/node_modules/lodash/_baseGetTag.js",
         "node_modules/eslint/node_modules/lodash/_baseGt.js",
         "node_modules/eslint/node_modules/lodash/_baseHas.js",
         "node_modules/eslint/node_modules/lodash/_baseHasIn.js",
@@ -2606,10 +2525,17 @@
         "node_modules/eslint/node_modules/lodash/_baseIntersection.js",
         "node_modules/eslint/node_modules/lodash/_baseInverter.js",
         "node_modules/eslint/node_modules/lodash/_baseInvoke.js",
+        "node_modules/eslint/node_modules/lodash/_baseIsArrayBuffer.js",
+        "node_modules/eslint/node_modules/lodash/_baseIsDate.js",
         "node_modules/eslint/node_modules/lodash/_baseIsEqual.js",
         "node_modules/eslint/node_modules/lodash/_baseIsEqualDeep.js",
+        "node_modules/eslint/node_modules/lodash/_baseIsMap.js",
         "node_modules/eslint/node_modules/lodash/_baseIsMatch.js",
+        "node_modules/eslint/node_modules/lodash/_baseIsNaN.js",
         "node_modules/eslint/node_modules/lodash/_baseIsNative.js",
+        "node_modules/eslint/node_modules/lodash/_baseIsRegExp.js",
+        "node_modules/eslint/node_modules/lodash/_baseIsSet.js",
+        "node_modules/eslint/node_modules/lodash/_baseIsTypedArray.js",
         "node_modules/eslint/node_modules/lodash/_baseIteratee.js",
         "node_modules/eslint/node_modules/lodash/_baseKeys.js",
         "node_modules/eslint/node_modules/lodash/_baseKeysIn.js",
@@ -2627,12 +2553,14 @@
         "node_modules/eslint/node_modules/lodash/_basePickBy.js",
         "node_modules/eslint/node_modules/lodash/_baseProperty.js",
         "node_modules/eslint/node_modules/lodash/_basePropertyDeep.js",
+        "node_modules/eslint/node_modules/lodash/_basePropertyOf.js",
         "node_modules/eslint/node_modules/lodash/_basePullAll.js",
         "node_modules/eslint/node_modules/lodash/_basePullAt.js",
         "node_modules/eslint/node_modules/lodash/_baseRandom.js",
         "node_modules/eslint/node_modules/lodash/_baseRange.js",
         "node_modules/eslint/node_modules/lodash/_baseReduce.js",
         "node_modules/eslint/node_modules/lodash/_baseRepeat.js",
+        "node_modules/eslint/node_modules/lodash/_baseRest.js",
         "node_modules/eslint/node_modules/lodash/_baseSet.js",
         "node_modules/eslint/node_modules/lodash/_baseSetData.js",
         "node_modules/eslint/node_modules/lodash/_baseSlice.js",
@@ -2662,7 +2590,6 @@
         "node_modules/eslint/node_modules/lodash/_castSlice.js",
         "node_modules/eslint/node_modules/lodash/_charsEndIndex.js",
         "node_modules/eslint/node_modules/lodash/_charsStartIndex.js",
-        "node_modules/eslint/node_modules/lodash/_checkGlobal.js",
         "node_modules/eslint/node_modules/lodash/_cloneArrayBuffer.js",
         "node_modules/eslint/node_modules/lodash/_cloneBuffer.js",
         "node_modules/eslint/node_modules/lodash/_cloneDataView.js",
@@ -2684,32 +2611,34 @@
         "node_modules/eslint/node_modules/lodash/_createAssigner.js",
         "node_modules/eslint/node_modules/lodash/_createBaseEach.js",
         "node_modules/eslint/node_modules/lodash/_createBaseFor.js",
-        "node_modules/eslint/node_modules/lodash/_createBaseWrapper.js",
+        "node_modules/eslint/node_modules/lodash/_createBind.js",
         "node_modules/eslint/node_modules/lodash/_createCaseFirst.js",
         "node_modules/eslint/node_modules/lodash/_createCompounder.js",
-        "node_modules/eslint/node_modules/lodash/_createCtorWrapper.js",
-        "node_modules/eslint/node_modules/lodash/_createCurryWrapper.js",
+        "node_modules/eslint/node_modules/lodash/_createCtor.js",
+        "node_modules/eslint/node_modules/lodash/_createCurry.js",
         "node_modules/eslint/node_modules/lodash/_createFind.js",
         "node_modules/eslint/node_modules/lodash/_createFlow.js",
-        "node_modules/eslint/node_modules/lodash/_createHybridWrapper.js",
+        "node_modules/eslint/node_modules/lodash/_createHybrid.js",
         "node_modules/eslint/node_modules/lodash/_createInverter.js",
         "node_modules/eslint/node_modules/lodash/_createMathOperation.js",
         "node_modules/eslint/node_modules/lodash/_createOver.js",
         "node_modules/eslint/node_modules/lodash/_createPadding.js",
-        "node_modules/eslint/node_modules/lodash/_createPartialWrapper.js",
+        "node_modules/eslint/node_modules/lodash/_createPartial.js",
         "node_modules/eslint/node_modules/lodash/_createRange.js",
-        "node_modules/eslint/node_modules/lodash/_createRecurryWrapper.js",
+        "node_modules/eslint/node_modules/lodash/_createRecurry.js",
         "node_modules/eslint/node_modules/lodash/_createRelationalOperation.js",
         "node_modules/eslint/node_modules/lodash/_createRound.js",
         "node_modules/eslint/node_modules/lodash/_createSet.js",
         "node_modules/eslint/node_modules/lodash/_createToPairs.js",
-        "node_modules/eslint/node_modules/lodash/_createWrapper.js",
+        "node_modules/eslint/node_modules/lodash/_createWrap.js",
         "node_modules/eslint/node_modules/lodash/_deburrLetter.js",
+        "node_modules/eslint/node_modules/lodash/_defineProperty.js",
         "node_modules/eslint/node_modules/lodash/_equalArrays.js",
         "node_modules/eslint/node_modules/lodash/_equalByTag.js",
         "node_modules/eslint/node_modules/lodash/_equalObjects.js",
         "node_modules/eslint/node_modules/lodash/_escapeHtmlChar.js",
         "node_modules/eslint/node_modules/lodash/_escapeStringChar.js",
+        "node_modules/eslint/node_modules/lodash/_freeGlobal.js",
         "node_modules/eslint/node_modules/lodash/_getAllKeys.js",
         "node_modules/eslint/node_modules/lodash/_getAllKeysIn.js",
         "node_modules/eslint/node_modules/lodash/_getData.js",
@@ -2725,6 +2654,7 @@
         "node_modules/eslint/node_modules/lodash/_getTag.js",
         "node_modules/eslint/node_modules/lodash/_getValue.js",
         "node_modules/eslint/node_modules/lodash/_getView.js",
+        "node_modules/eslint/node_modules/lodash/_getWrapDetails.js",
         "node_modules/eslint/node_modules/lodash/_hasPath.js",
         "node_modules/eslint/node_modules/lodash/_hashClear.js",
         "node_modules/eslint/node_modules/lodash/_hashDelete.js",
@@ -2732,12 +2662,11 @@
         "node_modules/eslint/node_modules/lodash/_hashHas.js",
         "node_modules/eslint/node_modules/lodash/_hashSet.js",
         "node_modules/eslint/node_modules/lodash/_indexKeys.js",
-        "node_modules/eslint/node_modules/lodash/_indexOfNaN.js",
         "node_modules/eslint/node_modules/lodash/_initCloneArray.js",
         "node_modules/eslint/node_modules/lodash/_initCloneByTag.js",
         "node_modules/eslint/node_modules/lodash/_initCloneObject.js",
+        "node_modules/eslint/node_modules/lodash/_insertWrapDetails.js",
         "node_modules/eslint/node_modules/lodash/_isFlattenable.js",
-        "node_modules/eslint/node_modules/lodash/_isFlattenableIteratee.js",
         "node_modules/eslint/node_modules/lodash/_isHostObject.js",
         "node_modules/eslint/node_modules/lodash/_isIndex.js",
         "node_modules/eslint/node_modules/lodash/_isIterateeCall.js",
@@ -2768,6 +2697,8 @@
         "node_modules/eslint/node_modules/lodash/_mergeDefaults.js",
         "node_modules/eslint/node_modules/lodash/_metaMap.js",
         "node_modules/eslint/node_modules/lodash/_nativeCreate.js",
+        "node_modules/eslint/node_modules/lodash/_nodeUtil.js",
+        "node_modules/eslint/node_modules/lodash/_overArg.js",
         "node_modules/eslint/node_modules/lodash/_parent.js",
         "node_modules/eslint/node_modules/lodash/_reEscape.js",
         "node_modules/eslint/node_modules/lodash/_reEvaluate.js",
@@ -2782,6 +2713,7 @@
         "node_modules/eslint/node_modules/lodash/_setData.js",
         "node_modules/eslint/node_modules/lodash/_setToArray.js",
         "node_modules/eslint/node_modules/lodash/_setToPairs.js",
+        "node_modules/eslint/node_modules/lodash/_setWrapToString.js",
         "node_modules/eslint/node_modules/lodash/_stackClear.js",
         "node_modules/eslint/node_modules/lodash/_stackDelete.js",
         "node_modules/eslint/node_modules/lodash/_stackGet.js",
@@ -2793,6 +2725,7 @@
         "node_modules/eslint/node_modules/lodash/_toKey.js",
         "node_modules/eslint/node_modules/lodash/_toSource.js",
         "node_modules/eslint/node_modules/lodash/_unescapeHtmlChar.js",
+        "node_modules/eslint/node_modules/lodash/_updateWrapDetails.js",
         "node_modules/eslint/node_modules/lodash/_wrapperClone.js",
         "node_modules/eslint/node_modules/lodash/add.js",
         "node_modules/eslint/node_modules/lodash/after.js",
@@ -2825,6 +2758,7 @@
         "node_modules/eslint/node_modules/lodash/concat.js",
         "node_modules/eslint/node_modules/lodash/cond.js",
         "node_modules/eslint/node_modules/lodash/conforms.js",
+        "node_modules/eslint/node_modules/lodash/conformsTo.js",
         "node_modules/eslint/node_modules/lodash/constant.js",
         "node_modules/eslint/node_modules/lodash/core.js",
         "node_modules/eslint/node_modules/lodash/core.min.js",
@@ -2835,6 +2769,7 @@
         "node_modules/eslint/node_modules/lodash/date.js",
         "node_modules/eslint/node_modules/lodash/debounce.js",
         "node_modules/eslint/node_modules/lodash/deburr.js",
+        "node_modules/eslint/node_modules/lodash/defaultTo.js",
         "node_modules/eslint/node_modules/lodash/defaults.js",
         "node_modules/eslint/node_modules/lodash/defaultsDeep.js",
         "node_modules/eslint/node_modules/lodash/defer.js",
@@ -2883,6 +2818,8 @@
         "node_modules/eslint/node_modules/lodash/forInRight.js",
         "node_modules/eslint/node_modules/lodash/forOwn.js",
         "node_modules/eslint/node_modules/lodash/forOwnRight.js",
+        "node_modules/eslint/node_modules/lodash/fp/F.js",
+        "node_modules/eslint/node_modules/lodash/fp/T.js",
         "node_modules/eslint/node_modules/lodash/fp/__.js",
         "node_modules/eslint/node_modules/lodash/fp/_baseConvert.js",
         "node_modules/eslint/node_modules/lodash/fp/_convertBrowser.js",
@@ -2900,7 +2837,11 @@
         "node_modules/eslint/node_modules/lodash/fp/array.js",
         "node_modules/eslint/node_modules/lodash/fp/ary.js",
         "node_modules/eslint/node_modules/lodash/fp/assign.js",
+        "node_modules/eslint/node_modules/lodash/fp/assignAll.js",
+        "node_modules/eslint/node_modules/lodash/fp/assignAllWith.js",
         "node_modules/eslint/node_modules/lodash/fp/assignIn.js",
+        "node_modules/eslint/node_modules/lodash/fp/assignInAll.js",
+        "node_modules/eslint/node_modules/lodash/fp/assignInAllWith.js",
         "node_modules/eslint/node_modules/lodash/fp/assignInWith.js",
         "node_modules/eslint/node_modules/lodash/fp/assignWith.js",
         "node_modules/eslint/node_modules/lodash/fp/assoc.js",
@@ -2930,6 +2871,7 @@
         "node_modules/eslint/node_modules/lodash/fp/concat.js",
         "node_modules/eslint/node_modules/lodash/fp/cond.js",
         "node_modules/eslint/node_modules/lodash/fp/conforms.js",
+        "node_modules/eslint/node_modules/lodash/fp/conformsTo.js",
         "node_modules/eslint/node_modules/lodash/fp/constant.js",
         "node_modules/eslint/node_modules/lodash/fp/contains.js",
         "node_modules/eslint/node_modules/lodash/fp/convert.js",
@@ -2942,8 +2884,11 @@
         "node_modules/eslint/node_modules/lodash/fp/date.js",
         "node_modules/eslint/node_modules/lodash/fp/debounce.js",
         "node_modules/eslint/node_modules/lodash/fp/deburr.js",
+        "node_modules/eslint/node_modules/lodash/fp/defaultTo.js",
         "node_modules/eslint/node_modules/lodash/fp/defaults.js",
+        "node_modules/eslint/node_modules/lodash/fp/defaultsAll.js",
         "node_modules/eslint/node_modules/lodash/fp/defaultsDeep.js",
+        "node_modules/eslint/node_modules/lodash/fp/defaultsDeepAll.js",
         "node_modules/eslint/node_modules/lodash/fp/defer.js",
         "node_modules/eslint/node_modules/lodash/fp/delay.js",
         "node_modules/eslint/node_modules/lodash/fp/difference.js",
@@ -2953,6 +2898,8 @@
         "node_modules/eslint/node_modules/lodash/fp/dissocPath.js",
         "node_modules/eslint/node_modules/lodash/fp/divide.js",
         "node_modules/eslint/node_modules/lodash/fp/drop.js",
+        "node_modules/eslint/node_modules/lodash/fp/dropLast.js",
+        "node_modules/eslint/node_modules/lodash/fp/dropLastWhile.js",
         "node_modules/eslint/node_modules/lodash/fp/dropRight.js",
         "node_modules/eslint/node_modules/lodash/fp/dropRightWhile.js",
         "node_modules/eslint/node_modules/lodash/fp/dropWhile.js",
@@ -2967,6 +2914,8 @@
         "node_modules/eslint/node_modules/lodash/fp/escapeRegExp.js",
         "node_modules/eslint/node_modules/lodash/fp/every.js",
         "node_modules/eslint/node_modules/lodash/fp/extend.js",
+        "node_modules/eslint/node_modules/lodash/fp/extendAll.js",
+        "node_modules/eslint/node_modules/lodash/fp/extendAllWith.js",
         "node_modules/eslint/node_modules/lodash/fp/extendWith.js",
         "node_modules/eslint/node_modules/lodash/fp/fill.js",
         "node_modules/eslint/node_modules/lodash/fp/filter.js",
@@ -3014,6 +2963,7 @@
         "node_modules/eslint/node_modules/lodash/fp/inRange.js",
         "node_modules/eslint/node_modules/lodash/fp/includes.js",
         "node_modules/eslint/node_modules/lodash/fp/includesFrom.js",
+        "node_modules/eslint/node_modules/lodash/fp/indexBy.js",
         "node_modules/eslint/node_modules/lodash/fp/indexOf.js",
         "node_modules/eslint/node_modules/lodash/fp/indexOfFrom.js",
         "node_modules/eslint/node_modules/lodash/fp/init.js",
@@ -3092,6 +3042,8 @@
         "node_modules/eslint/node_modules/lodash/fp/meanBy.js",
         "node_modules/eslint/node_modules/lodash/fp/memoize.js",
         "node_modules/eslint/node_modules/lodash/fp/merge.js",
+        "node_modules/eslint/node_modules/lodash/fp/mergeAll.js",
+        "node_modules/eslint/node_modules/lodash/fp/mergeAllWith.js",
         "node_modules/eslint/node_modules/lodash/fp/mergeWith.js",
         "node_modules/eslint/node_modules/lodash/fp/method.js",
         "node_modules/eslint/node_modules/lodash/fp/methodOf.js",
@@ -3197,8 +3149,13 @@
         "node_modules/eslint/node_modules/lodash/fp/subtract.js",
         "node_modules/eslint/node_modules/lodash/fp/sum.js",
         "node_modules/eslint/node_modules/lodash/fp/sumBy.js",
+        "node_modules/eslint/node_modules/lodash/fp/symmetricDifference.js",
+        "node_modules/eslint/node_modules/lodash/fp/symmetricDifferenceBy.js",
+        "node_modules/eslint/node_modules/lodash/fp/symmetricDifferenceWith.js",
         "node_modules/eslint/node_modules/lodash/fp/tail.js",
         "node_modules/eslint/node_modules/lodash/fp/take.js",
+        "node_modules/eslint/node_modules/lodash/fp/takeLast.js",
+        "node_modules/eslint/node_modules/lodash/fp/takeLastWhile.js",
         "node_modules/eslint/node_modules/lodash/fp/takeRight.js",
         "node_modules/eslint/node_modules/lodash/fp/takeRightWhile.js",
         "node_modules/eslint/node_modules/lodash/fp/takeWhile.js",
@@ -3255,6 +3212,7 @@
         "node_modules/eslint/node_modules/lodash/fp/valueOf.js",
         "node_modules/eslint/node_modules/lodash/fp/values.js",
         "node_modules/eslint/node_modules/lodash/fp/valuesIn.js",
+        "node_modules/eslint/node_modules/lodash/fp/where.js",
         "node_modules/eslint/node_modules/lodash/fp/whereEq.js",
         "node_modules/eslint/node_modules/lodash/fp/without.js",
         "node_modules/eslint/node_modules/lodash/fp/words.js",
@@ -3268,6 +3226,7 @@
         "node_modules/eslint/node_modules/lodash/fp/xorBy.js",
         "node_modules/eslint/node_modules/lodash/fp/xorWith.js",
         "node_modules/eslint/node_modules/lodash/fp/zip.js",
+        "node_modules/eslint/node_modules/lodash/fp/zipAll.js",
         "node_modules/eslint/node_modules/lodash/fp/zipObj.js",
         "node_modules/eslint/node_modules/lodash/fp/zipObject.js",
         "node_modules/eslint/node_modules/lodash/fp/zipObjectDeep.js",
@@ -3707,8 +3666,6 @@
         "node_modules/atom-linter/node_modules/named-js-regexp/package.json",
         "node_modules/atom-linter/node_modules/sb-exec/.eslintrc.json",
         "node_modules/atom-linter/node_modules/sb-exec/node_modules/consistent-env/package.json",
-        "node_modules/atom-linter/node_modules/sb-exec/node_modules/extify/.eslintrc.json",
-        "node_modules/atom-linter/node_modules/sb-exec/node_modules/extify/package.json",
         "node_modules/atom-linter/node_modules/sb-exec/node_modules/sb-npm-path/.eslintrc.json",
         "node_modules/atom-linter/node_modules/sb-exec/node_modules/sb-npm-path/node_modules/sb-memoize/.eslintrc.json",
         "node_modules/atom-linter/node_modules/sb-exec/node_modules/sb-npm-path/node_modules/sb-memoize/package.json",
@@ -3755,7 +3712,6 @@
         "node_modules/eslint/node_modules/doctrine/node_modules/isarray/package.json",
         "node_modules/eslint/node_modules/doctrine/package.json",
         "node_modules/eslint/node_modules/es6-map/node_modules/d/package.json",
-        "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/node_modules/es6-symbol/package.json",
         "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/package.json",
         "node_modules/eslint/node_modules/es6-map/node_modules/es6-iterator/package.json",
         "node_modules/eslint/node_modules/es6-map/node_modules/es6-set/package.json",
@@ -3764,7 +3720,6 @@
         "node_modules/eslint/node_modules/es6-map/package.json",
         "node_modules/eslint/node_modules/escope/bower.json",
         "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/d/package.json",
-        "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/package.json",
         "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/package.json",
         "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es6-iterator/package.json",
         "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es6-symbol/package.json",
@@ -3778,19 +3733,10 @@
         "node_modules/eslint/node_modules/espree/package.json",
         "node_modules/eslint/node_modules/estraverse/package.json",
         "node_modules/eslint/node_modules/esutils/package.json",
+        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/circular-json/package.json",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/array-union/node_modules/array-uniq/package.json",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/array-union/package.json",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/arrify/package.json",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inflight/node_modules/wrappy/package.json",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inflight/package.json",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inherits/package.json",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/package.json",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/package.json",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/package.json",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/minimatch/package.json",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/once/node_modules/wrappy/package.json",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/once/package.json",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/package.json",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/package.json",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/is-path-cwd/package.json",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/is-path-in-cwd/node_modules/is-path-inside/package.json",
@@ -3801,11 +3747,11 @@
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/rimraf/package.json",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/package.json",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/graceful-fs/package.json",
-        "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/read-json-sync/package.json",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/write/package.json",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/package.json",
         "node_modules/eslint/node_modules/file-entry-cache/node_modules/object-assign/package.json",
         "node_modules/eslint/node_modules/file-entry-cache/package.json",
+        "node_modules/eslint/node_modules/glob/node_modules/fs.realpath/package.json",
         "node_modules/eslint/node_modules/glob/node_modules/inflight/node_modules/wrappy/package.json",
         "node_modules/eslint/node_modules/glob/node_modules/inflight/package.json",
         "node_modules/eslint/node_modules/glob/node_modules/inherits/package.json",
@@ -3936,11 +3882,11 @@
           "src"
         ],
         "dependencies": {
-          "atom-linter": "^4.3.4",
+          "atom-linter": "^5.0.1",
           "atom-package-deps": "^4.0.1",
           "consistent-path": "^2.0.1",
           "escape-html": "^1.0.3",
-          "eslint": "^2.9.0",
+          "eslint": "^2.11.1",
           "process-communication": "^1.1.0",
           "resolve-env": "^1.0.0"
         }
@@ -3952,7 +3898,7 @@
         ],
         "dependencies": {
           "named-js-regexp": "^1.3.1",
-          "sb-exec": "^1.0.4",
+          "sb-exec": "^2.0.4",
           "sb-promisify": "^1.0.0",
           "tmp": "~0.0.28"
         }
@@ -3963,8 +3909,7 @@
           "node_modules/atom-linter/node_modules/sb-exec/lib"
         ],
         "dependencies": {
-          "consistent-env": "^1.0.1",
-          "extify": "^1.0.0",
+          "consistent-env": "^1.2.0",
           "sb-npm-path": "^1.0.0"
         }
       },
@@ -4038,7 +3983,7 @@
           "doctrine": "^1.2.2",
           "es6-map": "^0.1.3",
           "escope": "^3.6.0",
-          "espree": "3.1.4",
+          "espree": "^3.1.6",
           "estraverse": "^4.2.0",
           "esutils": "^2.0.2",
           "file-entry-cache": "^1.1.1",
@@ -4321,17 +4266,7 @@
         ],
         "dependencies": {
           "es6-iterator": "2",
-          "es6-symbol": "~3.0.2"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/node_modules/es6-symbol",
-          "node_modules/eslint/node_modules/es6-map/node_modules/es5-ext/node_modules/es6-symbol/test"
-        ],
-        "dependencies": {
-          "d": "~0.1.1",
-          "es5-ext": "~0.10.10"
+          "es6-symbol": "~3.1"
         }
       },
       {
@@ -4580,17 +4515,7 @@
         ],
         "dependencies": {
           "es6-iterator": "2",
-          "es6-symbol": "~3.0.2"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol",
-          "node_modules/eslint/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/test"
-        ],
-        "dependencies": {
-          "d": "~0.1.1",
-          "es5-ext": "~0.10.10"
+          "es6-symbol": "~3.1"
         }
       },
       {
@@ -4631,7 +4556,7 @@
           "node_modules/eslint/node_modules/espree/lib"
         ],
         "dependencies": {
-          "acorn": "^3.1.0",
+          "acorn": "^3.3.0",
           "acorn-jsx": "^3.0.0"
         }
       },
@@ -4648,7 +4573,7 @@
           "node_modules/eslint/node_modules/file-entry-cache"
         ],
         "dependencies": {
-          "flat-cache": "^1.0.9",
+          "flat-cache": "^1.2.1",
           "object-assign": "^4.0.1"
         }
       },
@@ -4657,9 +4582,9 @@
           "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache"
         ],
         "dependencies": {
+          "circular-json": "^0.3.0",
           "del": "^2.0.2",
           "graceful-fs": "^4.1.2",
-          "read-json-sync": "^1.1.0",
           "write": "^0.2.1"
         }
       },
@@ -4668,7 +4593,7 @@
           "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del"
         ],
         "dependencies": {
-          "globby": "^4.0.0",
+          "globby": "^5.0.0",
           "is-path-cwd": "^1.0.0",
           "is-path-in-cwd": "^1.0.0",
           "object-assign": "^4.0.1",
@@ -4684,7 +4609,7 @@
         "dependencies": {
           "array-union": "^1.0.1",
           "arrify": "^1.0.0",
-          "glob": "^6.0.1",
+          "glob": "^7.0.3",
           "object-assign": "^4.0.1",
           "pify": "^2.0.0",
           "pinkie-promise": "^2.0.0"
@@ -4696,52 +4621,6 @@
         ],
         "dependencies": {
           "array-uniq": "^1.0.1"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob"
-        ],
-        "dependencies": {
-          "inflight": "^1.0.4",
-          "inherits": "2",
-          "minimatch": "2 || 3",
-          "once": "^1.3.0",
-          "path-is-absolute": "^1.0.0"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inflight"
-        ],
-        "dependencies": {
-          "once": "^1.3.0",
-          "wrappy": "1"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/minimatch"
-        ],
-        "dependencies": {
-          "brace-expansion": "^1.0.0"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion"
-        ],
-        "dependencies": {
-          "balanced-match": "^0.4.1",
-          "concat-map": "0.0.1"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/globby/node_modules/glob/node_modules/once"
-        ],
-        "dependencies": {
-          "wrappy": "1"
         }
       },
       {
@@ -4773,15 +4652,7 @@
           "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/del/node_modules/rimraf"
         ],
         "dependencies": {
-          "glob": "^7.0.0"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/eslint/node_modules/file-entry-cache/node_modules/flat-cache/node_modules/read-json-sync"
-        ],
-        "dependencies": {
-          "graceful-fs": "^4.1.2"
+          "glob": "^7.0.5"
         }
       },
       {
@@ -4797,9 +4668,10 @@
           "node_modules/eslint/node_modules/glob"
         ],
         "dependencies": {
+          "fs.realpath": "^1.0.0",
           "inflight": "^1.0.4",
           "inherits": "2",
-          "minimatch": "2 || 3",
+          "minimatch": "^3.0.2",
           "once": "^1.3.0",
           "path-is-absolute": "^1.0.0"
         }
