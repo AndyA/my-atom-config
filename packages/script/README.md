@@ -14,25 +14,29 @@ Currently supported grammars are:
 | :----------------------------------- | :--------- | :-------------- | :---- |
 | 1C (BSL)                             | Yes        |                 | Runs through [OneScript](http://oscript.io/) interpreter in console mode |
 | Ansible                              | Yes        |                 | |
+| AutoHotKey                           | Yes        | Yes             | Requires the path of 'AutoHotKey.exe' in your system environment variables.
 | AppleScript                          | Yes        | Yes             | |
 | Babel ES6 JS                         | Yes        | Yes             | |
 | Bash                                 | Yes        | Yes             | The shell used is based on your default `$SHELL` environment variable |
 | Batch                                | Yes        |                 | |
 | Behat Feature                        | Yes        |                 | |
-| C                                    | Yes        |                 | Only available on OSX (`xcrun clang`) and Linux (`cc`) |
-| C#                                   | Yes        |                 | |
-| C++                                  | Yes        |                 | Only available on OSX (`xcurn clang++`) and Linux (`g++`) |
+| BuckleScript                         | Yes        | Yes             | |
+| C                                    | Yes        | Yes             | Only available on OSX (`xcrun clang`) and Linux (`cc`) |
+| C#                                   | Yes        | Yes             | Requires the path of 'csc.exe' in your system environment variables |
+| C# Script                            | Yes        | Yes             | |
+| C++                                  | Yes        | Yes             | Requires `-std=c++14`. Only available on OSX (`xcrun clang++`) and Linux (`g++`) |
 | Clojure                              | Yes        | Yes             | Clojure scripts are executed via [Leiningen](http://leiningen.org/)'s [exec](https://github.com/kumarshantanu/lein-exec) plugin. Both `Leiningen` and `exec` must be installed |
 | CoffeeScript                         | Yes        | Yes             | |
 | CoffeeScript (Literate)              | Yes        | Yes             | Running selections of code for CoffeeScript (Literate) only works when selecting just the code blocks |
 | Crystal                              | Yes        | Yes             | |
 | Cucumber (Gherkin)                   | Yes        |                 | |
-| D                                    | Yes        |                 | |
-| Dart                                 | Yes        |                 | |
-| DOT (Graphviz)                       | Yes        |                 | |
+| D                                    | Yes        | Yes             | |
+| Dart                                 | Yes        | Yes             | |
+| DOT (Graphviz)                       | Yes        | Yes             | |
 | Elixir                               | Yes        | Yes             | |
 | Erlang                               |            | Yes             | Uses `erl` for limited selection based runs (see [#70](https://github.com/rgbkrk/atom-script/pull/70)) |
 | F#                                   | Yes        |                 | |
+| F*                                   | Yes        |                 | |
 | Fish                                 | Yes        | Yes             | Finally, a way to run code within Atom for the 90s |
 | Forth (via GForth)                   | Yes        |                 | |
 | Fortran (via gfortran)               | Yes        |                 |
@@ -40,6 +44,7 @@ Currently supported grammars are:
 | Go                                   | Yes        |                 | |
 | Groovy                               | Yes        | Yes             | |
 | Haskell                              | Yes        | Yes             | |
+| Hy                                   | Yes        | Yes             | Requires the path of 'hy.exe' in your system environment variables. This is probably already fulfilled if you used `pip install hy` to get Hy. A Hy grammar, such as [this one](https://atom.io/packages/language-hy) is also a good idea. |
 | IcedCoffeeScript                     | Yes        | Yes             | |
 | Inno Setup                           | Yes        |                 | Requires the path of `ISCC.exe` in your system environment variables |
 | [ioLanguage](http://iolanguage.org/) | Yes        | Yes             | |
@@ -58,6 +63,7 @@ Currently supported grammars are:
 | Lua (WoW)                            | Yes        | Yes             | |
 | Makefile                             | Yes        | Yes             | |
 | [MATLAB](http://mathworks.com/products/matlab) | Yes        | Yes   | |
+| MIPS                                 | Yes        |                 | Requires the path of `spim` in your system environment variables |
 | MongoDB                              | Yes        | Yes             | |
 | MoonScript                           | Yes        | Yes             | |
 | [NCL](http://ncl.ucar.edu)           | Yes        | Yes             | Scripts must end with `exit` command for file based runs |
@@ -68,18 +74,21 @@ Currently supported grammars are:
 | Objective-C                          | Yes        |                 | Only available on OSX (`xcrun clang++`) |
 | OCaml                                | Yes        |                 | |
 | Octave                               | Yes        | Yes             | |
+| [Oz](https://mozart.github.io/)      | Yes        | Yes             | |
 | Pandoc Markdown                      | Yes        |                 | Requires the panzer pandoc wrapper https://github.com/msprev/panzer and the pandoc-flavored-markdown language package in Atom https://atom.io/packages/language-pfm |
 | Perl                                 | Yes        | Yes             | |
 | Perl 6                               | Yes        | Yes             | |
 | PHP                                  | Yes        | Yes             | |
 | PostgreSQL                           | Yes        | Yes             | Requires the atom-language-pgsql package in Atom https://atom.io/packages/language-pgsql. Connects as user `$PGUSER` to database `$PGDATABASE`. Both default to the operating system's user name and both can be set in the process environment or in Atom's `init.coffee` script: `process.env.PGUSER = ⟨username⟩` and `process.env.PGDATABASE = ⟨database name⟩` |
-| PowerShell                           | Yes        |                 | |
+| PowerShell                           | Yes        | Yes             | |
 | Processing                           | Yes        |                 | Runs through processing-java. |
 | Prolog                               | Yes        |                 | Scripts must contain a rule with the head `main` (e.g.`main:- parent(X,lucas),writeln(X).`). The script is executed with the goal `main` and is halted after the first result is found. The output is produced by the `writeln/1` predicates. It requires swipl |
 | Python                               | Yes        | Yes             | |
 | R                                    | Yes        | Yes             | |
 | Racket                               | Yes        | Yes             | |
 | [RANT](https://github.com/TheBerkin/Rant) | Yes        | Yes             | |
+| Reason                               | Yes        | Yes             | |
+| Ren'Py                               | Yes        | No              | Requires `renpy` to be in path. Runs project at root of current file.|
 | RSpec                                | Yes        | Yes             | |
 | Ruby                                 | Yes        | Yes             | |
 | Ruby on Rails                        | Yes        | Yes             | |
@@ -93,7 +102,7 @@ Currently supported grammars are:
 | Stata                                | Yes        | Yes             | Runs through Stata. Note stata needs to be added to your system PATH for this to work. `Mac directions <http://www.stata.com/support/faqs/mac/advanced-topics/>`_ . |
 | Swift                                | Yes        |                 | |
 | Tcl                                  | Yes        | Yes             | |
-| TypeScript                           | Yes        | Yes             | |
+| TypeScript                           | Yes        | Yes             | Requires `ts-node` https://github.com/TypeStrong/ts-node |
 | Zsh                                  | Yes        | Yes             | The shell used is based on your default `$SHELL` environment variable |
 
 **NOTE**: Some grammars may require you to install [a custom language package](https://atom.io/search?utf8=✓&q=language).
@@ -130,7 +139,7 @@ Make sure to run `atom` from the command line to get full access to your environ
 
 **Script: Run by Line Number** to run using the specified line number. **Note** that if you select an entire line this number could be off by one due to the way Atom detects numbers while text is selected.
 
-**Script: Run Options** should be used to configure command options, program arguments, and environment variables overrides. Environment variables may be input into the options view in the form `VARIABLE_NAME_ONE=value;VARIABLE_NAME_TWO="other value";VARIABLE_NAME_3='test'`.
+**Script: Configure Script** should be used to configure command options, program arguments, and environment variables overrides. Environment variables may be input into the options view in the form `VARIABLE_NAME_ONE=value;VARIABLE_NAME_TWO="other value";VARIABLE_NAME_3='test'`.
 
 Also, in this dialog you can save options as a profile for future use. For example, you can add two profiles, one for `python2.7` and another for `python3` and run scripts with a specified profile, which will be more convinient than entering options every time you want to switch python versions.
 

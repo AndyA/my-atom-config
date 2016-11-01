@@ -38,6 +38,11 @@ module.exports =
     catch error
       throw ("Error while deleting temporary files (#{error})")
 
+  # Public: Get the Java helper object
+  #
+  # Returns an {Object} which assists in preparing java + javac statements
+  Java: require './grammar-utils/java'
+
   # Public: Get the Lisp helper object
   #
   # Returns an {Object} which assists in splitting Lisp statements.
@@ -77,3 +82,8 @@ module.exports =
   #
   # Returns an [array] of appropriate command line flags for the active CS compiler.
   CScompiler: require './grammar-utils/coffee-script-compiler'
+
+  # Public: Get the D helper object
+  #
+  # Returns an {Object} which assists in creating temp files containing D code
+  D: require './grammar-utils/d'

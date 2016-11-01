@@ -226,6 +226,49 @@
       }
     }
   },
+  "clj": {
+    "title": "Clojure",
+    "type": "object",
+    "description": "Options for language Clojure",
+    "collapsed": true,
+    "beautifiers": [
+      "cljfmt"
+    ],
+    "grammars": [
+      "Clojure"
+    ],
+    "extensions": [
+      "clj",
+      "cljs",
+      "edn"
+    ],
+    "properties": {
+      "disabled": {
+        "title": "Disable Beautifying Language",
+        "order": -3,
+        "type": "boolean",
+        "default": false,
+        "description": "Disable Clojure Beautification"
+      },
+      "default_beautifier": {
+        "title": "Default Beautifier",
+        "order": -2,
+        "type": "string",
+        "default": "cljfmt",
+        "description": "Default Beautifier to be used for Clojure",
+        "enum": [
+          "cljfmt"
+        ]
+      },
+      "beautify_on_save": {
+        "title": "Beautify On Save",
+        "order": -1,
+        "type": "boolean",
+        "default": false,
+        "description": "Automatically beautify Clojure files on save"
+      }
+    }
+  },
   "coffeescript": {
     "title": "CoffeeScript",
     "type": "object",
@@ -762,7 +805,8 @@
     "beautifiers": [
       "CSScomb",
       "JS Beautify",
-      "Pretty Diff"
+      "Pretty Diff",
+      "SassConvert"
     ],
     "grammars": [
       "CSS"
@@ -819,7 +863,7 @@
       },
       "newline_between_rules": {
         "type": "boolean",
-        "default": false,
+        "default": true,
         "description": "Add a newline between CSS rules (Supported by JS Beautify, Pretty Diff)",
         "title": "Newline between rules",
         "beautifiers": [
@@ -857,6 +901,20 @@
           "Pretty Diff"
         ],
         "key": "wrap_line_length",
+        "language": {
+          "name": "CSS",
+          "namespace": "css"
+        }
+      },
+      "end_with_newline": {
+        "type": "boolean",
+        "default": false,
+        "description": "End output with newline (Supported by JS Beautify)",
+        "title": "End with newline",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "end_with_newline",
         "language": {
           "name": "CSS",
           "namespace": "css"
@@ -986,7 +1044,8 @@
         "enum": [
           "CSScomb",
           "JS Beautify",
-          "Pretty Diff"
+          "Pretty Diff",
+          "SassConvert"
         ]
       },
       "beautify_on_save": {
@@ -1165,6 +1224,20 @@
         "language": {
           "name": "HTML",
           "namespace": "html"
+        }
+      },
+      "space_in_paren": {
+        "type": "boolean",
+        "default": false,
+        "description": "Add padding spaces within paren, ie. f( a, b ) (Supported by Pretty Diff)",
+        "title": "Space in paren",
+        "beautifiers": [
+          "Pretty Diff"
+        ],
+        "key": "space_in_paren",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
         }
       },
       "space_after_anon_function": {
@@ -1798,36 +1871,67 @@
         "type": "array",
         "default": [
           "a",
-          "span",
-          "img",
-          "bdo",
-          "em",
-          "strong",
-          "dfn",
-          "code",
-          "samp",
-          "kbd",
-          "var",
-          "cite",
           "abbr",
-          "acronym",
+          "area",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "keygen",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "progress",
           "q",
+          "ruby",
+          "s",
+          "samp",
+          "select",
+          "small",
+          "span",
+          "strong",
           "sub",
           "sup",
-          "tt",
-          "i",
-          "b",
-          "big",
-          "small",
+          "svg",
+          "template",
+          "textarea",
+          "time",
           "u",
-          "s",
-          "strike",
-          "font",
-          "ins",
-          "del",
-          "pre",
+          "var",
+          "video",
+          "wbr",
+          "text",
+          "acronym",
           "address",
+          "big",
           "dt",
+          "ins",
+          "small",
+          "strike",
+          "tt",
+          "pre",
           "h1",
           "h2",
           "h3",
@@ -2133,36 +2237,67 @@
         "type": "array",
         "default": [
           "a",
-          "span",
-          "img",
-          "bdo",
-          "em",
-          "strong",
-          "dfn",
-          "code",
-          "samp",
-          "kbd",
-          "var",
-          "cite",
           "abbr",
-          "acronym",
+          "area",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "keygen",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "progress",
           "q",
+          "ruby",
+          "s",
+          "samp",
+          "select",
+          "small",
+          "span",
+          "strong",
           "sub",
           "sup",
-          "tt",
-          "i",
-          "b",
-          "big",
-          "small",
+          "svg",
+          "template",
+          "textarea",
+          "time",
           "u",
-          "s",
-          "strike",
-          "font",
-          "ins",
-          "del",
-          "pre",
+          "var",
+          "video",
+          "wbr",
+          "text",
+          "acronym",
           "address",
+          "big",
           "dt",
+          "ins",
+          "small",
+          "strike",
+          "tt",
+          "pre",
           "h1",
           "h2",
           "h3",
@@ -2482,10 +2617,11 @@
       "space_in_paren": {
         "type": "boolean",
         "default": false,
-        "description": "Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify)",
+        "description": "Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify, Pretty Diff)",
         "title": "Space in paren",
         "beautifiers": [
-          "JS Beautify"
+          "JS Beautify",
+          "Pretty Diff"
         ],
         "key": "space_in_paren",
         "language": {
@@ -2808,10 +2944,11 @@
       "space_in_paren": {
         "type": "boolean",
         "default": false,
-        "description": "Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify)",
+        "description": "Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify, Pretty Diff)",
         "title": "Space in paren",
         "beautifiers": [
-          "JS Beautify"
+          "JS Beautify",
+          "Pretty Diff"
         ],
         "key": "space_in_paren",
         "language": {
@@ -3035,7 +3172,8 @@
     ],
     "grammars": [
       "JSX",
-      "JavaScript (JSX)"
+      "JavaScript (JSX)",
+      "Babel ES6 JavaScript"
     ],
     "extensions": [
       "jsx",
@@ -3094,6 +3232,20 @@
           "Pretty Diff"
         ],
         "key": "preserve_newlines",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "space_in_paren": {
+        "type": "boolean",
+        "default": false,
+        "description": "Add padding spaces within paren, ie. f( a, b ) (Supported by Pretty Diff)",
+        "title": "Space in paren",
+        "beautifiers": [
+          "Pretty Diff"
+        ],
+        "key": "space_in_paren",
         "language": {
           "name": "JavaScript",
           "namespace": "js"
@@ -3374,7 +3526,7 @@
       },
       "newline_between_rules": {
         "type": "boolean",
-        "default": false,
+        "default": true,
         "description": "Add a newline between CSS rules (Supported by Pretty Diff)",
         "title": "Newline between rules",
         "beautifiers": [
@@ -3870,36 +4022,67 @@
         "type": "array",
         "default": [
           "a",
-          "span",
-          "img",
-          "bdo",
-          "em",
-          "strong",
-          "dfn",
-          "code",
-          "samp",
-          "kbd",
-          "var",
-          "cite",
           "abbr",
-          "acronym",
+          "area",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "keygen",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "progress",
           "q",
+          "ruby",
+          "s",
+          "samp",
+          "select",
+          "small",
+          "span",
+          "strong",
           "sub",
           "sup",
-          "tt",
-          "i",
-          "b",
-          "big",
-          "small",
+          "svg",
+          "template",
+          "textarea",
+          "time",
           "u",
-          "s",
-          "strike",
-          "font",
-          "ins",
-          "del",
-          "pre",
+          "var",
+          "video",
+          "wbr",
+          "text",
+          "acronym",
           "address",
+          "big",
           "dt",
+          "ins",
+          "small",
+          "strike",
+          "tt",
+          "pre",
           "h1",
           "h2",
           "h3",
@@ -4158,36 +4341,67 @@
         "type": "array",
         "default": [
           "a",
-          "span",
-          "img",
-          "bdo",
-          "em",
-          "strong",
-          "dfn",
-          "code",
-          "samp",
-          "kbd",
-          "var",
-          "cite",
           "abbr",
-          "acronym",
+          "area",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "keygen",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "progress",
           "q",
+          "ruby",
+          "s",
+          "samp",
+          "select",
+          "small",
+          "span",
+          "strong",
           "sub",
           "sup",
-          "tt",
-          "i",
-          "b",
-          "big",
-          "small",
+          "svg",
+          "template",
+          "textarea",
+          "time",
           "u",
-          "s",
-          "strike",
-          "font",
-          "ins",
-          "del",
-          "pre",
+          "var",
+          "video",
+          "wbr",
+          "text",
+          "acronym",
           "address",
+          "big",
           "dt",
+          "ins",
+          "small",
+          "strike",
+          "tt",
+          "pre",
           "h1",
           "h2",
           "h3",
@@ -4267,6 +4481,107 @@
         "type": "boolean",
         "default": false,
         "description": "Automatically beautify Mustache files on save"
+      }
+    }
+  },
+  "nunjucks": {
+    "title": "Nunjucks",
+    "type": "object",
+    "description": "Options for language Nunjucks",
+    "collapsed": true,
+    "beautifiers": [
+      "Pretty Diff"
+    ],
+    "grammars": [
+      "Nunjucks",
+      "Nunjucks Templates",
+      "HTML (Nunjucks Templates)"
+    ],
+    "extensions": [
+      "njk",
+      "nunjucks"
+    ],
+    "properties": {
+      "indent_size": {
+        "type": "integer",
+        "default": 4,
+        "minimum": 0,
+        "description": "Indentation size/length (Supported by Pretty Diff)",
+        "title": "Indent size",
+        "beautifiers": [
+          "Pretty Diff"
+        ],
+        "key": "indent_size",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "indent_char": {
+        "type": "string",
+        "default": " ",
+        "description": "Indentation character (Supported by Pretty Diff)",
+        "title": "Indent char",
+        "beautifiers": [
+          "Pretty Diff"
+        ],
+        "key": "indent_char",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "wrap_line_length": {
+        "type": "integer",
+        "default": 250,
+        "description": "Maximum characters per line (0 disables) (Supported by Pretty Diff)",
+        "title": "Wrap line length",
+        "beautifiers": [
+          "Pretty Diff"
+        ],
+        "key": "wrap_line_length",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "preserve_newlines": {
+        "type": "boolean",
+        "default": true,
+        "description": "Preserve line-breaks (Supported by Pretty Diff)",
+        "title": "Preserve newlines",
+        "beautifiers": [
+          "Pretty Diff"
+        ],
+        "key": "preserve_newlines",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "disabled": {
+        "title": "Disable Beautifying Language",
+        "order": -3,
+        "type": "boolean",
+        "default": false,
+        "description": "Disable Nunjucks Beautification"
+      },
+      "default_beautifier": {
+        "title": "Default Beautifier",
+        "order": -2,
+        "type": "string",
+        "default": "Pretty Diff",
+        "description": "Default Beautifier to be used for Nunjucks",
+        "enum": [
+          "Pretty Diff"
+        ]
+      },
+      "beautify_on_save": {
+        "title": "Beautify On Save",
+        "order": -1,
+        "type": "boolean",
+        "default": false,
+        "description": "Automatically beautify Nunjucks files on save"
       }
     }
   },
@@ -4742,6 +5057,62 @@
       }
     }
   },
+  "r": {
+    "title": "R",
+    "type": "object",
+    "description": "Options for language R",
+    "collapsed": true,
+    "beautifiers": [
+      "formatR"
+    ],
+    "grammars": [
+      "R"
+    ],
+    "extensions": [
+      "r",
+      "R"
+    ],
+    "properties": {
+      "indent_size": {
+        "type": "integer",
+        "default": 4,
+        "description": "Indentation size/length (Supported by formatR)",
+        "title": "Indent size",
+        "beautifiers": [
+          "formatR"
+        ],
+        "key": "indent_size",
+        "language": {
+          "name": "R",
+          "namespace": "r"
+        }
+      },
+      "disabled": {
+        "title": "Disable Beautifying Language",
+        "order": -3,
+        "type": "boolean",
+        "default": false,
+        "description": "Disable R Beautification"
+      },
+      "default_beautifier": {
+        "title": "Default Beautifier",
+        "order": -2,
+        "type": "string",
+        "default": "formatR",
+        "description": "Default Beautifier to be used for R",
+        "enum": [
+          "formatR"
+        ]
+      },
+      "beautify_on_save": {
+        "title": "Beautify On Save",
+        "order": -1,
+        "type": "boolean",
+        "default": false,
+        "description": "Automatically beautify R files on save"
+      }
+    }
+  },
   "riot": {
     "title": "Riot.js",
     "type": "object",
@@ -4995,8 +5366,7 @@
     "description": "Options for language Sass",
     "collapsed": true,
     "beautifiers": [
-      "CSScomb",
-      "Pretty Diff"
+      "SassConvert"
     ],
     "grammars": [
       "Sass"
@@ -5005,186 +5375,6 @@
       "sass"
     ],
     "properties": {
-      "indent_size": {
-        "type": "integer",
-        "default": 4,
-        "minimum": 0,
-        "description": "Indentation size/length (Supported by Pretty Diff)",
-        "title": "Indent size",
-        "beautifiers": [
-          "Pretty Diff"
-        ],
-        "key": "indent_size",
-        "language": {
-          "name": "CSS",
-          "namespace": "css"
-        }
-      },
-      "indent_char": {
-        "type": "string",
-        "default": " ",
-        "minimum": 0,
-        "description": "Indentation character (Supported by Pretty Diff)",
-        "title": "Indent char",
-        "beautifiers": [
-          "Pretty Diff"
-        ],
-        "key": "indent_char",
-        "language": {
-          "name": "CSS",
-          "namespace": "css"
-        }
-      },
-      "newline_between_rules": {
-        "type": "boolean",
-        "default": false,
-        "description": "Add a newline between CSS rules (Supported by Pretty Diff)",
-        "title": "Newline between rules",
-        "beautifiers": [
-          "Pretty Diff"
-        ],
-        "key": "newline_between_rules",
-        "language": {
-          "name": "CSS",
-          "namespace": "css"
-        }
-      },
-      "preserve_newlines": {
-        "type": "boolean",
-        "default": false,
-        "description": "Retain empty lines. Consecutive empty lines will be converted to a single empty line. (Supported by Pretty Diff)",
-        "title": "Preserve newlines",
-        "beautifiers": [
-          "Pretty Diff"
-        ],
-        "key": "preserve_newlines",
-        "language": {
-          "name": "CSS",
-          "namespace": "css"
-        }
-      },
-      "wrap_line_length": {
-        "type": "integer",
-        "default": 0,
-        "description": "Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)",
-        "title": "Wrap line length",
-        "beautifiers": [
-          "Pretty Diff"
-        ],
-        "key": "wrap_line_length",
-        "language": {
-          "name": "CSS",
-          "namespace": "css"
-        }
-      },
-      "indent_comments": {
-        "type": "boolean",
-        "default": true,
-        "description": "Determines whether comments should be indented. (Supported by Pretty Diff)",
-        "title": "Indent comments",
-        "beautifiers": [
-          "Pretty Diff"
-        ],
-        "key": "indent_comments",
-        "language": {
-          "name": "CSS",
-          "namespace": "css"
-        }
-      },
-      "force_indentation": {
-        "type": "boolean",
-        "default": false,
-        "description": "if indentation should be forcefully applied to markup even if it disruptively adds unintended whitespace to the documents rendered output (Supported by Pretty Diff)",
-        "title": "Force indentation",
-        "beautifiers": [
-          "Pretty Diff"
-        ],
-        "key": "force_indentation",
-        "language": {
-          "name": "CSS",
-          "namespace": "css"
-        }
-      },
-      "convert_quotes": {
-        "type": "string",
-        "default": "none",
-        "description": "Convert the quote characters delimiting strings from either double or single quotes to the other. (Supported by Pretty Diff)",
-        "enum": [
-          "none",
-          "double",
-          "single"
-        ],
-        "title": "Convert quotes",
-        "beautifiers": [
-          "Pretty Diff"
-        ],
-        "key": "convert_quotes",
-        "language": {
-          "name": "CSS",
-          "namespace": "css"
-        }
-      },
-      "align_assignments": {
-        "type": "boolean",
-        "default": false,
-        "description": "If lists of assignments or properties should be vertically aligned for faster and easier reading. (Supported by Pretty Diff)",
-        "title": "Align assignments",
-        "beautifiers": [
-          "Pretty Diff"
-        ],
-        "key": "align_assignments",
-        "language": {
-          "name": "CSS",
-          "namespace": "css"
-        }
-      },
-      "no_lead_zero": {
-        "type": "boolean",
-        "default": false,
-        "description": "If in CSS values leading 0s immediately preceeding a decimal should be removed or prevented. (Supported by Pretty Diff)",
-        "title": "No lead zero",
-        "beautifiers": [
-          "Pretty Diff"
-        ],
-        "key": "no_lead_zero",
-        "language": {
-          "name": "CSS",
-          "namespace": "css"
-        }
-      },
-      "configPath": {
-        "title": "comb custom config file",
-        "type": "string",
-        "default": "",
-        "description": "Path to custom CSScomb config file, used in absense of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)",
-        "beautifiers": [
-          "CSScomb"
-        ],
-        "key": "configPath",
-        "language": {
-          "name": "CSS",
-          "namespace": "css"
-        }
-      },
-      "predefinedConfig": {
-        "title": "comb predefined config",
-        "type": "string",
-        "default": "csscomb",
-        "description": "Used if neither a project or custom config file exists. (Supported by CSScomb)",
-        "enum": [
-          "csscomb",
-          "yandex",
-          "zen"
-        ],
-        "beautifiers": [
-          "CSScomb"
-        ],
-        "key": "predefinedConfig",
-        "language": {
-          "name": "CSS",
-          "namespace": "css"
-        }
-      },
       "disabled": {
         "title": "Disable Beautifying Language",
         "order": -3,
@@ -5196,11 +5386,10 @@
         "title": "Default Beautifier",
         "order": -2,
         "type": "string",
-        "default": "Pretty Diff",
+        "default": "SassConvert",
         "description": "Default Beautifier to be used for Sass",
         "enum": [
-          "CSScomb",
-          "Pretty Diff"
+          "SassConvert"
         ]
       },
       "beautify_on_save": {
@@ -5219,7 +5408,8 @@
     "collapsed": true,
     "beautifiers": [
       "CSScomb",
-      "Pretty Diff"
+      "Pretty Diff",
+      "SassConvert"
     ],
     "grammars": [
       "SCSS"
@@ -5260,7 +5450,7 @@
       },
       "newline_between_rules": {
         "type": "boolean",
-        "default": false,
+        "default": true,
         "description": "Add a newline between CSS rules (Supported by Pretty Diff)",
         "title": "Newline between rules",
         "beautifiers": [
@@ -5423,7 +5613,8 @@
         "description": "Default Beautifier to be used for SCSS",
         "enum": [
           "CSScomb",
-          "Pretty Diff"
+          "Pretty Diff",
+          "SassConvert"
         ]
       },
       "beautify_on_save": {
@@ -5872,7 +6063,7 @@
       },
       "newline_between_rules": {
         "type": "boolean",
-        "default": false,
+        "default": true,
         "description": "Add a newline between CSS rules (Supported by Pretty Diff)",
         "title": "Newline between rules",
         "beautifiers": [
@@ -6083,6 +6274,20 @@
         "language": {
           "name": "HTML",
           "namespace": "html"
+        }
+      },
+      "space_in_paren": {
+        "type": "boolean",
+        "default": false,
+        "description": "Add padding spaces within paren, ie. f( a, b ) (Supported by Pretty Diff)",
+        "title": "Space in paren",
+        "beautifiers": [
+          "Pretty Diff"
+        ],
+        "key": "space_in_paren",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
         }
       },
       "space_after_anon_function": {
@@ -6482,6 +6687,104 @@
       }
     }
   },
+  "ux": {
+    "title": "UX Markup",
+    "type": "object",
+    "description": "Options for language UX Markup",
+    "collapsed": true,
+    "beautifiers": [
+      "Pretty Diff"
+    ],
+    "grammars": [
+      "UX"
+    ],
+    "extensions": [
+      "ux"
+    ],
+    "properties": {
+      "indent_size": {
+        "type": "integer",
+        "default": 4,
+        "minimum": 0,
+        "description": "Indentation size/length (Supported by Pretty Diff)",
+        "title": "Indent size",
+        "beautifiers": [
+          "Pretty Diff"
+        ],
+        "key": "indent_size",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "indent_char": {
+        "type": "string",
+        "default": " ",
+        "description": "Indentation character (Supported by Pretty Diff)",
+        "title": "Indent char",
+        "beautifiers": [
+          "Pretty Diff"
+        ],
+        "key": "indent_char",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "wrap_line_length": {
+        "type": "integer",
+        "default": 250,
+        "description": "Maximum characters per line (0 disables) (Supported by Pretty Diff)",
+        "title": "Wrap line length",
+        "beautifiers": [
+          "Pretty Diff"
+        ],
+        "key": "wrap_line_length",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "preserve_newlines": {
+        "type": "boolean",
+        "default": true,
+        "description": "Preserve line-breaks (Supported by Pretty Diff)",
+        "title": "Preserve newlines",
+        "beautifiers": [
+          "Pretty Diff"
+        ],
+        "key": "preserve_newlines",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "disabled": {
+        "title": "Disable Beautifying Language",
+        "order": -3,
+        "type": "boolean",
+        "default": false,
+        "description": "Disable UX Markup Beautification"
+      },
+      "default_beautifier": {
+        "title": "Default Beautifier",
+        "order": -2,
+        "type": "string",
+        "default": "Pretty Diff",
+        "description": "Default Beautifier to be used for UX Markup",
+        "enum": [
+          "Pretty Diff"
+        ]
+      },
+      "beautify_on_save": {
+        "title": "Beautify On Save",
+        "order": -1,
+        "type": "boolean",
+        "default": false,
+        "description": "Automatically beautify UX Markup files on save"
+      }
+    }
+  },
   "vala": {
     "title": "Vala",
     "type": "object",
@@ -6535,6 +6838,325 @@
         "type": "boolean",
         "default": false,
         "description": "Automatically beautify Vala files on save"
+      }
+    }
+  },
+  "vue": {
+    "title": "Vue",
+    "type": "object",
+    "description": "Options for language Vue",
+    "collapsed": true,
+    "beautifiers": [
+      "Vue Beautifier"
+    ],
+    "grammars": [
+      "Vue Component"
+    ],
+    "extensions": [
+      "vue"
+    ],
+    "properties": {
+      "indent_inner_html": {
+        "type": "boolean",
+        "default": false,
+        "description": "Indent <head> and <body> sections. (Supported by Vue Beautifier)",
+        "title": "Indent inner html",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "indent_inner_html",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "indent_size": {
+        "type": "integer",
+        "default": 4,
+        "minimum": 0,
+        "description": "Indentation size/length (Supported by Vue Beautifier)",
+        "title": "Indent size",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "indent_size",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "indent_char": {
+        "type": "string",
+        "default": " ",
+        "description": "Indentation character (Supported by Vue Beautifier)",
+        "title": "Indent char",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "indent_char",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "brace_style": {
+        "type": "string",
+        "default": "collapse",
+        "enum": [
+          "collapse",
+          "expand",
+          "end-expand",
+          "none"
+        ],
+        "description": "[collapse|expand|end-expand|none] (Supported by Vue Beautifier)",
+        "title": "Brace style",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "brace_style",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "indent_scripts": {
+        "type": "string",
+        "default": "normal",
+        "enum": [
+          "keep",
+          "separate",
+          "normal"
+        ],
+        "description": "[keep|separate|normal] (Supported by Vue Beautifier)",
+        "title": "Indent scripts",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "indent_scripts",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "wrap_line_length": {
+        "type": "integer",
+        "default": 250,
+        "description": "Maximum characters per line (0 disables) (Supported by Vue Beautifier)",
+        "title": "Wrap line length",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "wrap_line_length",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "wrap_attributes": {
+        "type": "string",
+        "default": "auto",
+        "enum": [
+          "auto",
+          "force"
+        ],
+        "description": "Wrap attributes to new lines [auto|force] (Supported by Vue Beautifier)",
+        "title": "Wrap attributes",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "wrap_attributes",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "wrap_attributes_indent_size": {
+        "type": "integer",
+        "default": 4,
+        "minimum": 0,
+        "description": "Indent wrapped attributes to after N characters (Supported by Vue Beautifier)",
+        "title": "Wrap attributes indent size",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "wrap_attributes_indent_size",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "preserve_newlines": {
+        "type": "boolean",
+        "default": true,
+        "description": "Preserve line-breaks (Supported by Vue Beautifier)",
+        "title": "Preserve newlines",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "preserve_newlines",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "max_preserve_newlines": {
+        "type": "integer",
+        "default": 10,
+        "description": "Number of line-breaks to be preserved in one chunk (Supported by Vue Beautifier)",
+        "title": "Max preserve newlines",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "max_preserve_newlines",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "unformatted": {
+        "type": "array",
+        "default": [
+          "a",
+          "abbr",
+          "area",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "keygen",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "progress",
+          "q",
+          "ruby",
+          "s",
+          "samp",
+          "select",
+          "small",
+          "span",
+          "strong",
+          "sub",
+          "sup",
+          "svg",
+          "template",
+          "textarea",
+          "time",
+          "u",
+          "var",
+          "video",
+          "wbr",
+          "text",
+          "acronym",
+          "address",
+          "big",
+          "dt",
+          "ins",
+          "small",
+          "strike",
+          "tt",
+          "pre",
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "h6"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of tags (defaults to inline) that should not be reformatted (Supported by Vue Beautifier)",
+        "title": "Unformatted",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "unformatted",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "end_with_newline": {
+        "type": "boolean",
+        "default": false,
+        "description": "End output with newline (Supported by Vue Beautifier)",
+        "title": "End with newline",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "end_with_newline",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "extra_liners": {
+        "type": "array",
+        "default": [
+          "head",
+          "body",
+          "/html"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of tags (defaults to [head,body,/html] that should have an extra newline before them. (Supported by Vue Beautifier)",
+        "title": "Extra liners",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "extra_liners",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "disabled": {
+        "title": "Disable Beautifying Language",
+        "order": -3,
+        "type": "boolean",
+        "default": false,
+        "description": "Disable Vue Beautification"
+      },
+      "default_beautifier": {
+        "title": "Default Beautifier",
+        "order": -2,
+        "type": "string",
+        "default": "Vue Beautifier",
+        "description": "Default Beautifier to be used for Vue",
+        "enum": [
+          "Vue Beautifier"
+        ]
+      },
+      "beautify_on_save": {
+        "title": "Beautify On Save",
+        "order": -1,
+        "type": "boolean",
+        "default": false,
+        "description": "Automatically beautify Vue files on save"
       }
     }
   },
@@ -6829,36 +7451,67 @@
         "type": "array",
         "default": [
           "a",
-          "span",
-          "img",
-          "bdo",
-          "em",
-          "strong",
-          "dfn",
-          "code",
-          "samp",
-          "kbd",
-          "var",
-          "cite",
           "abbr",
-          "acronym",
+          "area",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "keygen",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "progress",
           "q",
+          "ruby",
+          "s",
+          "samp",
+          "select",
+          "small",
+          "span",
+          "strong",
           "sub",
           "sup",
-          "tt",
-          "i",
-          "b",
-          "big",
-          "small",
+          "svg",
+          "template",
+          "textarea",
+          "time",
           "u",
-          "s",
-          "strike",
-          "font",
-          "ins",
-          "del",
-          "pre",
+          "var",
+          "video",
+          "wbr",
+          "text",
+          "acronym",
           "address",
+          "big",
           "dt",
+          "ins",
+          "small",
+          "strike",
+          "tt",
+          "pre",
           "h1",
           "h2",
           "h3",

@@ -1,3 +1,46 @@
+## 3.11.1
+
+* Revert `Support java packages`
+
+## 3.11.0
+
+* Add ability to set how `current working directory` is calculated. See the package settings!
+* Support for `Ren'py`
+* Add a dummy runner for generic `SQL`
+* Support `c++14` standard for `c++`
+* Support `java` packages
+* Use `ts-node` as `typescript` runner
+* Tune `F*` run
+* Fix `MIPS` file-based run
+
+## 3.10.1
+
+* Fix `tsc` run
+
+## 3.10.0
+
+* Support for `BuckleScript`
+* Support for `F*`
+* Support for `Hy`
+* Support for `MIPS`
+* Support for `Oz`
+* Ignore first line check in scripts on Windows
+* Fix the `{FILE_ACTIVE_NAME_BASE}}` doesn't work
+* Fix run `tsc` on non amd or system module types
+
+## 3.9.0
+
+* Support "Selection Based" run for `C#`
+* Support "Selection Based" run for `C# Script`
+* Support "Selection Based" run for `C`
+* Support "Selection Based" run for `C++`
+* Support "Selection Based" run for `D`
+* Support "Selection Based" run for `Dart`
+* Support "Selection Based" run for `DOT (Graphviz)`
+* Support "Selection Based" run for `Powershell`
+* Fix `MATLAB` plot support
+* Fix #973 (`args.split is not a function`)
+
 ## 3.8.3
 
 * Support for Processing

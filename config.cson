@@ -4,6 +4,7 @@
       _analyticsUserId: "28afc5e2-8e9c-4e71-8c79-67dd3cbe7f6b"
     perl:
       perltidy_profile: "~/.perltidyrc"
+    php: {}
   "autocomplete-plus":
     maxVisibleSuggestions: 30
   "clang-format":
@@ -17,6 +18,7 @@
       "haskell-grammar"
     ]
     projectHome: "~/Works"
+    telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
       "base16-tomorrow-dark-theme"
