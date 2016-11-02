@@ -44,6 +44,7 @@
   "linter-less": {}
   "merge-conflicts": {}
   minimap:
+    absoluteMode: true
     plugins:
       "git-diff": true
       "git-diffDecorationsZIndex": 0
