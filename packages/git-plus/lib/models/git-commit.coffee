@@ -1,7 +1,6 @@
 Path = require 'path'
 {CompositeDisposable} = require 'atom'
 fs = require 'fs-plus'
-getFile = require('flavored-path').get # TODO: find an alternative to this
 git = require '../git'
 notifier = require '../notifier'
 GitPush = require './git-push'
@@ -10,9 +9,6 @@ GitPull = require './git-pull'
 disposables = new CompositeDisposable
 
 verboseCommitsEnabled = -> atom.config.get('git-plus.experimental') and atom.config.get('git-plus.verboseCommits')
-
-dir = (repo) ->
-  (git.getSubmodule() or repo).getWorkingDirectory()
 
 getStagedFiles = (repo) ->
   git.stagedFiles(repo).then (files) ->
@@ -23,7 +19,7 @@ getStagedFiles = (repo) ->
 
 getTemplate = (cwd) ->
   git.getConfig('commit.template', cwd).then (filePath) ->
-    if filePath then fs.readFileSync(getFile(filePath.trim())).toString().trim() else ''
+    if filePath then fs.readFileSync(fs.absolute(filePath.trim())).toString().trim() else ''
 
 prepFile = (status, filePath, diff='') ->
   cwd = Path.dirname(filePath)
@@ -61,7 +57,7 @@ trimFile = (filePath) ->
   cwd = Path.dirname(filePath)
   git.getConfig('core.commentchar', cwd).then (commentchar) ->
     commentchar = if commentchar is '' then '#'
-    content = fs.readFileSync(getFile(filePath)).toString()
+    content = fs.readFileSync(fs.absolute(filePath)).toString()
     startOfComments = content.indexOf(content.split('\n').find (line) -> line.startsWith commentchar)
     content = content.substring(0, startOfComments)
     fs.writeFileSync filePath, content
@@ -78,6 +74,7 @@ commit = (directory, filePath) ->
     git.refresh()
   .catch (data) ->
     notifier.addError data
+    destroyCommitEditor()
 
 cleanup = (currentPane, filePath) ->
   currentPane.activate() if currentPane.isAlive()
@@ -105,7 +102,7 @@ module.exports = (repo, {stageChanges, andPush}={}) ->
     showFile filePath
     .then (textEditor) ->
       disposables.add textEditor.onDidSave ->
-        commit(dir(repo), filePath)
+        commit(repo.getWorkingDirectory(), filePath)
         .then -> GitPush(repo) if andPush
       disposables.add textEditor.onDidDestroy -> cleanup currentPane, filePath
     .catch (msg) -> notifier.addError msg

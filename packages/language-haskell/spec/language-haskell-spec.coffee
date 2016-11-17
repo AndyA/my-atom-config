@@ -36,6 +36,13 @@ describe "Language-Haskell", ->
           {value: char, scopes: ["source.haskell", 'string.quoted.single.haskell', 'constant.character.escape.haskell']}
           {value:"'", scopes: ["source.haskell", 'string.quoted.single.haskell', "punctuation.definition.string.end.haskell"]}
         ]
+    it 'tokenizes control chars', ->
+      escapeChars = [64..95].map (x) -> "\\^#{String.fromCharCode(x)}"
+      for scope, char of escapeChars
+        g = grammarExpect grammar, "'#{char}'"
+        g.toHaveTokens [["'", char, "'"]]
+        g.toHaveScopes [['source.haskell', "string.quoted.single.haskell"]]
+        g.tokenToHaveScopes [[ [1, ["constant.character.escape.control.haskell"]] ]]
 
   describe "strings", ->
     it "tokenizes single-line strings", ->
@@ -48,6 +55,16 @@ describe "Language-Haskell", ->
         { value : '\\EOL', scopes : [ 'source.haskell', 'string.quoted.double.haskell' ] }
         { value : '"', scopes : [ 'source.haskell', 'string.quoted.double.haskell', 'punctuation.definition.string.end.haskell' ] }
       ]
+    it "Regression test for 96", ->
+      g = grammarExpect grammar, '"^\\\\ "'
+      g.toHaveTokens [["\"", "^", "\\\\", " ", "\""]]
+      g.toHaveScopes [['source.haskell', "string.quoted.double.haskell"]]
+      g.tokenToHaveScopes [[ [2, ["constant.character.escape.haskell"]] ]]
+    it "Supports type-level string literals", ->
+      g = grammarExpect grammar, ':: "type-level string"'
+      g.toHaveTokens [["::", " ", "\"", "type-level string", "\""]]
+      g.toHaveScopes [['source.haskell']]
+      g.tokenToHaveScopes [[ [3, ["string.quoted.double.haskell"]] ]]
 
 
   describe "backtick function call", ->
@@ -191,7 +208,7 @@ describe "Language-Haskell", ->
       g = grammarExpect(grammar, 'data Foo = Foo {bar :: Bar}')
       g.toHaveScopes [['source.haskell', 'meta.declaration.type.data.haskell']]
       g.toHaveTokenScopes [
-        [ 'data' : [ 'storage.type.data.haskell' ]
+        [ 'data' : [ 'keyword.other.data.haskell' ]
         , ' '
         , 'Foo' : [ 'meta.type-signature.haskell', 'entity.name.type.haskell' ]
         , ' ' : [ 'meta.type-signature.haskell' ]
@@ -213,7 +230,7 @@ describe "Language-Haskell", ->
       data = 'data Foo = Foo{bar :: Bar}'
       {tokens} = grammar.tokenizeLine(data)
       expect(tokens).toEqual [
-        { value : 'data', scopes : [ 'source.haskell', 'meta.declaration.type.data.haskell', 'storage.type.data.haskell' ] }
+        { value : 'data', scopes : [ 'source.haskell', 'meta.declaration.type.data.haskell', 'keyword.other.data.haskell' ] }
         { value : ' ', scopes : [ 'source.haskell', 'meta.declaration.type.data.haskell' ] }
         { value : 'Foo', scopes : [ 'source.haskell', 'meta.declaration.type.data.haskell', 'meta.type-signature.haskell', 'entity.name.type.haskell' ] }
         { value : ' ', scopes : [ 'source.haskell', 'meta.declaration.type.data.haskell', 'meta.type-signature.haskell' ] }
@@ -239,7 +256,7 @@ describe "Language-Haskell", ->
           "scopes": [
             "source.haskell",
             "meta.declaration.type.data.haskell",
-            "storage.type.data.haskell"
+            "keyword.other.data.haskell"
           ]
         }
         {

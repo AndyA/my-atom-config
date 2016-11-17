@@ -19,8 +19,8 @@
   'escapeChar': '\\\\(?:NUL|SOH|STX|ETX|EOT|ENQ|ACK|BEL|BS|HT|LF|VT|FF|CR|SO|SI|DLE|DC1|DC2|DC3|DC4|NAK|SYN|ETB|CAN|EM|SUB|ESC|FS|GS|RS|US|SP|DEL|[abfnrtv\\\\\\"\'\\&])'
   'octalChar': '(?:\\\\o[0-7]+)'
   'hexChar': '(?:\\\\x[0-9A-Fa-f]+)'
-  'controlChar': '(?:\\^[A-Z@\\[\\]\\\\\\^_])'
-  'character': '(?:[\\ -\\[\\]-~]|\\\\(?:NUL|SOH|STX|ETX|EOT|ENQ|ACK|BEL|BS|HT|LF|VT|FF|CR|SO|SI|DLE|DC1|DC2|DC3|DC4|NAK|SYN|ETB|CAN|EM|SUB|ESC|FS|GS|RS|US|SP|DEL|[abfnrtv\\\\\\"\'\\&])|(?:\\\\o[0-7]+)|(?:\\\\x[0-9A-Fa-f]+)|(?:\\^[A-Z@\\[\\]\\\\\\^_])|[\\p{S}\\p{P}&&[^(),;\\[\\]`{}_"\']])'
+  'controlChar': '(?:\\\\\\^[A-Z@\\[\\]\\\\^_])'
+  'character': '(?:[\\ -\\[\\]-~]|\\\\(?:NUL|SOH|STX|ETX|EOT|ENQ|ACK|BEL|BS|HT|LF|VT|FF|CR|SO|SI|DLE|DC1|DC2|DC3|DC4|NAK|SYN|ETB|CAN|EM|SUB|ESC|FS|GS|RS|US|SP|DEL|[abfnrtv\\\\\\"\'\\&])|(?:\\\\o[0-7]+)|(?:\\\\x[0-9A-Fa-f]+)|(?:\\\\\\^[A-Z@\\[\\]\\\\^_])|[\\p{S}\\p{P}&&[^(),;\\[\\]`{}_"\']])'
   'functionTypeDeclaration': '(?:(?:((?:(?:[\\p{Lu}\\p{Lt}][\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\']*(?:\\.[\\p{Lu}\\p{Lt}][\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\']*)*\\.)?[\\p{Ll}_][\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\']*|(?:\\((?!--+\\))[\\p{S}\\p{P}&&[^(),;\\[\\]`{}_"\']]+\\)))(?:(?:\\s*,\\s*)(?:(?:[\\p{Lu}\\p{Lt}][\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\']*(?:\\.[\\p{Lu}\\p{Lt}][\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\']*)*\\.)?[\\p{Ll}_][\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\']*|(?:\\((?!--+\\))[\\p{S}\\p{P}&&[^(),;\\[\\]`{}_"\']]+\\))))*))(?:\\s*((?<![\\p{S}\\p{P}&&[^(),;\\[\\]`{}_"\']])(?:::|∷)(?![\\p{S}\\p{P}&&[^(),;\\[\\]`{}_"\']]))))'
   'doubleColonOperator': '(?<![\\p{S}\\p{P}&&[^(),;\\[\\]`{}_"\']])(?:::|∷)(?![\\p{S}\\p{P}&&[^(),;\\[\\]`{}_"\']])'
   'ctorTypeDeclaration': '(?:(?:((?:[\\p{Lu}\\p{Lt}][\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\']*(?:\\.[\\p{Lu}\\p{Lt}][\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\']*)*|(?:\\((?!--+\\))[\\p{S}\\p{P}&&[^(),;\\[\\]`{}_"\']]+\\)))(?:(?:\\s*,\\s*)(?:[\\p{Lu}\\p{Lt}][\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\']*(?:\\.[\\p{Lu}\\p{Lt}][\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\']*)*|(?:\\((?!--+\\))[\\p{S}\\p{P}&&[^(),;\\[\\]`{}_"\']]+\\))))*))(?:\\s*((?<![\\p{S}\\p{P}&&[^(),;\\[\\]`{}_"\']])(?:::|∷)(?![\\p{S}\\p{P}&&[^(),;\\[\\]`{}_"\']]))))'
@@ -130,7 +130,7 @@
         'name': 'constant.character.escape.hexadecimal.haskell'
       }
       {
-        'match': '(?:\\^[A-Z@\\[\\]\\\\\\^_])'
+        'match': '(?:\\\\\\^[A-Z@\\[\\]\\\\^_])'
         'name': 'constant.character.escape.control.haskell'
       }
     ]
@@ -311,6 +311,9 @@
         'include': '#empty_list'
       }
       {
+        'include': '#string'
+      }
+      {
         'name': 'keyword.other.arrow.haskell'
         'match': '(?<![\\p{S}\\p{P}&&[^(),;\\[\\]`{}_"\']])(->|→)(?![\\p{S}\\p{P}&&[^(),;\\[\\]`{}_"\']])'
       }
@@ -460,7 +463,7 @@
         'end': '(?:(?=[\\p{Ll}_\\p{Lu}\\p{Lt}])(?<![\\p{Ll}_\\p{Lu}\\p{Lt}\']))(where)(?:(?<=[\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\'])(?![\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\']))|^(?!\\1[ \\t]|[ \\t]*$)'
         'beginCaptures':
           '2':
-            'name': 'storage.type.class.haskell'
+            'name': 'keyword.other.class.haskell'
         'endCaptures':
           '1':
             'name': 'keyword.other.haskell'
@@ -574,7 +577,7 @@
         'end': '^(?!\\1[ \\t]|[ \\t]*$)'
         'beginCaptures':
           '2':
-            'name': 'storage.type.data.haskell'
+            'name': 'keyword.other.data.haskell'
           '3':
             'name': 'meta.type-signature.haskell'
             'patterns': [
@@ -658,7 +661,7 @@
         'contentName': 'meta.type-signature.haskell'
         'beginCaptures':
           '2':
-            'name': 'storage.type.data.haskell'
+            'name': 'keyword.other.type.haskell'
         'patterns': [
           {
             'include': '#comments'
@@ -685,7 +688,7 @@
         'match': '(?:(?=[\\p{Ll}_\\p{Lu}\\p{Lt}])(?<![\\p{Ll}_\\p{Lu}\\p{Lt}\']))(deriving|where|data|type|newtype)(?:(?<=[\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\'])(?![\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\']))'
       }
       {
-        'name': 'storage.type.haskell'
+        'name': 'keyword.other.haskell'
         'match': '(?:(?=[\\p{Ll}_\\p{Lu}\\p{Lt}])(?<![\\p{Ll}_\\p{Lu}\\p{Lt}\']))(data|type|newtype)(?:(?<=[\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\'])(?![\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}\']))'
       }
       {
@@ -755,7 +758,7 @@
     'patterns': [
       {
         'name': 'string.quoted.single.haskell'
-        'match': '(\')((?:[\\ -\\[\\]-~]|\\\\(?:NUL|SOH|STX|ETX|EOT|ENQ|ACK|BEL|BS|HT|LF|VT|FF|CR|SO|SI|DLE|DC1|DC2|DC3|DC4|NAK|SYN|ETB|CAN|EM|SUB|ESC|FS|GS|RS|US|SP|DEL|[abfnrtv\\\\\\"\'\\&])|(?:\\\\o[0-7]+)|(?:\\\\x[0-9A-Fa-f]+)|(?:\\^[A-Z@\\[\\]\\\\\\^_])|[\\p{S}\\p{P}&&[^(),;\\[\\]`{}_"\']]))(\')'
+        'match': '(\')((?:[\\ -\\[\\]-~]|\\\\(?:NUL|SOH|STX|ETX|EOT|ENQ|ACK|BEL|BS|HT|LF|VT|FF|CR|SO|SI|DLE|DC1|DC2|DC3|DC4|NAK|SYN|ETB|CAN|EM|SUB|ESC|FS|GS|RS|US|SP|DEL|[abfnrtv\\\\\\"\'\\&])|(?:\\\\o[0-7]+)|(?:\\\\x[0-9A-Fa-f]+)|(?:\\\\\\^[A-Z@\\[\\]\\\\^_])|[\\p{S}\\p{P}&&[^(),;\\[\\]`{}_"\']]))(\')'
         'captures':
           '1':
             'name': 'punctuation.definition.string.begin.haskell'
