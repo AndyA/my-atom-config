@@ -1,60 +1,12 @@
 "*":
   "atom-beautify":
     general:
-      _analyticsUserId: "28afc5e2-8e9c-4e71-8c79-67dd3cbe7f6b"
-    perl:
-      perltidy_profile: "~/.perltidyrc"
-    php: {}
-  "autocomplete-plus":
-    maxVisibleSuggestions: 30
-  "clang-format":
-    formatJavascriptOnSave: false
-    formatObjectiveCOnSave: true
+      _analyticsUserId: "8deb8af9-ce06-45f4-b52f-fa30ba53e4c4"
   core:
-    disabledPackages: [
-      "jsdoc-generator"
-      "makro"
-      "javascript-snippets"
-      "haskell-grammar"
-    ]
-    projectHome: "~/Works"
     telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
       "base16-tomorrow-dark-theme"
     ]
-  docblockr:
-    align_tags: "shallow"
-    auto_add_method_tag: true
-    deep_indent: true
-    extra_tags_go_after: true
-  editor:
-    fontSize: 12
-    invisibles: {}
   "exception-reporting":
-    userId: "f9a18cac-be95-c8b9-09ec-02a129e9b8d7"
-  "jsdoc-generator": {}
-  "keybinding-cheatsheet": {}
-  linter:
-    lintOnFly: false
-  "linter-eslint":
-    disableWhenNoEslintrcFileInPath: true
-    lintOnEdit: false
-    showRuleIdInMessage: true
-  "linter-less": {}
-  "merge-conflicts": {}
-  minimap:
-    absoluteMode: true
-    plugins:
-      "git-diff": true
-      "git-diffDecorationsZIndex": 0
-  mocha:
-    specDirectory: "./test/"
-  perltidy: {}
-  pigments: {}
-  "terminal-panel": {}
-  welcome:
-    showOnStartup: false
-".perl.source":
-  editor:
-    nonWordCharacters: "/\\()\"',.;<>~!#^&*|+=[]{}`?-"
+    userId: "86f04aad-c530-eb37-de7a-8a0519d99057"
