@@ -1,5 +1,6 @@
 .node-gyp
 .npm
+/blob-store/
 /nohup.out
 build/
 compile-cache
