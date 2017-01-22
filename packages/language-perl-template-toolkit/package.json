@@ -1,0 +1,60 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117022-24350-1xwm572/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117022-24350-1xwm572/package.tgz",
+        "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117022-24350-1xwm572/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-117022-24350-11unffl"
+    ]
+  ],
+  "_from": "../d-117022-24350-1xwm572/package.tgz",
+  "_id": "language-perl-template-toolkit@0.1.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/language-perl-template-toolkit",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117022-24350-1xwm572/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117022-24350-1xwm572/package.tgz",
+    "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117022-24350-1xwm572/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117022-24350-1xwm572/package.tgz",
+  "_shasum": "fa8b1a68944c9fcc9449759dc371db0fe25b6e0d",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117022-24350-1xwm572/package.tgz",
+  "_where": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-117022-24350-11unffl",
+  "bugs": {
+    "url": "https://github.com/mshuster/language-perl-template-toolkit/issues"
+  },
+  "dependencies": {},
+  "description": "Conversion of the TextMate Perl Template Toolkit bundle",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "homepage": "https://github.com/mshuster/language-perl-template-toolkit#readme",
+  "license": "MIT",
+  "name": "language-perl-template-toolkit",
+  "optionalDependencies": {},
+  "private": true,
+  "readme": "# language-perl-template-toolkit package\n\nConversion of the TextMate Perl Template Toolkit bundle\n\nhttps://github.com/textmate/perl-template-toolkit.tmbundle\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mshuster/language-perl-template-toolkit.git"
+  },
+  "version": "0.1.0"
+}
