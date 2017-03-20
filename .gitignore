@@ -2,6 +2,7 @@
 .npm
 /blob-store/
 /nohup.out
+/recovery
 build/
 compile-cache
 dev
