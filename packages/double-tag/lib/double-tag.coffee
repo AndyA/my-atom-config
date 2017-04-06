@@ -1,7 +1,3 @@
-# FIXME: not activating when backspace to end of tag
-# backspace selects to the left then deletes
-# I'm returning when there is a selection
-
 {CompositeDisposable, Range, Point} = require 'atom'
 
 module.exports =
@@ -31,7 +27,7 @@ class DoubleTag
   # private
 
   findTag: (@cursor) ->
-    return if @editor.hasMultipleCursors() or @editorHasSelectedText()
+    return if @editor.hasMultipleCursors()
     return unless @cursorInHtmlTag()
 
     return unless @findStartTag()
@@ -49,7 +45,7 @@ class DoubleTag
       @copyNewTagToEnd()
 
   copyNewTagToEnd: ->
-    return if @editor.hasMultipleCursors() or @editorHasSelectedText()
+    return if @editor.hasMultipleCursors()
     newTag = @editor.getTextInBufferRange(@startMarker.getBufferRange())
     # remove space after new tag, but allow blank new tag
     origTagLength = newTag.length
@@ -123,10 +119,6 @@ class DoubleTag
       [endTagRange.end.row, endTagRange.end.column - 1]
     )
     true
-
-  editorHasSelectedText: ->
-    # TODO: add test for "undefined length for null"
-    @editor.getSelectedText()?.length > 0
 
   cursorInHtmlTag: ->
     scopeDescriptor = @cursor?.getScopeDescriptor()
