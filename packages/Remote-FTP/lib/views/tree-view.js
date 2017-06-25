@@ -140,6 +140,7 @@ module.exports = TreeView = (function (parent) {
         }, 1);
       }
     });
+
     atom.config.onDidChange('Remote-FTP.hideLocalWhenDisplayed', (values) => {
       if (values.newValue) {
         if (self.isVisible()) {
@@ -151,6 +152,20 @@ module.exports = TreeView = (function (parent) {
         self.attach();
       } else {
         showLocalTree();
+      }
+    });
+
+    atom.config.onDidChange('Remote-FTP.useNewDockIntegration', () => {
+      if (!atom.workspace.getRightDock === 'undefined') {
+        atom.notifications.addWarning('Your editor is <b>deprecated</b>.<br />This option is available only >=1.7.0 version.');
+        return;
+      }
+
+      if (self.isVisible()) {
+        setTimeout(() => {
+          this.detach();
+          this.attach();
+        }, 1);
       }
     });
 
@@ -219,29 +234,52 @@ module.exports = TreeView = (function (parent) {
     atom.project.remoteftp.on('disconnected', () => {
       self.showOffline();
     });
+
+    self.getTitle = () => 'Remote-FTP';
   };
 
   TreeView.prototype.attach = function () {
-    if (atom.config.get('tree-view.showOnRightSide')) {
+    if (atom.config.get('tree-view.showOnRightSide') && atom.config.get('Remote-FTP.useNewDockIntegration')) {
+      // if show on right side && use new integration
+      this.panel = atom.workspace.getRightDock().paneContainer.getActivePane().addItem(this);
+      atom.workspace.getRightDock().paneContainer.getActivePane().activateItemforURI(this.getTitle());
+    } else if (!atom.config.get('tree-view.showOnRightSide') && atom.config.get('Remote-FTP.useNewDockIntegration')) {
+      // if not show on right side && use new integration
+      this.panel = atom.workspace.getLeftDock().paneContainer.getActivePane().addItem(this);
+      atom.workspace.getLeftDock().paneContainer.getActivePane().activateItem(this.panel);
+    } else if (atom.config.get('tree-view.showOnRightSide') && !atom.config.get('Remote-FTP.useNewDockIntegration')) {
+      // if show on right side && not use new integration
       this.panel = atom.workspace.addRightPanel({ item: this });
-    } else {
+    } else if (!atom.config.get('tree-view.showOnRightSide') && !atom.config.get('Remote-FTP.useNewDockIntegration')) {
+      // if not show on right side && not use new integration
       this.panel = atom.workspace.addLeftPanel({ item: this });
     }
 
-    if (atom.config.get('Remote-FTP.hideLocalWhenDisplayed'))			{ hideLocalTree(); } else			{ showLocalTree(); }
+    if (atom.config.get('Remote-FTP.hideLocalWhenDisplayed')) {
+      hideLocalTree();
+    } else {
+      showLocalTree();
+    }
   };
 
   TreeView.prototype.detach = function () {
     TreeView.__super__.detach.apply(this, arguments);
 
     if (this.panel) {
-      this.panel.destroy();
+      if (typeof this.panel.destroy === 'function') {
+        this.panel.destroy();
+      } else if (typeof atom.workspace.paneForItem === 'function') {
+        if (typeof atom.workspace.paneForItem(this.panel) !== 'undefined') {
+          atom.workspace.paneForItem(this.panel).destroyItem(this.panel, true);
+        }
+      }
+
       this.panel = null;
     }
   };
 
   TreeView.prototype.toggle = function () {
-    if (this.isVisible()) {
+    if (typeof this.panel !== 'undefined' && this.panel !== null) {
       this.detach();
     } else {
       this.attach();
