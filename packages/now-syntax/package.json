@@ -1,0 +1,77 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78868-1qfi97w.fneyrdx6r/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78868-1qfi97w.fneyrdx6r/package.tgz",
+        "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78868-1qfi97w.fneyrdx6r/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-117526-78868-ua2mzy.ci7vp4aemi"
+    ]
+  ],
+  "_from": "../d-117526-78868-1qfi97w.fneyrdx6r/package.tgz",
+  "_id": "now-syntax@0.2.4",
+  "_inCache": true,
+  "_location": "/now-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78868-1qfi97w.fneyrdx6r/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78868-1qfi97w.fneyrdx6r/package.tgz",
+    "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78868-1qfi97w.fneyrdx6r/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117526-78868-1qfi97w.fneyrdx6r/package.tgz",
+  "_shasum": "8f9e0c9c1da428b09d897917086f194fd7e6ef58",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78868-1qfi97w.fneyrdx6r/package.tgz",
+  "_where": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-117526-78868-ua2mzy.ci7vp4aemi",
+  "author": {
+    "name": "Daniel Illouz"
+  },
+  "bugs": {
+    "url": "https://github.com/danillouz/now-syntax/issues"
+  },
+  "dependencies": {},
+  "description": "Minimalistic dark syntax theme inspired by the zeit now website.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/danillouz/now-syntax#readme",
+  "keywords": [
+    "syntax",
+    "theme",
+    "dark"
+  ],
+  "license": "MIT",
+  "name": "now-syntax",
+  "optionalDependencies": {},
+  "readme": "# Now Syntax theme\n\n[now-syntax](https://atom.io/themes/now-syntax) is a minimalistic dark syntax theme inspired by the [zeit now](https://zeit.co/now) website, with some minor changes.\n\n## Screenshots\n![screenshot](https://raw.githubusercontent.com/danillouz/now-syntax/master/screenshots/js.png \"screenshot\")\n\n_Theme used in the screenshot is [Nucleus Dark UI](https://atom.io/themes/nucleus-dark-ui)._\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danillouz/now-syntax.git"
+  },
+  "theme": "syntax",
+  "version": "0.2.4",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

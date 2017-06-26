@@ -1,0 +1,69 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78483-xls254.bcpr13v7vi/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78483-xls254.bcpr13v7vi/package.tgz",
+        "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78483-xls254.bcpr13v7vi/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-117526-78483-101cq9h.7whbu1h5mi"
+    ]
+  ],
+  "_from": "../d-117526-78483-xls254.bcpr13v7vi/package.tgz",
+  "_id": "language-gnuplot-atom@0.2.0",
+  "_inCache": true,
+  "_location": "/language-gnuplot-atom",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78483-xls254.bcpr13v7vi/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78483-xls254.bcpr13v7vi/package.tgz",
+    "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78483-xls254.bcpr13v7vi/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117526-78483-xls254.bcpr13v7vi/package.tgz",
+  "_shasum": "dfc4ec8f3daa82862dc5903f88d0862f1b991efd",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78483-xls254.bcpr13v7vi/package.tgz",
+  "_where": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-117526-78483-101cq9h.7whbu1h5mi",
+  "bugs": {
+    "url": "https://github.com/jinhuang/language-gnuplot-atom/issues"
+  },
+  "dependencies": {},
+  "description": "Syntax highlighting for Gnuplot in Atom",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "homepage": "https://github.com/jinhuang/language-gnuplot-atom#readme",
+  "lincense": "MIT",
+  "name": "language-gnuplot-atom",
+  "optionalDependencies": {},
+  "private": true,
+  "readme": "# GNUPLOT syntax highlighting for Atom\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinhuang/language-gnuplot-atom.git"
+  },
+  "version": "0.2.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

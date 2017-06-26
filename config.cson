@@ -5,14 +5,20 @@
   core:
     telemetryConsent: "limited"
     themes: [
-      "one-dark-ui"
+      "seti-ui"
       "base16-tomorrow-dark-theme"
     ]
   editor:
     fontSize: 12
   "exception-reporting":
     userId: "86f04aad-c530-eb37-de7a-8a0519d99057"
-  "w3c-validation":
-    validateOnSave: false
+  minimap:
+    disablePythonDocLinks: true
+  "seti-syntax":
+    themeColor: "Orange"
+  "seti-ui":
+    compactView: true
+    themeColor: "Orange"
+  "w3c-validation": {}
   welcome:
     showOnStartup: false

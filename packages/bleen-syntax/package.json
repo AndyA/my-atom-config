@@ -1,0 +1,73 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78921-1ybc8bn.mkjqxb6gvi/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78921-1ybc8bn.mkjqxb6gvi/package.tgz",
+        "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78921-1ybc8bn.mkjqxb6gvi/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-117526-78921-1jt7xmz.28qitchaor"
+    ]
+  ],
+  "_from": "../d-117526-78921-1ybc8bn.mkjqxb6gvi/package.tgz",
+  "_id": "bleen-syntax@0.3.1",
+  "_inCache": true,
+  "_location": "/bleen-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78921-1ybc8bn.mkjqxb6gvi/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78921-1ybc8bn.mkjqxb6gvi/package.tgz",
+    "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78921-1ybc8bn.mkjqxb6gvi/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117526-78921-1ybc8bn.mkjqxb6gvi/package.tgz",
+  "_shasum": "e8d94fb7d75a4ec6ad0ba897d67ba61e5fcce9c9",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78921-1ybc8bn.mkjqxb6gvi/package.tgz",
+  "_where": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-117526-78921-1jt7xmz.28qitchaor",
+  "bugs": {
+    "url": "https://github.com/BafS/atom-bleen-syntax/issues"
+  },
+  "dependencies": {},
+  "description": "A deep but soft green & blue syntax theme",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/BafS/atom-bleen-syntax#readme",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "license": "MIT",
+  "name": "bleen-syntax",
+  "optionalDependencies": {},
+  "readme": "# Bleen-syntax theme\n\nA deep but soft green/blue syntax theme.\n\n![Bleen-syntax](http://i.imgur.com/8WP67uw.png)\n\n> Bleen syntax with Atom one dark theme. The font used is Fira Code.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BafS/atom-bleen-syntax.git"
+  },
+  "theme": "syntax",
+  "version": "0.3.1",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
