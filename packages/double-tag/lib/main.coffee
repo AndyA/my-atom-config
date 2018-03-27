@@ -12,21 +12,23 @@ module.exports =
         'html', 'img', 'input', 'keygen', 'link', 'meta', 'param', 'source',
         'title', 'track', 'wbr'
       ]
+    allowEndTagSync:
+      description: 'Editing the end tag will change the start tag'
+      type: 'boolean'
+      default: true
 
   activate: (state) ->
     @subscriptions = new CompositeDisposable
 
     @subscriptions.add atom.workspace.observeTextEditors (editor) ->
       editorScope = editor.getRootScopeDescriptor?().getScopesArray()
-      return unless editorScope and editorScope.length
+      return unless editorScope?.length
 
       # TODO: add option for language scope
       editorScopeRegex = /text\.(html|xml|marko)|source\.js\.jsx/
       return unless editorScopeRegex.test(editorScope[0])
 
       doubleTag = new DoubleTag(editor)
-      doubleTag.watchForTag()
-
       editor.onDidDestroy -> doubleTag?.destroy()
 
   deactivate: -> @subscriptions?.dispose()

@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78901-aujzcl.pkze86ko6r/package.tgz",
+        "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117619-43043-smv85y.z6yzyw4s4i/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78901-aujzcl.pkze86ko6r/package.tgz",
-        "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78901-aujzcl.pkze86ko6r/package.tgz",
+        "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117619-43043-smv85y.z6yzyw4s4i/package.tgz",
+        "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117619-43043-smv85y.z6yzyw4s4i/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-117526-78901-1ektrkn.5gmk7qfr"
+      "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-117619-43043-1k2llhm.r4jng0hpvi"
     ]
   ],
-  "_from": "../d-117526-78901-aujzcl.pkze86ko6r/package.tgz",
-  "_id": "pure-syntax@0.2.1",
+  "_from": "../d-117619-43043-smv85y.z6yzyw4s4i/package.tgz",
+  "_id": "pure-syntax@0.3.0",
   "_inCache": true,
   "_location": "/pure-syntax",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78901-aujzcl.pkze86ko6r/package.tgz",
+    "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117619-43043-smv85y.z6yzyw4s4i/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78901-aujzcl.pkze86ko6r/package.tgz",
-    "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78901-aujzcl.pkze86ko6r/package.tgz",
+    "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117619-43043-smv85y.z6yzyw4s4i/package.tgz",
+    "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117619-43043-smv85y.z6yzyw4s4i/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117526-78901-aujzcl.pkze86ko6r/package.tgz",
-  "_shasum": "b8fe8e3190277573c8af246295391aa30e46061c",
+  "_resolved": "file:../d-117619-43043-smv85y.z6yzyw4s4i/package.tgz",
+  "_shasum": "c22b410515bfd341659a9ba1538d20b5b7755371",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117526-78901-aujzcl.pkze86ko6r/package.tgz",
-  "_where": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-117526-78901-1ektrkn.5gmk7qfr",
+  "_spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-117619-43043-smv85y.z6yzyw4s4i/package.tgz",
+  "_where": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-117619-43043-1k2llhm.r4jng0hpvi",
   "bugs": {
     "url": "https://github.com/nkpfstr/pure-syntax/issues"
   },
@@ -63,7 +63,7 @@
     "url": "git+https://github.com/nkpfstr/pure-syntax.git"
   },
   "theme": "syntax",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [],

@@ -1,24 +1,51 @@
 "*":
   "atom-beautify":
+    c:
+      default_beautifier: "clang-format"
+    cpp:
+      default_beautifier: "clang-format"
+    css:
+      default_beautifier: "CSScomb"
     general:
       _analyticsUserId: "8deb8af9-ce06-45f4-b52f-fa30ba53e4c4"
+    less:
+      default_beautifier: "CSScomb"
+    objectivec:
+      default_beautifier: "clang-format"
+    perl: {}
+  "atom-fuzzy-grep":
+    grepCommandString: "ag --nocolor --nogroup --column"
   core:
+    projectHome: "/Users/andy/Works"
     telemetryConsent: "limited"
     themes: [
       "seti-ui"
       "base16-tomorrow-dark-theme"
     ]
   editor:
-    fontSize: 12
+    fontSize: 13
+    softWrap: true
+    softWrapHangingIndent: 2
   "exception-reporting":
     userId: "86f04aad-c530-eb37-de7a-8a0519d99057"
+  linter: {}
+  "linter-jshint":
+    executablePath: "/usr/local/bin/jshint"
+    lintInlineJavaScript: true
+  "linter-stylelint":
+    disableWhenNoConfig: false
+    showIgnored: true
+    useStandard: true
+  "linter-ui-default": {}
   minimap:
     disablePythonDocLinks: true
+  "platformio-ide-terminal":
+    style:
+      theme: "one-dark"
   "seti-syntax":
     themeColor: "Orange"
   "seti-ui":
     compactView: true
     themeColor: "Orange"
-  "w3c-validation": {}
   welcome:
     showOnStartup: false

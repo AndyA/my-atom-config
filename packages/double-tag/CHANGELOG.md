@@ -1,3 +1,15 @@
+## 1.1.0
+_November 3, 2017_
+* Added option to disable end tag syncing
+
+## 1.0.0
+_November 3, 2017_
+* Get clipboard history working
+
+## 0.9.0
+_June 29, 2017_
+* Add support for editing end tag
+
 ## 0.8.0
 _March 27, 2017_
 * Code clean up
