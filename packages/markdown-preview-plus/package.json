@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118227-1746-5z4hk3.ganabgldi/package.tgz",
+        "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118312-99814-agxh.jsu6ry66r/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118227-1746-5z4hk3.ganabgldi/package.tgz",
-        "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118227-1746-5z4hk3.ganabgldi/package.tgz",
+        "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118312-99814-agxh.jsu6ry66r/package.tgz",
+        "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118312-99814-agxh.jsu6ry66r/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-118227-1746-1bt4tl0.m9t4tsatt9"
+      "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-118312-99814-1hf3el5.yyiu0oogvi"
     ]
   ],
-  "_from": "../d-118227-1746-5z4hk3.ganabgldi/package.tgz",
-  "_id": "markdown-preview-plus@2.5.6",
+  "_from": "../d-118312-99814-agxh.jsu6ry66r/package.tgz",
+  "_id": "markdown-preview-plus@2.5.7",
   "_inCache": true,
   "_location": "/markdown-preview-plus",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118227-1746-5z4hk3.ganabgldi/package.tgz",
+    "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118312-99814-agxh.jsu6ry66r/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118227-1746-5z4hk3.ganabgldi/package.tgz",
-    "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118227-1746-5z4hk3.ganabgldi/package.tgz",
+    "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118312-99814-agxh.jsu6ry66r/package.tgz",
+    "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118312-99814-agxh.jsu6ry66r/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-118227-1746-5z4hk3.ganabgldi/package.tgz",
-  "_shasum": "8b26905c34f508a5f37d94b3280aa7bf3efdb89d",
+  "_resolved": "file:../d-118312-99814-agxh.jsu6ry66r/package.tgz",
+  "_shasum": "aa99fb54c1d436606c47182b39537808283c20af",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118227-1746-5z4hk3.ganabgldi/package.tgz",
-  "_where": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-118227-1746-1bt4tl0.m9t4tsatt9",
+  "_spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118312-99814-agxh.jsu6ry66r/package.tgz",
+  "_where": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-118312-99814-1hf3el5.yyiu0oogvi",
   "atomTestRunner": "./spec/runner.js",
   "bugs": {
     "url": "https://github.com/atom-community/markdown-preview-plus/issues"
@@ -108,5 +108,5 @@
     "test": "npm run typecheck && npm run lint && npm run prettier-check",
     "typecheck": "tsc --noEmit -p . && tsc --noEmit -p spec"
   },
-  "version": "2.5.6"
+  "version": "2.5.7"
 }
