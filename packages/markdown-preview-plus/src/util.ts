@@ -1,6 +1,7 @@
 export function handlePromise(promise: Promise<any>): void {
   if (!promise) return
   promise.catch((error: Error) => {
+    console.error(error)
     atom.notifications.addFatalError(error.toString(), {
       detail: error.message,
       stack: error.stack,
@@ -28,4 +29,51 @@ export function pairUp<T>(arr: T[], option?: string): Array<[T, T]> {
     if (index % 2 === 0) result.push([array[index], array[index + 1]])
     return result
   }, [])
+}
+
+export function isElement(node: Node): node is Element {
+  return node.nodeType === Node.ELEMENT_NODE
+}
+
+import { WebviewHandler } from './markdown-preview-view/webview-handler'
+import * as renderer from './renderer'
+export async function copyHtml(
+  text: string,
+  filePath: string | undefined,
+  renderLaTeX: boolean,
+): Promise<void> {
+  const view = new WebviewHandler(async () => {
+    view.init(atom.getConfigDirPath(), atomConfig().mathConfig, 'SVG')
+    view.setBasePath(filePath)
+
+    const domDocument = await renderer.render({
+      text,
+      filePath,
+      renderLaTeX,
+      mode: 'copy',
+    })
+    const res = await view.update(
+      domDocument.documentElement.outerHTML,
+      renderLaTeX,
+    )
+    if (res) {
+      if (atom.config.get('markdown-preview-plus.richClipboard')) {
+        const clipboard = await import('./clipboard')
+        clipboard.write({ text: res, html: res })
+      } else {
+        atom.clipboard.write(res)
+      }
+    }
+    view.destroy()
+  })
+  view.element.style.pointerEvents = 'none'
+  view.element.style.position = 'absolute'
+  view.element.style.width = '0px'
+  view.element.style.height = '0px'
+  const ws = atom.views.getView(atom.workspace)
+  ws.appendChild(view.element)
+}
+
+export function atomConfig() {
+  return atom.config.get('markdown-preview-plus')
 }

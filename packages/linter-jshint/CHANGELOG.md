@@ -1,3 +1,61 @@
+## [3.1.14](https://github.com/AtomLinter/linter-jshint/compare/v3.1.13...v3.1.14) (2019-02-06)
+
+
+### Bug Fixes
+
+* **deps:** pin remaining dependencies ([dc01923](https://github.com/AtomLinter/linter-jshint/commit/dc01923)), closes [#627](https://github.com/AtomLinter/linter-jshint/issues/627)
+
+## [3.1.13](https://github.com/AtomLinter/linter-jshint/compare/v3.1.12...v3.1.13) (2019-02-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency jshint to v2.10.1 ([a83e30f](https://github.com/AtomLinter/linter-jshint/commit/a83e30f))
+
+## [3.1.12](https://github.com/AtomLinter/linter-jshint/compare/v3.1.11...v3.1.12) (2019-02-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency jshint to v2.10.0 ([716cd1a](https://github.com/AtomLinter/linter-jshint/commit/716cd1a))
+
+## [3.1.11](https://github.com/AtomLinter/linter-jshint/compare/v3.1.10...v3.1.11) (2019-01-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency jshint to v2.9.7 ([e236c2f](https://github.com/AtomLinter/linter-jshint/commit/e236c2f))
+
+## [3.1.10](https://github.com/AtomLinter/linter-jshint/compare/v3.1.9...v3.1.10) (2019-01-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency atom-package-deps to v5 ([4993e63](https://github.com/AtomLinter/linter-jshint/commit/4993e63))
+
+## [3.1.9](https://github.com/AtomLinter/linter-jshint/compare/v3.1.8...v3.1.9) (2018-09-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency jshint to v2.9.6 ([d663243](https://github.com/AtomLinter/linter-jshint/commit/d663243))
+
+<a name="3.1.8"></a>
+## [3.1.8](https://github.com/AtomLinter/linter-jshint/compare/v3.1.7...v3.1.8) (2018-05-06)
+
+
+### Bug Fixes
+
+* **package:** update jshint-json to version 2.0.0 ([a11590e](https://github.com/AtomLinter/linter-jshint/commit/a11590e))
+
+<a name="3.1.7"></a>
+## [3.1.7](https://github.com/AtomLinter/linter-jshint/compare/v3.1.6...v3.1.7) (2018-05-06)
+
+
+### Bug Fixes
+
+* **package:** update shelljs to version 0.8.0 ([#556](https://github.com/AtomLinter/linter-jshint/issues/556)) ([6382677](https://github.com/AtomLinter/linter-jshint/commit/6382677))
+
 # Change Log
 
 ## [v3.1.6](https://github.com/AtomLinter/linter-jshint/tree/v3.1.6) (2017-09-25)

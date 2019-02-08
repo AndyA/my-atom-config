@@ -1,0 +1,106 @@
+{
+  "_from": "https://www.atom.io/api/packages/julia-client/versions/0.7.13/tarball",
+  "_id": "julia-client@0.7.13",
+  "_inBundle": false,
+  "_integrity": "sha512-KoJSzFhV2HnBM1jVVdcc0xTlB9S7n3sGw7Wa+Z4WaTmhR9cQQY9ydNUvfgXDGGSIDlbJI69CKv8xiSRIuN1b3A==",
+  "_location": "/julia-client",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/julia-client/versions/0.7.13/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/julia-client/versions/0.7.13/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/julia-client/versions/0.7.13/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/julia-client/versions/0.7.13/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/julia-client/versions/0.7.13/tarball",
+  "_shasum": "bbb0be46ba3761e7c5a452d230dcbfd5e21b92b2",
+  "_spec": "https://www.atom.io/api/packages/julia-client/versions/0.7.13/tarball",
+  "_where": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-11918-94622-1pdsbhy.ehe2",
+  "bugs": {
+    "url": "https://github.com/JunoLab/atom-julia-client/issues"
+  },
+  "bundleDependencies": false,
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    },
+    "tool-bar": {
+      "versions": {
+        "^0 || ^1": "consumeToolBar"
+      }
+    },
+    "ink": {
+      "versions": {
+        "*": "consumeInk"
+      }
+    },
+    "runInTerminal": {
+      "versions": {
+        "*": "consumeTerminal"
+      }
+    },
+    "ftp-remote.getCurrentServerConfig": {
+      "versions": {
+        "0.1.0": "consumeGetServerConfig"
+      }
+    },
+    "ftp-remote.getCurrentServerName": {
+      "versions": {
+        "0.1.0": "consumeGetServerName"
+      }
+    }
+  },
+  "dependencies": {
+    "atom-package-deps": "*",
+    "atom-space-pen-views": "^2.0.0",
+    "coffee-script": "*",
+    "etch": "*",
+    "fuzzaldrin-plus": "^0.6.0",
+    "node-pty-prebuilt": "0.7.6",
+    "physical-cpu-count": "*",
+    "ssh2": "^0.6.0",
+    "underscore-plus": "*"
+  },
+  "deprecated": false,
+  "description": "Julia Evaluation",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/JunoLab/atom-julia-client#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "./lib/julia-client",
+  "name": "julia-client",
+  "package-deps": [
+    "ink"
+  ],
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "4.0.0": "completions"
+      }
+    },
+    "julia-client": {
+      "description": "Run a Julia process",
+      "versions": {
+        "0.1.0": "provideClient"
+      }
+    },
+    "hyperclick.provider": {
+      "versions": {
+        "0.0.0": "provideHyperclick"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JunoLab/atom-julia-client.git"
+  },
+  "version": "0.7.13"
+}

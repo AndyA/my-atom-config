@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118312-99816-19mbrsz.z9mxgpsyvi/package.tgz",
+        "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118513-73990-1u0qg8a.ddt92uik9/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118312-99816-19mbrsz.z9mxgpsyvi/package.tgz",
-        "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118312-99816-19mbrsz.z9mxgpsyvi/package.tgz",
+        "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118513-73990-1u0qg8a.ddt92uik9/package.tgz",
+        "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118513-73990-1u0qg8a.ddt92uik9/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-118312-99816-ghkmmm.fbut29y66r"
+      "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-118513-73990-zi242x.fcmaz9qkt9"
     ]
   ],
-  "_from": "../d-118312-99816-19mbrsz.z9mxgpsyvi/package.tgz",
-  "_id": "teletype@0.12.1",
+  "_from": "../d-118513-73990-1u0qg8a.ddt92uik9/package.tgz",
+  "_id": "teletype@0.13.3",
   "_inCache": true,
   "_location": "/teletype",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118312-99816-19mbrsz.z9mxgpsyvi/package.tgz",
+    "raw": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118513-73990-1u0qg8a.ddt92uik9/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118312-99816-19mbrsz.z9mxgpsyvi/package.tgz",
-    "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118312-99816-19mbrsz.z9mxgpsyvi/package.tgz",
+    "rawSpec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118513-73990-1u0qg8a.ddt92uik9/package.tgz",
+    "spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118513-73990-1u0qg8a.ddt92uik9/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-118312-99816-19mbrsz.z9mxgpsyvi/package.tgz",
-  "_shasum": "8fd029e8c49fd38731d53d762cf7687bbcd7e288",
+  "_resolved": "file:../d-118513-73990-1u0qg8a.ddt92uik9/package.tgz",
+  "_shasum": "280426316ea6b96273a0c4aed75f8172de4ac93c",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118312-99816-19mbrsz.z9mxgpsyvi/package.tgz",
-  "_where": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-118312-99816-ghkmmm.fbut29y66r",
+  "_spec": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/d-118513-73990-1u0qg8a.ddt92uik9/package.tgz",
+  "_where": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-118513-73990-zi242x.fcmaz9qkt9",
   "atomTestRunner": "./test/setup",
   "author": "",
   "bugs": {
@@ -86,7 +86,7 @@
     }
   },
   "dependencies": {
-    "@atom/teletype-client": "^0.37.0",
+    "@atom/teletype-client": "^0.38.4",
     "etch": "^0.12.6"
   },
   "description": "Share your workspace with team members and collaborate on code in real time",
@@ -98,7 +98,7 @@
     "temp": "^0.8.3"
   },
   "engines": {
-    "atom": ">=1.22.0"
+    "atom": ">=1.25.0"
   },
   "homepage": "https://github.com/atom/teletype#readme",
   "keywords": [
@@ -145,5 +145,5 @@
     "method": "handleURI",
     "deferActivation": false
   },
-  "version": "0.12.1"
+  "version": "0.13.3"
 }

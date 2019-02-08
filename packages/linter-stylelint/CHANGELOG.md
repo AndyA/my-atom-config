@@ -1,3 +1,71 @@
+## [4.4.3](https://github.com/AtomLinter/linter-stylelint/compare/v4.4.2...v4.4.3) (2019-01-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency stylelint to v9.10.1 ([f5465a4](https://github.com/AtomLinter/linter-stylelint/commit/f5465a4))
+
+## [4.4.2](https://github.com/AtomLinter/linter-stylelint/compare/v4.4.1...v4.4.2) (2019-01-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency atom-package-deps to v5 ([9018f56](https://github.com/AtomLinter/linter-stylelint/commit/9018f56))
+
+## [4.4.1](https://github.com/AtomLinter/linter-stylelint/compare/v4.4.0...v4.4.1) (2019-01-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency resolve to v1.10.0 ([e56e754](https://github.com/AtomLinter/linter-stylelint/commit/e56e754))
+
+# [4.4.0](https://github.com/AtomLinter/linter-stylelint/compare/v4.3.2...v4.4.0) (2019-01-22)
+
+
+### Bug Fixes
+
+* add default option object ([a4d6c92](https://github.com/AtomLinter/linter-stylelint/commit/a4d6c92))
+* check passed-in editor, not a new one ([d9489c7](https://github.com/AtomLinter/linter-stylelint/commit/d9489c7))
+* don’t change editor text unless necessary ([32427ea](https://github.com/AtomLinter/linter-stylelint/commit/32427ea))
+* only save files (buffers) once ([cfd5b9c](https://github.com/AtomLinter/linter-stylelint/commit/cfd5b9c))
+* restore cursors ([5ebb26f](https://github.com/AtomLinter/linter-stylelint/commit/5ebb26f))
+
+
+### Features
+
+* added autofix on save ([3164aab](https://github.com/AtomLinter/linter-stylelint/commit/3164aab))
+
+## [4.3.2](https://github.com/AtomLinter/linter-stylelint/compare/v4.3.1...v4.3.2) (2018-06-29)
+
+
+### Bug Fixes
+
+* **dependencies:** bump minimum assign-deep to v0.4.7 ([a98e5f7](https://github.com/AtomLinter/linter-stylelint/commit/a98e5f7))
+
+## [4.3.1](https://github.com/AtomLinter/linter-stylelint/compare/v4.3.0...v4.3.1) (2018-06-28)
+
+
+### Bug Fixes
+
+* **dependencies:** update resolve to v1.8.1 ([1179cdf](https://github.com/AtomLinter/linter-stylelint/commit/1179cdf))
+* **dependencies:** update stylelint to v9.3.0 ([1b23600](https://github.com/AtomLinter/linter-stylelint/commit/1b23600))
+
+<a name="4.3.0"></a>
+# [4.3.0](https://github.com/AtomLinter/linter-stylelint/compare/v4.2.1...v4.3.0) (2018-04-27)
+
+
+### Features
+
+* use the stylelint instance local to the project if one exists ([#381](https://github.com/AtomLinter/linter-stylelint/issues/381)) ([d8f9bf6](https://github.com/AtomLinter/linter-stylelint/commit/d8f9bf6))
+
+<a name="4.2.1"></a>
+## [4.2.1](https://github.com/AtomLinter/linter-stylelint/compare/v4.2.0...v4.2.1) (2018-04-27)
+
+
+### Bug Fixes
+
+* **package:** update stylelint to version 9.2.0 ([7d20459](https://github.com/AtomLinter/linter-stylelint/commit/7d20459)), closes [#389](https://github.com/AtomLinter/linter-stylelint/issues/389)
+
 # Change Log
 
 ## [v4.2.0](https://github.com/AtomLinter/linter-stylelint/tree/v4.2.0) (2017-12-15)

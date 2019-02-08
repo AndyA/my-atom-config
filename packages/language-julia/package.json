@@ -1,0 +1,42 @@
+{
+  "_from": "https://www.atom.io/api/packages/language-julia/versions/0.18.0/tarball",
+  "_id": "language-julia@0.18.0",
+  "_inBundle": false,
+  "_integrity": "sha512-T35y3TgIcH07W/oAAad9EtVUCsOr9XX9fNRQ/9dW8nB/Hqxhp4fmq0uTmBmCvVmh/SEaNAkiXwlx2ceX+IbhmA==",
+  "_location": "/language-julia",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/language-julia/versions/0.18.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/language-julia/versions/0.18.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/language-julia/versions/0.18.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/language-julia/versions/0.18.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/language-julia/versions/0.18.0/tarball",
+  "_shasum": "2817ffa24320b44250665ce2a5cb394476384447",
+  "_spec": "https://www.atom.io/api/packages/language-julia/versions/0.18.0/tarball",
+  "_where": "/private/var/folders/0w/45m503jd19gg36svfbs298zr0000gn/T/apm-install-dir-118931-31339-i9x2zj.gtt",
+  "bugs": {
+    "url": "https://github.com/JuliaEditorSupport/atom-language-julia/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Julia language support for Atom.",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "homepage": "https://github.com/JuliaEditorSupport/atom-language-julia",
+  "keywords": [],
+  "license": "MIT",
+  "main": "./lib/julia",
+  "name": "language-julia",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuliaEditorSupport/atom-language-julia.git"
+  },
+  "version": "0.18.0"
+}

@@ -8,6 +8,8 @@
       default_beautifier: "CSScomb"
     general:
       _analyticsUserId: "8deb8af9-ce06-45f4-b52f-fa30ba53e4c4"
+    jsx:
+      default_beautifier: "JS Beautify"
     less:
       default_beautifier: "CSScomb"
     objectivec:
@@ -15,7 +17,13 @@
     perl: {}
   "atom-fuzzy-grep":
     grepCommandString: "ag --nocolor --nogroup --column"
+  "autocomplete-plus":
+    strictMatching: true
   core:
+    disabledPackages: [
+      "markdown-preview"
+      "linter-jshint"
+    ]
     projectHome: "/Users/andy/Works"
     telemetryConsent: "limited"
     themes: [
@@ -28,6 +36,8 @@
     softWrapHangingIndent: 2
   "exception-reporting":
     userId: "86f04aad-c530-eb37-de7a-8a0519d99057"
+  "julia-client":
+    firstBoot: false
   linter: {}
   "linter-jshint":
     executablePath: "/usr/local/bin/jshint"
@@ -49,3 +59,6 @@
     themeColor: "Orange"
   welcome:
     showOnStartup: false
+".perl.source":
+  editor:
+    nonWordCharacters: "/\\()\"',.;<>~!#^&*|+=[]{}`?-"
